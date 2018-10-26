@@ -39,7 +39,7 @@ vel = 10
 
 a = True
 while a:    
-    pygame.time.delay(1)
+    pygame.time.delay(2)
     
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
