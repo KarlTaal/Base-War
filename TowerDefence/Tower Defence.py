@@ -1,5 +1,6 @@
 import pygame
 import ctypes
+import time
 
 pygame.init()
 
@@ -27,19 +28,29 @@ vasak_torn = pygame.transform.scale(vasak_torn, (int(0.15 * y_global), int(0.15 
 parem_torn = pygame.image.load("images/parem_torn.png")
 parem_torn = pygame.transform.scale(parem_torn, (int(0.15 * y_global), int(0.15 * x_global)))
 
-#kast mida liigutada saab
-x = 0
-y = 0
-width = 0.1 * x_global
-height = 0.1 * y_global
-vel = 10
+mehikese_pildid = [pygame.image.load("images/mehike/mehike1.png"), pygame.image.load("images/mehike/mehike2.png"), pygame.image.load("images/mehike/mehike3.png"),\
+pygame.image.load("images/mehike/mehike4.png"), pygame.image.load("images/mehike/mehike5.png"), pygame.image.load("images/mehike/mehike6.png"),\
+pygame.image.load("images/mehike/mehike7.png"), pygame.image.load("images/mehike/mehike8.png")]
+mehike_walkRight = []
+for mehike in mehikese_pildid:
+    mehike_walkRight.append(pygame.transform.scale(mehike, (int(0.15 * x_global), int(0.15 * y_global))))
+    
+def mehike():
+    mängu_screen.blit(mehike_walkRight[0], (0.3 * x_global, 0.75 * y_global))      #praegu esitab listist ainult esimest elementi aga oleks vaja et esitab pilte listist järjest ja iga järgmise pildi natuke paremale, et jääks mulje et kõnniks edasi
+        
 
 
-
-
+def draw():
+    #loob kujutised
+    mängu_screen.blit(taust, (0, 0))
+    if keys[pygame.K_DOWN]:
+        mehike()
+    mängu_screen.blit(vasak_torn, (0, 0.635 * y_global))
+    mängu_screen.blit(parem_torn, (x_global - int(0.15 * y_global), 0.635 * y_global))
+    pygame.display.update()
+    
 a = True
-while a:    
-    pygame.time.delay(20)
+while a:        
     
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -47,24 +58,8 @@ while a:
         
     keys = pygame.key.get_pressed()
     
-    if keys[pygame.K_LEFT]:
-        x = x - vel
-    if keys[pygame.K_RIGHT]:
-        x = x + vel
-    if keys[pygame.K_UP]:
-        y = y - vel
-    if keys[pygame.K_DOWN]:
-        y = y + vel
     if keys[pygame.K_ESCAPE]:
         a = False
-        
+    draw()
     
-    #loob kujutised
-    mängu_screen.blit(taust, (0, 0))
-    mängu_screen.blit(vasak_torn, (0, y_global- 0.365 * y_global))
-    mängu_screen.blit(parem_torn, (x_global - int(0.15 * y_global), y_global- 0.365 * y_global))
-    pygame.draw.rect(mängu_screen, (255, 0 , 0), (x, y ,width, height))
-    pygame.display.update()
-    
-
 pygame.quit()
