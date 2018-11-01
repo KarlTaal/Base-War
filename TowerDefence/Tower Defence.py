@@ -37,6 +37,7 @@ for mehike in mehikese_pildid:
     
 def mehike():
     mängu_screen.blit(mehike_walkRight[0], (0.3 * x_global, 0.75 * y_global))      #praegu esitab listist ainult esimest elementi aga oleks vaja et esitab pilte listist järjest ja iga järgmise pildi natuke paremale, et jääks mulje et kõnniks edasi
+
         
 
 
