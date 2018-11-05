@@ -4,6 +4,9 @@ import time
 
 pygame.init()
 
+FPS = 60
+clock = pygame.time.Clock()
+
 
 #VÕTAB ARVUTI EKRAANI MÕÕTME JA LOOB MÄNGU EKRAANI SUURUSE 
 ctypes.windll.user32.SetProcessDPIAware()
@@ -33,26 +36,54 @@ pygame.image.load("images/mehike/mehike4.png"), pygame.image.load("images/mehike
 pygame.image.load("images/mehike/mehike7.png"), pygame.image.load("images/mehike/mehike8.png")]
 mehike_walkRight = []
 for mehike in mehikese_pildid:
-    mehike_walkRight.append(pygame.transform.scale(mehike, (int(0.15 * x_global), int(0.15 * y_global))))
+    mehike_walkRight.append(pygame.transform.scale(mehike, (int(0.07 * x_global), int(0.13 * y_global))))
     
-def mehike():
-    mängu_screen.blit(mehike_walkRight[0], (0.3 * x_global, 0.75 * y_global))      #praegu esitab listist ainult esimest elementi aga oleks vaja et esitab pilte listist järjest ja iga järgmise pildi natuke paremale, et jääks mulje et kõnniks edasi
+class Player(pygame.sprite.Sprite):
+#EI SAA PÄRIS HÄSTI ARU MIS SIIN TOIMUB, AGA SEE TÖÖTAB :D
+    def __init__(self, position, mehike_walkRight):
+        super(Player, self).__init__()
+        size = (int(0.15 * x_global), int(0.15 * y_global))
+        self.rect = pygame.Rect(position, size)
+        self.mehike_walkRight = mehike_walkRight
+        self.index = 0
+        self.image = mehike_walkRight[self.index]
+        self.velocity = pygame.math.Vector2(0, 0)
+        self.animation_time = 0.001
+        self.current_time = 0
 
-        
+
+    def update_time_dependent(self, dt):
+        self.current_time += dt
+        if self.current_time >= self.animation_time:
+            self.current_time = 0
+            self.index = (self.index + 1) % len(self.mehike_walkRight)
+            self.image = self.mehike_walkRight[self.index]
+
+    def update_frame_dependent(self):
+        self.current_frame = 0
+        self.index = (self.index + 1) % len(self.mehike_walkRight)
+        self.image = self.mehike_walkRight[self.index]
+
+    def update(self, dt):
+        self.update_time_dependent(dt)
+        self.rect.x += 20
 
 
 def draw():
-    #loob kujutised
     mängu_screen.blit(taust, (0, 0))
-    if keys[pygame.K_DOWN]:
-        mehike()
+    all_sprites.update(dt)
+    all_sprites.draw(mängu_screen)
     mängu_screen.blit(vasak_torn, (0, 0.635 * y_global))
     mängu_screen.blit(parem_torn, (x_global - int(0.15 * y_global), 0.635 * y_global))
     pygame.display.update()
-    
+
+
+player = Player(position=(0, y_global * 0.76), mehike_walkRight=mehike_walkRight)
+all_sprites = pygame.sprite.Group(player)
+
 a = True
-while a:        
-    
+while a:
+    dt = clock.tick(FPS) / 1000
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             a = False
@@ -61,6 +92,7 @@ while a:
     
     if keys[pygame.K_ESCAPE]:
         a = False
+
     draw()
-    
+
 pygame.quit()

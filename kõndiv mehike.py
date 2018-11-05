@@ -15,22 +15,14 @@ pygame.image.load("images/mehike/mehike4.png"), pygame.image.load("images/mehike
 pygame.image.load("images/mehike/mehike7.png"), pygame.image.load("images/mehike/mehike8.png")]
 images = []
 for mehike in mehikese_pildid:
-    images.append(pygame.transform.scale(mehike, (int(200), int(350))))
+    images.append(pygame.transform.scale(mehike, (int(200), int(300))))
 
 
 class AnimatedSprite(pygame.sprite.Sprite):
 
     def __init__(self, position, images):
-        """
-        Animated sprite object.
-
-        Args:
-            position: x, y coordinate on the screen to place the AnimatedSprite.
-            images: Images to use in the animation.
-        """
         super(AnimatedSprite, self).__init__()
-
-        size = (32, 32)  # This should match the size of the images.
+        size = (32, 32)
 
         self.rect = pygame.Rect(position, size)
         self.images = images
