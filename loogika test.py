@@ -11,6 +11,8 @@ gameDisplay = pygame.display.set_mode((display_width, display_height))
 white = (255, 255, 255)
 black = (0, 0, 0)
 
+liikumis_kiirus = 2
+
 X_kordinaat_A = 0
 Y_kordinaat_A = 400
 
@@ -27,16 +29,12 @@ class Block_A(pygame.sprite.Sprite):
         self.image.fill(color)
         self.rect = self.image.get_rect()
 
-    def reset_pos(self):
-        self.rect.x = X_kordinaat_A
-        self.rect.y = Y_kordinaat_A
 
     def update(self):
         if self.rect.x > display_width - 30:
-            # self.reset_pos()
             self.rect.x += 0
         else:
-            self.rect.x += 5
+            self.rect.x += liikumis_kiirus
 
 
 def blokk_a(x_kordinaat, y_kordinaat):
@@ -46,8 +44,7 @@ def blokk_a(x_kordinaat, y_kordinaat):
     block.rect.y = y_kordinaat
 
     # Add the block to the list of objects
-    block_list.add(block)
-    all_sprites_list.add(block)
+    A_sprites.add(block)
 
 
 class Block_B(pygame.sprite.Sprite):
@@ -57,17 +54,12 @@ class Block_B(pygame.sprite.Sprite):
         self.image.fill(color)
         self.rect = self.image.get_rect()
 
-    def reset_pos(self):
-        self.rect.x = X_kordinaat_B
-        self.rect.y = Y_kordinaat_B
 
     def update(self):
         if self.rect.x < 0:
-            # self.reset_pos()
             self.rect.x += 0
         else:
-            self.rect.x -= 5
-
+            self.rect.x -= liikumis_kiirus
 
 def blokk_b(x_kordinaat, y_kordinaat):
     block = Block_B(black, 30, 30)
@@ -76,24 +68,32 @@ def blokk_b(x_kordinaat, y_kordinaat):
     block.rect.y = y_kordinaat
 
     # Add the block to the list of objects
-    block_list.add(block)
-    all_sprites_list.add(block)
+    B_sprites.add(block)
 
 
-# This is a list of 'sprites.' Each block in the program is
-# added to this list. The list is managed by a class called 'Group.'
-block_list = pygame.sprite.Group()
+# This is a list of every sprite.
+A_sprites = pygame.sprite.Group()
+B_sprites = pygame.sprite.Group()
 
-# This is a list of every sprite. All blocks and the player block as well.
-all_sprites_list = pygame.sprite.Group()
 
-#blokk_a(X_kordinaat_A, Y_kordinaat_A)
-#blokk_b(X_kordinaat_B,Y_kordinaat_B)
 
+
+def kokkupuude():
+    # kustutab kokkupuutel
+    blocks_hit_list = pygame.sprite.groupcollide(A_sprites, B_sprites, False, False, collided=None)
+    #kustutab vabalt valitud blokki
+    for i in blocks_hit_list:
+        suvaline = random.randint(0,2)
+        if suvaline == 0:
+            A_sprites.remove(i)
+        elif suvaline == 1:
+            B_sprites.remove(blocks_hit_list[i])
 
 while not gameExit:
-    pygame.display.update()
 
+    kokkupuude()
+
+    pygame.display.update()
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             gameExit = True
@@ -106,8 +106,10 @@ while not gameExit:
 
     gameDisplay.fill(white)
     # Calls update() method on every sprite in the list
-    all_sprites_list.update()
-    all_sprites_list.draw(gameDisplay)
+    A_sprites.update()
+    B_sprites.update()
+    A_sprites.draw(gameDisplay)
+    B_sprites.draw(gameDisplay)
 
     pygame.display.update()
     clock.tick(60)
