@@ -35,19 +35,42 @@ mehikese_pildid = [pygame.image.load("images/mehike/mehike1.png"), pygame.image.
 pygame.image.load("images/mehike/mehike4.png"), pygame.image.load("images/mehike/mehike5.png"), pygame.image.load("images/mehike/mehike6.png"),\
 pygame.image.load("images/mehike/mehike7.png"), pygame.image.load("images/mehike/mehike8.png")]
 mehike_walkRight = []
+mehike_walkLeft = []
 for mehike in mehikese_pildid:
     mehike_walkRight.append(pygame.transform.scale(mehike, (int(0.07 * x_global), int(0.13 * y_global))))
+for mehike in mehike_walkRight:
+    mehike_walkLeft.append(pygame.transform.flip(mehike, True, False))
 
 
+class Player2(pygame.sprite.Sprite):
+    def __init__(self, position, mehike_walkLeft):
+        super(Player2, self).__init__()
+        size = (32, 32)
+        self.rect = pygame.Rect(position, size)
+        self.images = mehike_walkLeft
+        self.index = 0
+        self.image = mehike_walkLeft[self.index]
+        self.velocity = pygame.math.Vector2(0, 0)
+        self.animation_time = 0.1
+        self.current_time = 0
 
-#class Vasak_torn(pygame.sprite.Sprite):
+    def update_time_dependent(self, dt):
+        self.current_time += dt
+        if self.current_time >= self.animation_time:
+            self.current_time = 0
+            self.index = (self.index + 1) % len(self.images)
+            self.image = self.images[self.index]
 
-
-
+    def update(self, dt):
+        self.update_time_dependent(dt)
+        self.rect.x -= 5
+def player2():
+    player2 = Player2(position=(x_global - int(0.07 * x_global) , y_global * 0.76), mehike_walkLeft=mehike_walkLeft)
+    player_list2.add(player2)
+    all_sprites_list.add(player2)
 
 
 class Player(pygame.sprite.Sprite):
-#EI SAA PÄRIS HÄSTI ARU MIS SIIN TOIMUB, AGA SEE TÖÖTAB :D
     def __init__(self, position, mehike_walkRight):
         super(Player, self).__init__()
         size = (int(0.15 * x_global), int(0.15 * y_global))
@@ -59,7 +82,6 @@ class Player(pygame.sprite.Sprite):
         self.animation_time = 0.1
         self.current_time = 0
 
-
     def update_time_dependent(self, dt):
         self.current_time += dt
         if self.current_time >= self.animation_time:
@@ -67,20 +89,15 @@ class Player(pygame.sprite.Sprite):
             self.index = (self.index + 1) % len(self.mehike_walkRight)
             self.image = self.mehike_walkRight[self.index]
 
-    def update_frame_dependent(self):
-        self.current_frame = 0
-        self.index = (self.index + 1) % len(self.mehike_walkRight)
-        self.image = self.mehike_walkRight[self.index]
-
     def update(self, dt):
         self.update_time_dependent(dt)
         self.rect.x += 5
-
 def player():
     player = Player(position=(0, y_global * 0.76), mehike_walkRight=mehike_walkRight)
-
     player_list.add(player)
     all_sprites_list.add(player)
+
+
 
 def draw():
     mängu_screen.blit(taust, (0, 0))
@@ -92,7 +109,7 @@ def draw():
 
 
 
-
+player_list2 = pygame.sprite.Group()
 player_list = pygame.sprite.Group()
 all_sprites_list = pygame.sprite.Group()
 a = True
@@ -105,9 +122,12 @@ while a:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_a:
                 player()
+            if event.key == pygame.K_s:
+                player2()
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 a = False
+
 
     draw()
 
