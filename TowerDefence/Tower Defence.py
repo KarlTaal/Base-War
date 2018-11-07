@@ -37,7 +37,15 @@ pygame.image.load("images/mehike/mehike7.png"), pygame.image.load("images/mehike
 mehike_walkRight = []
 for mehike in mehikese_pildid:
     mehike_walkRight.append(pygame.transform.scale(mehike, (int(0.07 * x_global), int(0.13 * y_global))))
-    
+
+
+
+#class Vasak_torn(pygame.sprite.Sprite):
+
+
+
+
+
 class Player(pygame.sprite.Sprite):
 #EI SAA PÄRIS HÄSTI ARU MIS SIIN TOIMUB, AGA SEE TÖÖTAB :D
     def __init__(self, position, mehike_walkRight):
@@ -48,7 +56,7 @@ class Player(pygame.sprite.Sprite):
         self.index = 0
         self.image = mehike_walkRight[self.index]
         self.velocity = pygame.math.Vector2(0, 0)
-        self.animation_time = 0.001
+        self.animation_time = 0.1
         self.current_time = 0
 
 
@@ -66,32 +74,40 @@ class Player(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x += 20
+        self.rect.x += 5
 
+def player():
+    player = Player(position=(0, y_global * 0.76), mehike_walkRight=mehike_walkRight)
+
+    player_list.add(player)
+    all_sprites_list.add(player)
 
 def draw():
     mängu_screen.blit(taust, (0, 0))
-    all_sprites.update(dt)
-    all_sprites.draw(mängu_screen)
+    all_sprites_list.update(dt)
+    all_sprites_list.draw(mängu_screen)
     mängu_screen.blit(vasak_torn, (0, 0.635 * y_global))
     mängu_screen.blit(parem_torn, (x_global - int(0.15 * y_global), 0.635 * y_global))
     pygame.display.update()
 
 
-player = Player(position=(0, y_global * 0.76), mehike_walkRight=mehike_walkRight)
-all_sprites = pygame.sprite.Group(player)
 
+
+player_list = pygame.sprite.Group()
+all_sprites_list = pygame.sprite.Group()
 a = True
 while a:
     dt = clock.tick(FPS) / 1000
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             a = False
-        
-    keys = pygame.key.get_pressed()
-    
-    if keys[pygame.K_ESCAPE]:
-        a = False
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_a:
+                player()
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                a = False
 
     draw()
 
