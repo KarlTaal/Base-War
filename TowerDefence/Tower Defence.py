@@ -1,5 +1,6 @@
 import pygame
 import ctypes
+import random
 import time
 
 pygame.init()
@@ -45,7 +46,7 @@ for mehike in mehike_walkRight:
 class Player2(pygame.sprite.Sprite):
     def __init__(self, position, mehike_walkLeft):
         super(Player2, self).__init__()
-        size = (32, 32)
+        size = (int(0.07 * x_global), int(0.13 * y_global))
         self.rect = pygame.Rect(position, size)
         self.images = mehike_walkLeft
         self.index = 0
@@ -67,13 +68,12 @@ class Player2(pygame.sprite.Sprite):
 def player2():
     player2 = Player2(position=(x_global - int(0.07 * x_global) , y_global * 0.76), mehike_walkLeft=mehike_walkLeft)
     player_list2.add(player2)
-    all_sprites_list.add(player2)
 
 
 class Player(pygame.sprite.Sprite):
     def __init__(self, position, mehike_walkRight):
         super(Player, self).__init__()
-        size = (int(0.15 * x_global), int(0.15 * y_global))
+        size = (int(0.07 * x_global), int(0.13 * y_global))
         self.rect = pygame.Rect(position, size)
         self.mehike_walkRight = mehike_walkRight
         self.index = 0
@@ -95,26 +95,43 @@ class Player(pygame.sprite.Sprite):
 def player():
     player = Player(position=(0, y_global * 0.76), mehike_walkRight=mehike_walkRight)
     player_list.add(player)
-    all_sprites_list.add(player)
+
+
+def kokkupuude():
+    player_hit_list = pygame.sprite.groupcollide(player_list, player_list2, False, False, collided=None)
+    for i in player_hit_list:
+        suvaline = random.randint(0,2)
+        if suvaline == 0:
+            player_list.remove(i)
+        elif suvaline == 1:
+            player_list2.remove(player_hit_list[i])
 
 
 
 def draw():
+
     mängu_screen.blit(taust, (0, 0))
-    all_sprites_list.update(dt)
-    all_sprites_list.draw(mängu_screen)
+    player_list.update(dt)
+    player_list2.update(dt)
+    player_list.draw(mängu_screen)
+    player_list2.draw(mängu_screen)
     mängu_screen.blit(vasak_torn, (0, 0.635 * y_global))
     mängu_screen.blit(parem_torn, (x_global - int(0.15 * y_global), 0.635 * y_global))
     pygame.display.update()
 
 
 
+
+
+
+
 player_list2 = pygame.sprite.Group()
 player_list = pygame.sprite.Group()
-all_sprites_list = pygame.sprite.Group()
 a = True
 while a:
     dt = clock.tick(FPS) / 1000
+
+    kokkupuude()
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
