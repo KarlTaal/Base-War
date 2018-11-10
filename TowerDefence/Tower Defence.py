@@ -156,6 +156,7 @@ def draw():
 
 def draw_game_over():
     mängu_screen.blit(game_over, (0, 0))
+
     pygame.display.update()
 
 

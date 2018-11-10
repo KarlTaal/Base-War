@@ -8,8 +8,8 @@
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/vasak_torn.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/parem_torn.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/parem_torn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/vasak_torn.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/vasak_torn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/game_over.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/game_over.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,24 +21,26 @@
     <session id="855116060">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="2" />
-          <entry key="project.open.time.4" value="8" />
+          <entry key="project.open.time.4" value="10" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="3" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="png" value="1" />
           <entry key="py" value="52" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Image" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Python" value="51" />
           <entry key="Scratch" value="1" />
@@ -48,13 +50,13 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="33" />
-          <entry key="Python" value="10951" />
+          <entry key="Python" value="10952" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="33" />
-          <entry key="py" value="10951" />
+          <entry key="py" value="10952" />
         </counts>
       </usages-collector>
     </session>
@@ -64,15 +66,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2424">
-              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+            <state relative-caret-position="132">
+              <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1541881711374" expanded="true" signature="1854:2659" ph="..." />
-                <marker date="1541881711374" expanded="true" signature="3645:3646" ph="..." />
-                <marker date="1541881711374" expanded="true" signature="4515:4974" ph="..." />
-                <marker date="1541881711374" expanded="true" signature="4970:4974" ph="..." />
-                <marker date="1541881711374" expanded="true" signature="5506:5579" ph="..." />
+                <marker date="1541883006729" expanded="true" signature="1854:2659" ph="..." />
+                <marker date="1541883006729" expanded="true" signature="3645:3646" ph="..." />
+                <marker date="1541883006729" expanded="true" signature="4515:4974" ph="..." />
+                <marker date="1541883006729" expanded="true" signature="4970:4974" ph="..." />
+                <marker date="1541883006729" expanded="true" signature="5506:5580" ph="..." />
               </folding>
             </state>
           </provider>
@@ -357,8 +359,8 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.1886121" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3291815" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30071175" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3979933" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -482,21 +484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2424">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1541881711374" expanded="true" signature="1854:2659" ph="..." />
-            <marker date="1541881711374" expanded="true" signature="3645:3646" ph="..." />
-            <marker date="1541881711374" expanded="true" signature="4515:4974" ph="..." />
-            <marker date="1541881711374" expanded="true" signature="4970:4974" ph="..." />
-            <marker date="1541881711374" expanded="true" signature="5506:5579" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../lisaülesanded/veiderdav tekst/veiderdav tekst one line.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -508,6 +495,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1819">
           <caret line="108" column="4" selection-start-line="108" selection-start-column="4" selection-end-line="110" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TowerDefence/images/game_over.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1541883006729" expanded="true" signature="1854:2659" ph="..." />
+            <marker date="1541883006729" expanded="true" signature="3645:3646" ph="..." />
+            <marker date="1541883006729" expanded="true" signature="4515:4974" ph="..." />
+            <marker date="1541883006729" expanded="true" signature="4970:4974" ph="..." />
+            <marker date="1541883006729" expanded="true" signature="5506:5580" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
