@@ -23,6 +23,9 @@ y_global = int(true_res[1])  #1080
 pygame.display.set_caption("TOWER DEFENCE")
 
 #LAEB PILDID JA MUUDAB NEED SOBIVAKS SUURUSEKS
+game_over = pygame.image.load("images/game_over.png")
+game_over = pygame.transform.scale(game_over, (x_global,y_global))
+
 taust = pygame.image.load("images/taust.png")
 taust = pygame.transform.scale(taust, (x_global, y_global))
 
@@ -137,7 +140,6 @@ def kokkupuude():
 
 
 def draw():
-
     kokkupuude()
     mängu_screen.blit(taust, (0, 0))
     player_list1.update(dt)
@@ -152,22 +154,27 @@ def draw():
     mängu_screen.blit(parem_torn, (x_global - int(0.15 * y_global), 0.635 * y_global))
     pygame.display.update()
 
+def draw_game_over():
+    mängu_screen.blit(game_over, (0, 0))
+    pygame.display.update()
+
 
 
 player_list2 = pygame.sprite.Group()
 player_list1 = pygame.sprite.Group()
 a = True
+b = 0
 while a:
     dt = clock.tick(FPS) / 1000
 
     k = pygame.sprite.groupcollide(player_list2, vasak_torn_sprite, False, False, collided=None)
     for i in k:
         player_list2.remove(i)
-        a = False
+        b = 1
     k2 = pygame.sprite.groupcollide(player_list1, parem_torn_sprite, False, False, collided=None)
     for i in k2:
         player_list1.remove(i)
-        a = False
+        b = 1
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -180,6 +187,9 @@ while a:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 a = False
-    draw()
+    if b == 0:
+        draw()
+    if b == 1:
+        draw_game_over()
 
 pygame.quit()
