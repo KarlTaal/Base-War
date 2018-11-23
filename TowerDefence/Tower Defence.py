@@ -7,6 +7,7 @@ pygame.init()
 
 FPS = 60
 clock = pygame.time.Clock()
+player_lisamis_delay = 20
 
 
 #VÕTAB ARVUTI EKRAANI MÕÕTME JA LOOB MÄNGU EKRAANI SUURUSE 
@@ -165,6 +166,11 @@ player_list2 = pygame.sprite.Group()
 player_list1 = pygame.sprite.Group()
 a = True
 b = 0
+
+#viivitus tegelaste lisamiseks
+player1_aeg = player_lisamis_delay
+player2_aeg = player_lisamis_delay
+
 while a:
     dt = clock.tick(FPS) / 1000
 
@@ -182,9 +188,13 @@ while a:
             a = False
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_a:
-                player1()
+                if player1_aeg == player_lisamis_delay:
+                    player1()
+                    player1_aeg -= player_lisamis_delay
             if event.key == pygame.K_s:
-                player2()
+                if player2_aeg == player_lisamis_delay:
+                    player2()
+                    player2_aeg -= player_lisamis_delay
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 a = False
@@ -193,4 +203,9 @@ while a:
     if b == 1:
         draw_game_over()
 
+    #lisab 1 mõlena playeri aega kui see pole piisav uue mehikese lisamiseks
+    if player1_aeg < player_lisamis_delay:
+        player1_aeg += 1
+    if player2_aeg < player_lisamis_delay:
+        player2_aeg += 1
 pygame.quit()
