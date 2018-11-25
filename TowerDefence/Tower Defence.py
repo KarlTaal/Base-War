@@ -8,8 +8,8 @@ pygame.init()
 FPS = 60
 clock = pygame.time.Clock()
 tegelane_lisamis_delay = 20
-vasaku_torni_elud = 3
-parema_torni_elud = 3
+vasaku_torni_elud = 5
+parema_torni_elud = 5
 
 
 #VÕTAB ARVUTI EKRAANI MÕÕTME JA LOOB MÄNGU EKRAANI SUURUSE 
@@ -28,6 +28,8 @@ pygame.display.set_caption("TOWER DEFENCE")
 #LAEB PILDID JA MUUDAB NEED SOBIVAKS SUURUSEKS
 game_over = pygame.image.load("images/game_over.png")
 game_over = pygame.transform.scale(game_over, (x_global,y_global))
+
+
 
 taust = pygame.image.load("images/taust.png")
 taust = pygame.transform.scale(taust, (x_global, y_global))
@@ -49,6 +51,36 @@ parem_torn2 = pygame.transform.scale(parem_torn2, (int(0.2 * y_global), int(0.2 
 
 parem_torn3 = pygame.image.load("images/paremad_tornid/parem_torn3.png")
 parem_torn3 = pygame.transform.scale(parem_torn3, (int(0.2 * y_global), int(0.2 * x_global)))
+
+vasak_elud5 = pygame.image.load("images/vasak_elud/vasak_elud5.png")
+vasak_elud5 = pygame.transform.scale(vasak_elud5, (int(0.1 * y_global), int(0.03 * x_global)))
+
+vasak_elud4 = pygame.image.load("images/vasak_elud/vasak_elud4.png")
+vasak_elud4 = pygame.transform.scale(vasak_elud4, (int(0.1 * y_global), int(0.03 * x_global)))
+
+vasak_elud3 = pygame.image.load("images/vasak_elud/vasak_elud3.png")
+vasak_elud3 = pygame.transform.scale(vasak_elud3, (int(0.1 * y_global), int(0.03 * x_global)))
+
+vasak_elud2 = pygame.image.load("images/vasak_elud/vasak_elud2.png")
+vasak_elud2 = pygame.transform.scale(vasak_elud2, (int(0.1 * y_global), int(0.03 * x_global)))
+
+vasak_elud1 = pygame.image.load("images/vasak_elud/vasak_elud1.png")
+vasak_elud1 = pygame.transform.scale(vasak_elud1, (int(0.1 * y_global), int(0.03 * x_global)))
+
+parem_elud5 = pygame.image.load("images/parem_elud/parem_elud5.png")
+parem_elud5 = pygame.transform.scale(parem_elud5, (int(0.1 * y_global), int(0.03 * x_global)))
+
+parem_elud4 = pygame.image.load("images/parem_elud/parem_elud4.png")
+parem_elud4 = pygame.transform.scale(parem_elud4, (int(0.1 * y_global), int(0.03 * x_global)))
+
+parem_elud3 = pygame.image.load("images/parem_elud/parem_elud3.png")
+parem_elud3 = pygame.transform.scale(parem_elud3, (int(0.1 * y_global), int(0.03 * x_global)))
+
+parem_elud2 = pygame.image.load("images/parem_elud/parem_elud2.png")
+parem_elud2 = pygame.transform.scale(parem_elud2, (int(0.1 * y_global), int(0.03 * x_global)))
+
+parem_elud1 = pygame.image.load("images/parem_elud/parem_elud1.png")
+parem_elud1 = pygame.transform.scale(parem_elud1, (int(0.1 * y_global), int(0.03 * x_global)))
 
 
 mehikese_pildid = [pygame.image.load("images/mehike/mehike1.png"), pygame.image.load("images/mehike/mehike2.png"), pygame.image.load("images/mehike/mehike3.png"),\
@@ -352,7 +384,7 @@ def kokkupuude9():
 
 
 
-def draw(vasaktorn, paremtorn):
+def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud):
     kokkupuude1()
     kokkupuude2()
     kokkupuude3()
@@ -381,6 +413,8 @@ def draw(vasaktorn, paremtorn):
     parem_torn_sprite.update()
     parem_torn_sprite.draw(mängu_screen)
     mängu_screen.blit(paremtorn, (1.01 * (x_global - int(0.2 * y_global)), 0.55 * y_global))
+    mängu_screen.blit(vasakud_elud, (0.015 * x_global, 0.49 * y_global))
+    mängu_screen.blit(paremad_elud, (0.925 * x_global, 0.49 * y_global))
     pygame.display.update()
 
 def draw_game_over():
@@ -474,23 +508,44 @@ while a:
             if event.key == pygame.K_ESCAPE:
                 a = False
 
-    if vasaku_torni_elud == 3:
+    if vasaku_torni_elud > 3:
         vasaktorn = vasak_torn1
-    if vasaku_torni_elud == 2:
+    if vasaku_torni_elud > 1 and vasaku_torni_elud < 4:
         vasaktorn = vasak_torn2
     if vasaku_torni_elud == 1:
         vasaktorn = vasak_torn3
 
-    if parema_torni_elud == 3:
+    if parema_torni_elud > 3:
         paremtorn = parem_torn1
-    if parema_torni_elud == 2:
+    if parema_torni_elud > 1 and parema_torni_elud < 4:
         paremtorn = parem_torn2
     if parema_torni_elud == 1:
         paremtorn = parem_torn3
 
+    if vasaku_torni_elud == 5:
+        vasakud_elud = vasak_elud5
+    if vasaku_torni_elud == 4:
+        vasakud_elud = vasak_elud4
+    if vasaku_torni_elud == 3:
+        vasakud_elud = vasak_elud3
+    if vasaku_torni_elud == 2:
+        vasakud_elud = vasak_elud2
+    if vasaku_torni_elud == 1:
+        vasakud_elud = vasak_elud1
+    if parema_torni_elud == 5:
+        paremad_elud = parem_elud5
+    if parema_torni_elud == 4:
+        paremad_elud = parem_elud4
+    if parema_torni_elud == 3:
+        paremad_elud = parem_elud3
+    if parema_torni_elud == 2:
+        paremad_elud = parem_elud2
+    if parema_torni_elud == 1:
+        paremad_elud = parem_elud1
+
 
     if b == 0:
-        draw(vasaktorn, paremtorn)
+        draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud)
     if b == 1:
         draw_game_over()
 

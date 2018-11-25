@@ -9,19 +9,11 @@
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/parem_torn.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/taust.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/vasak_torn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/mehike/mehike1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/mehike/mehike1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/mehike/mehike2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/mehike/mehike2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/mehike/mehike3.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/mehike/mehike3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/mehike/mehike4.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/mehike/mehike4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/mehike/mehike5.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/mehike/mehike5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/mehike/mehike6.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/mehike/mehike6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/mehike/mehike7.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/mehike/mehike7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/mehike/mehike8.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/mehike/mehike8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/parem_torn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/taust.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/taust.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasak_torn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tornid/parem_torn2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tornid/parem_torn2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tornid/parem_torn3.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tornid/parem_torn3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tornid/vasak_torn2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tornid/vasak_torn2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tornid/vasak_torn3.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tornid/vasak_torn3.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,13 +54,13 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="39" />
-          <entry key="Python" value="30660" />
+          <entry key="Python" value="31277" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="38" />
-          <entry key="py" value="30660" />
+          <entry key="py" value="31277" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -82,8 +74,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="652">
-              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="-147">
+              <caret line="533" column="34" selection-start-line="533" selection-start-column="34" selection-end-line="533" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -154,7 +146,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="501" />
     <option name="y" value="25" />
     <option name="width" value="1362" />
@@ -174,17 +166,6 @@
             <path>
               <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
               <item name="proge" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="proge" type="462c0819:PsiDirectoryNode" />
-              <item name="projekt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="proge" type="462c0819:PsiDirectoryNode" />
-              <item name="projekt" type="462c0819:PsiDirectoryNode" />
-              <item name="TowerDefence" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -629,8 +610,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        <state relative-caret-position="-147">
+          <caret line="533" column="34" selection-start-line="533" selection-start-column="34" selection-end-line="533" selection-end-column="34" />
         </state>
       </provider>
     </entry>
