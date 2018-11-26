@@ -9,15 +9,6 @@
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/parem_torn.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/taust.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/vasak_torn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/taust.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/taust.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/veel lisamata tegelased/orc2 - siin walking animation parem vist kui esimesel orcil/WALK_001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/veel lisamata tegelased/orc2 - siin walking animation parem vist kui esimesel orcil/WALK_002.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/veel lisamata tegelased/orc2 - siin walking animation parem vist kui esimesel orcil/WALK_003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/veel lisamata tegelased/orc2 - siin walking animation parem vist kui esimesel orcil/WALK_004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/veel lisamata tegelased/orc2 - siin walking animation parem vist kui esimesel orcil/WALK_005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/veel lisamata tegelased/orc2 - siin walking animation parem vist kui esimesel orcil/WALK_006.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -165,7 +156,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-440" />
     <option name="y" value="52" />
     <option name="width" value="1362" />
