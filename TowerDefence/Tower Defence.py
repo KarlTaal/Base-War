@@ -89,7 +89,7 @@ pygame.image.load("images/mehike/mehike7.png"), pygame.image.load("images/mehike
 mehike_walkRight = []
 mehike_walkLeft = []
 for mehike in mehikese_pildid:
-    mehike_walkRight.append(pygame.transform.scale(mehike, (int(0.05 * x_global), int(0.13 * y_global))))
+    mehike_walkRight.append(pygame.transform.scale(mehike, (int(0.03 * x_global), int(0.1 * y_global))))
 for mehike in mehike_walkRight:
     mehike_walkLeft.append(pygame.transform.flip(mehike, True, False))
 
@@ -148,7 +148,7 @@ parem_torn_sprite.add(paremtorn)
 class Player1(pygame.sprite.Sprite):
     def __init__(self, position, mehike_walkRight):
         super(Player1, self).__init__()
-        size = (int(0.05 * x_global), int(0.13 * y_global))
+        size = (int(0.03 * x_global), int(0.1 * y_global))
         self.rect = pygame.Rect(position, size)
         self.mehike_walkRight = mehike_walkRight
         self.index = 0
@@ -168,14 +168,14 @@ class Player1(pygame.sprite.Sprite):
         self.update_time_dependent(dt)
         self.rect.x += 5
 def player1():
-    player1 = Player1(position=(0, y_global * 0.76), mehike_walkRight=mehike_walkRight)
+    player1 = Player1(position=(0, y_global * 0.79), mehike_walkRight=mehike_walkRight)
     player_list1.add(player1)
 
 
 class Player2(pygame.sprite.Sprite):
     def __init__(self, position, mehike_walkLeft):
         super(Player2, self).__init__()
-        size = (int(0.05 * x_global), int(0.13 * y_global))
+        size = (int(0.03 * x_global), int(0.1 * y_global))
         self.rect = pygame.Rect(position, size)
         self.images = mehike_walkLeft
         self.index = 0
@@ -195,7 +195,7 @@ class Player2(pygame.sprite.Sprite):
         self.update_time_dependent(dt)
         self.rect.x -= 5
 def player2():
-    player2 = Player2(position=(x_global - int(0.07 * x_global) , y_global * 0.76), mehike_walkLeft=mehike_walkLeft)
+    player2 = Player2(position=(x_global - int(0.07 * x_global) , y_global * 0.79), mehike_walkLeft=mehike_walkLeft)
     player_list2.add(player2)
 
 
