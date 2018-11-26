@@ -10,6 +10,8 @@ clock = pygame.time.Clock()
 tegelane_lisamis_delay = 20
 vasaku_torni_elud = 5
 parema_torni_elud = 5
+vasakud_coinid = 0
+paremad_coinid = 0
 
 
 #VÕTAB ARVUTI EKRAANI MÕÕTME JA LOOB MÄNGU EKRAANI SUURUSE 
@@ -30,9 +32,14 @@ game_over = pygame.image.load("images/game_over.png")
 game_over = pygame.transform.scale(game_over, (x_global,y_global))
 
 
-
 taust = pygame.image.load("images/taust.png")
 taust = pygame.transform.scale(taust, (x_global, y_global))
+
+coin1 = pygame.image.load("images/coins/coin1.png")
+coin1 = pygame.transform.scale(coin1, (int(0.025 * x_global), int(0.05 * y_global)))
+
+coin2 = pygame.image.load("images/coins/coin2.png")
+coin2 = pygame.transform.scale(coin2, (int(0.025 * x_global), int(0.05 * y_global)))
 
 vasak_torn1 = pygame.image.load("images/vasakud_tornid/vasak_torn1.png")
 vasak_torn1 = pygame.transform.scale(vasak_torn1, (int(0.2 * y_global), int(0.2 * x_global)))
@@ -384,7 +391,7 @@ def kokkupuude9():
 
 
 
-def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud):
+def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2):
     kokkupuude1()
     kokkupuude2()
     kokkupuude3()
@@ -415,6 +422,18 @@ def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud):
     mängu_screen.blit(paremtorn, (1.01 * (x_global - int(0.2 * y_global)), 0.55 * y_global))
     mängu_screen.blit(vasakud_elud, (0.015 * x_global, 0.49 * y_global))
     mängu_screen.blit(paremad_elud, (0.925 * x_global, 0.49 * y_global))
+
+    mängu_screen.blit(coin1, (0.015 * x_global, 0.425* y_global))
+    mängu_screen.blit(coin2, (0.925 * x_global, 0.425 * y_global))
+
+    basicfont1 = pygame.font.SysFont(None, 80)
+    text1 = basicfont1.render(str(round(coins1)), True, (139, 117, 0))
+    mängu_screen.blit(text1, (0.045 * x_global, 0.43* y_global))
+
+    basicfont2 = pygame.font.SysFont(None, 80)
+    text2 = basicfont2.render(str(round(coins2)), True, (139, 117, 0))
+    mängu_screen.blit(text2, (0.955 * x_global, 0.43 * y_global))
+
     pygame.display.update()
 
 def draw_game_over():
@@ -543,9 +562,17 @@ while a:
     if parema_torni_elud == 1:
         paremad_elud = parem_elud1
 
+    if vasakud_coinid < 30:
+        vasakud_coinid += 0.01
+        coins1 = vasakud_coinid
+    if paremad_coinid < 30:
+        paremad_coinid += 0.01
+        coins2 = paremad_coinid
+
+
 
     if b == 0:
-        draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud)
+        draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2)
     if b == 1:
         draw_game_over()
 
