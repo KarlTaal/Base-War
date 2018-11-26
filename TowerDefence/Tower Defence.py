@@ -90,6 +90,36 @@ parem_elud1 = pygame.image.load("images/parem_elud/parem_elud1.png")
 parem_elud1 = pygame.transform.scale(parem_elud1, (int(0.1 * y_global), int(0.03 * x_global)))
 
 
+wizard_pildid = [pygame.image.load("images/wizard/wizard1.png"), pygame.image.load("images/wizard/wizard2.png"), pygame.image.load("images/wizard/wizard3.png"),\
+pygame.image.load("images/wizard/wizard4.png"), pygame.image.load("images/wizard/wizard5.png")]
+wizard_walkRight = []
+wizard_walkLeft = []
+for wizard in wizard_pildid:
+    wizard_walkRight.append(pygame.transform.scale(wizard, (int(0.05 * x_global), int(0.18 * y_global))))
+for wizard in wizard_walkRight:
+    wizard_walkLeft.append(pygame.transform.flip(wizard, True, False))
+
+
+orc_pildid = [pygame.image.load("images/orc/orc1.png"), pygame.image.load("images/orc/orc2.png"), pygame.image.load("images/orc/orc3.png"),\
+pygame.image.load("images/orc/orc4.png"), pygame.image.load("images/orc/orc5.png"), pygame.image.load("images/orc/orc6.png")]
+orc_walkRight = []
+orc_walkLeft = []
+for orc in orc_pildid:
+    orc_walkRight.append(pygame.transform.scale(orc, (int(0.08 * x_global), int(0.11 * y_global))))
+for orc in orc_walkRight:
+    orc_walkLeft.append(pygame.transform.flip(orc, True, False))
+
+
+eye_pildid = [pygame.image.load("images/eye/eye1.png"), pygame.image.load("images/eye/eye2.png"), pygame.image.load("images/eye/eye3.png"),\
+pygame.image.load("images/eye/eye4.png")]
+eye_walkRight = []
+eye_walkLeft = []
+for eye in eye_pildid:
+    eye_walkRight.append(pygame.transform.scale(eye, (int(0.06 * x_global), int(0.18 * y_global))))
+for eye in eye_walkRight:
+    eye_walkLeft.append(pygame.transform.flip(eye, True, False))
+
+
 mehikese_pildid = [pygame.image.load("images/mehike/mehike1.png"), pygame.image.load("images/mehike/mehike2.png"), pygame.image.load("images/mehike/mehike3.png"),\
 pygame.image.load("images/mehike/mehike4.png"), pygame.image.load("images/mehike/mehike5.png"), pygame.image.load("images/mehike/mehike6.png"),\
 pygame.image.load("images/mehike/mehike7.png"), pygame.image.load("images/mehike/mehike8.png")]
@@ -107,7 +137,7 @@ pygame.image.load("images/knight/knight7.png"), pygame.image.load("images/knight
 knight_walkRight = []
 knight_walkLeft = []
 for knight in knight_pildid:
-    knight_walkRight.append(pygame.transform.scale(knight, (int(0.07 * x_global), int(0.2 * y_global))))
+    knight_walkRight.append(pygame.transform.scale(knight, (int(0.05 * x_global), int(0.15 * y_global))))
 for knight in knight_walkRight:
     knight_walkLeft.append(pygame.transform.flip(knight, True, False))
 
@@ -150,6 +180,168 @@ class paremtorn(pygame.sprite.Sprite):
 parem_torn_sprite = pygame.sprite.Group()
 paremtorn = paremtorn()
 parem_torn_sprite.add(paremtorn)
+
+
+class Orc1(pygame.sprite.Sprite):
+    def __init__(self, position, orc_walkRight):
+        super(Orc1, self).__init__()
+        size = (int(0.08 * x_global), int(0.11 * y_global))
+        self.rect = pygame.Rect(position, size)
+        self.orc_walkRight = orc_walkRight
+        self.index = 0
+        self.image = orc_walkRight[self.index]
+        self.velocity = pygame.math.Vector2(0, 0)
+        self.animation_time = 0.1
+        self.current_time = 0
+
+    def update_time_dependent(self, dt):
+        self.current_time += dt
+        if self.current_time >= self.animation_time:
+            self.current_time = 0
+            self.index = (self.index + 1) % len(self.orc_walkRight)
+            self.image = self.orc_walkRight[self.index]
+
+    def update(self, dt):
+        self.update_time_dependent(dt)
+        self.rect.x += 5
+def orc1():
+    orc1 = Orc1(position=(0, y_global * 0.78), orc_walkRight=orc_walkRight)
+    orc_list1.add(orc1)
+
+
+class Orc2(pygame.sprite.Sprite):
+    def __init__(self, position, orc_walkLeft):
+        super(Orc2, self).__init__()
+        size = (int(0.08 * x_global), int(0.11 * y_global))
+        self.rect = pygame.Rect(position, size)
+        self.images = orc_walkLeft
+        self.index = 0
+        self.image = orc_walkLeft[self.index]
+        self.velocity = pygame.math.Vector2(0, 0)
+        self.animation_time = 0.1
+        self.current_time = 0
+
+    def update_time_dependent(self, dt):
+        self.current_time += dt
+        if self.current_time >= self.animation_time:
+            self.current_time = 0
+            self.index = (self.index + 1) % len(self.images)
+            self.image = self.images[self.index]
+
+    def update(self, dt):
+        self.update_time_dependent(dt)
+        self.rect.x -= 5
+def orc2():
+    orc2 = Orc2(position=(x_global - int(0.08 * x_global) , y_global * 0.78), orc_walkLeft=orc_walkLeft)
+    orc_list2.add(orc2)
+
+
+class Wizard1(pygame.sprite.Sprite):
+    def __init__(self, position, wizard_walkRight):
+        super(Wizard1, self).__init__()
+        size = (int(0.05 * x_global), int(0.18 * y_global))
+        self.rect = pygame.Rect(position, size)
+        self.wizard_walkRight = wizard_walkRight
+        self.index = 0
+        self.image = wizard_walkRight[self.index]
+        self.velocity = pygame.math.Vector2(0, 0)
+        self.animation_time = 0.1
+        self.current_time = 0
+
+    def update_time_dependent(self, dt):
+        self.current_time += dt
+        if self.current_time >= self.animation_time:
+            self.current_time = 0
+            self.index = (self.index + 1) % len(self.wizard_walkRight)
+            self.image = self.wizard_walkRight[self.index]
+
+    def update(self, dt):
+        self.update_time_dependent(dt)
+        self.rect.x += 5
+def wizard1():
+    wizard1 = Wizard1(position=(0, y_global * 0.73), wizard_walkRight=wizard_walkRight)
+    wizard_list1.add(wizard1)
+
+
+class Wizard2(pygame.sprite.Sprite):
+    def __init__(self, position, wizard_walkLeft):
+        super(Wizard2, self).__init__()
+        size = (int(0.05 * x_global), int(0.18 * y_global))
+        self.rect = pygame.Rect(position, size)
+        self.images = wizard_walkLeft
+        self.index = 0
+        self.image = wizard_walkLeft[self.index]
+        self.velocity = pygame.math.Vector2(0, 0)
+        self.animation_time = 0.1
+        self.current_time = 0
+
+    def update_time_dependent(self, dt):
+        self.current_time += dt
+        if self.current_time >= self.animation_time:
+            self.current_time = 0
+            self.index = (self.index + 1) % len(self.images)
+            self.image = self.images[self.index]
+
+    def update(self, dt):
+        self.update_time_dependent(dt)
+        self.rect.x -= 5
+def wizard2():
+    wizard2 = Wizard2(position=(x_global - int(0.05 * x_global) , y_global * 0.73), wizard_walkLeft=wizard_walkLeft)
+    wizard_list2.add(wizard2)
+
+
+class Eye1(pygame.sprite.Sprite):
+    def __init__(self, position, eye_walkRight):
+        super(Eye1, self).__init__()
+        size = (int(0.06 * x_global), int(0.18 * y_global))
+        self.rect = pygame.Rect(position, size)
+        self.eye_walkRight = eye_walkRight
+        self.index = 0
+        self.image = eye_walkRight[self.index]
+        self.velocity = pygame.math.Vector2(0, 0)
+        self.animation_time = 0.1
+        self.current_time = 0
+
+    def update_time_dependent(self, dt):
+        self.current_time += dt
+        if self.current_time >= self.animation_time:
+            self.current_time = 0
+            self.index = (self.index + 1) % len(self.eye_walkRight)
+            self.image = self.eye_walkRight[self.index]
+
+    def update(self, dt):
+        self.update_time_dependent(dt)
+        self.rect.x += 5
+def eye1():
+    eye1 = Eye1(position=(0, y_global * 0.74), eye_walkRight=eye_walkRight)
+    eye_list1.add(eye1)
+
+
+class Eye2(pygame.sprite.Sprite):
+    def __init__(self, position, eye_walkLeft):
+        super(Eye2, self).__init__()
+        size = (int(0.06 * x_global), int(0.18 * y_global))
+        self.rect = pygame.Rect(position, size)
+        self.images = eye_walkLeft
+        self.index = 0
+        self.image = eye_walkLeft[self.index]
+        self.velocity = pygame.math.Vector2(0, 0)
+        self.animation_time = 0.1
+        self.current_time = 0
+
+    def update_time_dependent(self, dt):
+        self.current_time += dt
+        if self.current_time >= self.animation_time:
+            self.current_time = 0
+            self.index = (self.index + 1) % len(self.images)
+            self.image = self.images[self.index]
+
+    def update(self, dt):
+        self.update_time_dependent(dt)
+        self.rect.x -= 5
+def eye2():
+    eye2 = Eye2(position=(x_global - int(0.06 * x_global), y_global * 0.74), eye_walkLeft=eye_walkLeft)
+    eye_list2.add(eye2)
 
 
 class Player1(pygame.sprite.Sprite):
@@ -202,14 +394,14 @@ class Player2(pygame.sprite.Sprite):
         self.update_time_dependent(dt)
         self.rect.x -= 5
 def player2():
-    player2 = Player2(position=(x_global - int(0.07 * x_global) , y_global * 0.79), mehike_walkLeft=mehike_walkLeft)
+    player2 = Player2(position=(x_global - int(0.03 * x_global), y_global * 0.79), mehike_walkLeft=mehike_walkLeft)
     player_list2.add(player2)
 
 
 class Knight1(pygame.sprite.Sprite):
     def __init__(self, position, knight_walkRight):
         super(Knight1, self).__init__()
-        size = (int(0.07 * x_global), int(0.2 * y_global))
+        size = (int(0.05 * x_global), int(0.15 * y_global))
         self.rect = pygame.Rect(position, size)
         self.knight_walkRight = knight_walkRight
         self.index = 0
@@ -229,14 +421,14 @@ class Knight1(pygame.sprite.Sprite):
         self.update_time_dependent(dt)
         self.rect.x += 5
 def knight1():
-    knight1 = Knight1(position=(0, y_global * 0.7), knight_walkRight=knight_walkRight)
+    knight1 = Knight1(position=(0, y_global * 0.75), knight_walkRight=knight_walkRight)
     knight_list1.add(knight1)
 
 
 class Knight2(pygame.sprite.Sprite):
     def __init__(self, position, knight_walkLeft):
         super(Knight2, self).__init__()
-        size = (int(0.07 * x_global), int(0.2 * y_global))
+        size = (int(0.05 * x_global), int(0.15 * y_global))
         self.rect = pygame.Rect(position, size)
         self.images = knight_walkLeft
         self.index = 0
@@ -256,7 +448,7 @@ class Knight2(pygame.sprite.Sprite):
         self.update_time_dependent(dt)
         self.rect.x -= 5
 def knight2():
-    knight2 = Knight2(position=(x_global - int(0.07 * x_global) , y_global * 0.7), knight_walkLeft=knight_walkLeft)
+    knight2 = Knight2(position=(x_global - int(0.05 * x_global), y_global * 0.75), knight_walkLeft=knight_walkLeft)
     knight_list2.add(knight2)
 
 
@@ -310,7 +502,7 @@ class Skeleton2(pygame.sprite.Sprite):
         self.update_time_dependent(dt)
         self.rect.x -= 5
 def skeleton2():
-    skeleton2 = Skeleton2(position=(x_global - int(0.07 * x_global) , y_global * 0.76), skeleton_walkLeft=skeleton_walkLeft)
+    skeleton2 = Skeleton2(position=(x_global - int(0.05 * x_global), y_global * 0.76), skeleton_walkLeft=skeleton_walkLeft)
     skeleton_list2.add(skeleton2)
 
 
@@ -318,7 +510,7 @@ def skeleton2():
 def kokkupuude1():
     tegelane_hit_list = pygame.sprite.groupcollide(player_list1, player_list2, False, False, collided=None)
     for i in tegelane_hit_list:
-        suvaline = random.randint(0,1)
+        suvaline = random.randint(0, 1)
         if suvaline == 0:
             player_list1.remove(i)
         elif suvaline == 1:
@@ -326,7 +518,7 @@ def kokkupuude1():
 def kokkupuude2():
     tegelane_hit_list = pygame.sprite.groupcollide(knight_list1, knight_list2, False, False, collided=None)
     for i in tegelane_hit_list:
-        suvaline = random.randint(0,1)
+        suvaline = random.randint(0, 1)
         if suvaline == 0:
             knight_list1.remove(i)
         elif suvaline == 1:
@@ -334,7 +526,7 @@ def kokkupuude2():
 def kokkupuude3():
     tegelane_hit_list = pygame.sprite.groupcollide(knight_list1, player_list2, False, False, collided=None)
     for i in tegelane_hit_list:
-        suvaline = random.randint(0,10)
+        suvaline = random.randint(0, 10)
         if suvaline == 0:
             knight_list1.remove(i)
         elif suvaline > 0:
@@ -342,7 +534,7 @@ def kokkupuude3():
 def kokkupuude4():
     tegelane_hit_list = pygame.sprite.groupcollide(player_list1, knight_list2, False, False, collided=None)
     for i in tegelane_hit_list:
-        suvaline = random.randint(0,10)
+        suvaline = random.randint(0, 10)
         if suvaline > 0:
             player_list1.remove(i)
         elif suvaline == 0:
@@ -350,7 +542,7 @@ def kokkupuude4():
 def kokkupuude5():
     tegelane_hit_list = pygame.sprite.groupcollide(player_list1, skeleton_list2, False, False, collided=None)
     for i in tegelane_hit_list:
-        suvaline = random.randint(0,5)
+        suvaline = random.randint(0, 5)
         if suvaline > 0:
             player_list1.remove(i)
         elif suvaline == 0:
@@ -358,7 +550,7 @@ def kokkupuude5():
 def kokkupuude6():
     tegelane_hit_list = pygame.sprite.groupcollide(knight_list1, skeleton_list2, False, False, collided=None)
     for i in tegelane_hit_list:
-        suvaline = random.randint(0,5)
+        suvaline = random.randint(0, 5)
         if suvaline == 0:
             knight_list1.remove(i)
         elif suvaline > 0:
@@ -366,7 +558,7 @@ def kokkupuude6():
 def kokkupuude7():
     tegelane_hit_list = pygame.sprite.groupcollide(skeleton_list1, knight_list2, False, False, collided=None)
     for i in tegelane_hit_list:
-        suvaline = random.randint(0,5)
+        suvaline = random.randint(0, 5)
         if suvaline > 0:
             skeleton_list1.remove(i)
         elif suvaline == 0:
@@ -374,7 +566,7 @@ def kokkupuude7():
 def kokkupuude8():
     tegelane_hit_list = pygame.sprite.groupcollide(skeleton_list1, player_list2, False, False, collided=None)
     for i in tegelane_hit_list:
-        suvaline = random.randint(0,5)
+        suvaline = random.randint(0, 5)
         if suvaline == 0:
             skeleton_list1.remove(i)
         elif suvaline > 0:
@@ -382,12 +574,227 @@ def kokkupuude8():
 def kokkupuude9():
     tegelane_hit_list = pygame.sprite.groupcollide(skeleton_list1, skeleton_list2, False, False, collided=None)
     for i in tegelane_hit_list:
-        suvaline = random.randint(0,1)
+        suvaline = random.randint(0, 1)
         if suvaline == 1:
             skeleton_list1.remove(i)
         elif suvaline == 0:
             skeleton_list2.remove(tegelane_hit_list[i])
-
+def kokkupuude10():
+    tegelane_hit_list = pygame.sprite.groupcollide(player_list1, orc_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 15)
+        if suvaline > 0:
+            player_list1.remove(i)
+        elif suvaline == 0:
+            orc_list2.remove(tegelane_hit_list[i])
+def kokkupuude11():
+    tegelane_hit_list = pygame.sprite.groupcollide(player_list1, eye_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 20)
+        if suvaline > 0:
+            player_list1.remove(i)
+        elif suvaline == 0:
+            eye_list2.remove(tegelane_hit_list[i])
+def kokkupuude12():
+    tegelane_hit_list = pygame.sprite.groupcollide(player_list1, wizard_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 25)
+        if suvaline > 0:
+            player_list1.remove(i)
+        elif suvaline == 0:
+            wizard_list2.remove(tegelane_hit_list[i])
+def kokkupuude13():
+    tegelane_hit_list = pygame.sprite.groupcollide(skeleton_list1, orc_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 10)
+        if suvaline > 0:
+            skeleton_list1.remove(i)
+        elif suvaline == 0:
+            orc_list2.remove(tegelane_hit_list[i])
+def kokkupuude14():
+    tegelane_hit_list = pygame.sprite.groupcollide(skeleton_list1, eye_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 15)
+        if suvaline > 0:
+            skeleton_list1.remove(i)
+        elif suvaline == 0:
+            eye_list2.remove(tegelane_hit_list[i])
+def kokkupuude15():
+    tegelane_hit_list = pygame.sprite.groupcollide(skeleton_list1, wizard_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 20)
+        if suvaline > 0:
+            skeleton_list1.remove(i)
+        elif suvaline == 0:
+            wizard_list2.remove(tegelane_hit_list[i])
+def kokkupuude16():
+    tegelane_hit_list = pygame.sprite.groupcollide(knight_list1, orc_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 5)
+        if suvaline > 0:
+            knight_list1.remove(i)
+        elif suvaline == 0:
+            orc_list2.remove(tegelane_hit_list[i])
+def kokkupuude17():
+    tegelane_hit_list = pygame.sprite.groupcollide(knight_list1, eye_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 10)
+        if suvaline > 0:
+            knight_list1.remove(i)
+        elif suvaline == 0:
+            eye_list2.remove(tegelane_hit_list[i])
+def kokkupuude18():
+    tegelane_hit_list = pygame.sprite.groupcollide(knight_list1, wizard_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 15)
+        if suvaline > 0:
+            knight_list1.remove(i)
+        elif suvaline == 0:
+            wizard_list2.remove(tegelane_hit_list[i])
+def kokkupuude19():
+    tegelane_hit_list = pygame.sprite.groupcollide(orc_list1, player_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 15)
+        if suvaline == 0:
+            orc_list1.remove(i)
+        elif suvaline > 0:
+            player_list2.remove(tegelane_hit_list[i])
+def kokkupuude20():
+    tegelane_hit_list = pygame.sprite.groupcollide(orc_list1, skeleton_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 10)
+        if suvaline == 0:
+            orc_list1.remove(i)
+        elif suvaline > 0:
+            skeleton_list2.remove(tegelane_hit_list[i])
+def kokkupuude21():
+    tegelane_hit_list = pygame.sprite.groupcollide(orc_list1, knight_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 5)
+        if suvaline == 0:
+            orc_list1.remove(i)
+        elif suvaline > 0:
+            knight_list2.remove(tegelane_hit_list[i])
+def kokkupuude22():
+    tegelane_hit_list = pygame.sprite.groupcollide(orc_list1, orc_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 1)
+        if suvaline == 0:
+            orc_list1.remove(i)
+        elif suvaline == 1:
+            orc_list2.remove(tegelane_hit_list[i])
+def kokkupuude23():
+    tegelane_hit_list = pygame.sprite.groupcollide(orc_list1, eye_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 5)
+        if suvaline > 0:
+            orc_list1.remove(i)
+        elif suvaline == 0:
+            eye_list2.remove(tegelane_hit_list[i])
+def kokkupuude24():
+    tegelane_hit_list = pygame.sprite.groupcollide(orc_list1, wizard_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 10)
+        if suvaline > 0:
+            orc_list1.remove(i)
+        elif suvaline == 0:
+            wizard_list2.remove(tegelane_hit_list[i])
+def kokkupuude25():
+    tegelane_hit_list = pygame.sprite.groupcollide(eye_list1, player_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 20)
+        if suvaline == 0:
+            eye_list1.remove(i)
+        elif suvaline > 0:
+            player_list2.remove(tegelane_hit_list[i])
+def kokkupuude26():
+    tegelane_hit_list = pygame.sprite.groupcollide(eye_list1, skeleton_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 15)
+        if suvaline == 0:
+            eye_list1.remove(i)
+        elif suvaline > 0:
+            skeleton_list2.remove(tegelane_hit_list[i])
+def kokkupuude27():
+    tegelane_hit_list = pygame.sprite.groupcollide(eye_list1, knight_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 10)
+        if suvaline == 0:
+            eye_list1.remove(i)
+        elif suvaline > 0:
+            knight_list2.remove(tegelane_hit_list[i])
+def kokkupuude28():
+    tegelane_hit_list = pygame.sprite.groupcollide(eye_list1, orc_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 5)
+        if suvaline == 0:
+            eye_list1.remove(i)
+        elif suvaline > 0:
+            orc_list2.remove(tegelane_hit_list[i])
+def kokkupuude29():
+    tegelane_hit_list = pygame.sprite.groupcollide(eye_list1, eye_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 1)
+        if suvaline == 0:
+            eye_list1.remove(i)
+        elif suvaline == 1:
+            eye_list2.remove(tegelane_hit_list[i])
+def kokkupuude30():
+    tegelane_hit_list = pygame.sprite.groupcollide(eye_list1, wizard_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 5)
+        if suvaline > 0:
+            eye_list1.remove(i)
+        elif suvaline == 0:
+            wizard_list2.remove(tegelane_hit_list[i])
+def kokkupuude31():
+    tegelane_hit_list = pygame.sprite.groupcollide(wizard_list1, player_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 25)
+        if suvaline == 0:
+            wizard_list1.remove(i)
+        elif suvaline > 0:
+            player_list2.remove(tegelane_hit_list[i])
+def kokkupuude32():
+    tegelane_hit_list = pygame.sprite.groupcollide(wizard_list1, skeleton_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 20)
+        if suvaline == 0:
+            wizard_list1.remove(i)
+        elif suvaline > 0:
+            skeleton_list2.remove(tegelane_hit_list[i])
+def kokkupuude33():
+    tegelane_hit_list = pygame.sprite.groupcollide(wizard_list1, knight_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 15)
+        if suvaline == 0:
+            wizard_list1.remove(i)
+        elif suvaline > 0:
+            knight_list2.remove(tegelane_hit_list[i])
+def kokkupuude34():
+    tegelane_hit_list = pygame.sprite.groupcollide(wizard_list1, orc_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 10)
+        if suvaline == 0:
+            wizard_list1.remove(i)
+        elif suvaline > 0:
+            orc_list2.remove(tegelane_hit_list[i])
+def kokkupuude35():
+    tegelane_hit_list = pygame.sprite.groupcollide(wizard_list1, eye_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 5)
+        if suvaline == 0:
+            wizard_list1.remove(i)
+        elif suvaline > 0:
+            eye_list2.remove(tegelane_hit_list[i])
+def kokkupuude36():
+    tegelane_hit_list = pygame.sprite.groupcollide(wizard_list1, wizard_list2, False, False, collided=None)
+    for i in tegelane_hit_list:
+        suvaline = random.randint(0, 1)
+        if suvaline == 0:
+            wizard_list1.remove(i)
+        elif suvaline == 1:
+            wizard_list2.remove(tegelane_hit_list[i])
 
 
 
@@ -401,6 +808,33 @@ def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2):
     kokkupuude7()
     kokkupuude8()
     kokkupuude9()
+    kokkupuude10()
+    kokkupuude11()
+    kokkupuude12()
+    kokkupuude13()
+    kokkupuude14()
+    kokkupuude15()
+    kokkupuude16()
+    kokkupuude17()
+    kokkupuude18()
+    kokkupuude19()
+    kokkupuude20()
+    kokkupuude21()
+    kokkupuude22()
+    kokkupuude23()
+    kokkupuude24()
+    kokkupuude25()
+    kokkupuude26()
+    kokkupuude27()
+    kokkupuude28()
+    kokkupuude29()
+    kokkupuude30()
+    kokkupuude31()
+    kokkupuude32()
+    kokkupuude33()
+    kokkupuude34()
+    kokkupuude35()
+    kokkupuude36()
     mängu_screen.blit(taust, (0, 0))
     player_list1.update(dt)
     player_list2.update(dt)
@@ -414,6 +848,18 @@ def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2):
     skeleton_list2.update(dt)
     skeleton_list1.draw(mängu_screen)
     skeleton_list2.draw(mängu_screen)
+    eye_list1.update(dt)
+    eye_list2.update(dt)
+    eye_list1.draw(mängu_screen)
+    eye_list2.draw(mängu_screen)
+    orc_list1.update(dt)
+    orc_list2.update(dt)
+    orc_list1.draw(mängu_screen)
+    orc_list2.draw(mängu_screen)
+    wizard_list1.update(dt)
+    wizard_list2.update(dt)
+    wizard_list1.draw(mängu_screen)
+    wizard_list2.draw(mängu_screen)
     vasak_torn_sprite.update()
     vasak_torn_sprite.draw(mängu_screen)
     mängu_screen.blit(vasaktorn, (-0.01 * x_global, 0.55 * y_global))
@@ -447,6 +893,12 @@ knight_list2 = pygame.sprite.Group()
 knight_list1 = pygame.sprite.Group()
 skeleton_list2 = pygame.sprite.Group()
 skeleton_list1 = pygame.sprite.Group()
+orc_list2 = pygame.sprite.Group()
+orc_list1 = pygame.sprite.Group()
+eye_list2 = pygame.sprite.Group()
+eye_list1 = pygame.sprite.Group()
+wizard_list2 = pygame.sprite.Group()
+wizard_list1 = pygame.sprite.Group()
 a = True
 b = 0
 
@@ -493,35 +945,96 @@ while a:
         vasaku_torni_elud -= 1
         if vasaku_torni_elud == 0:
             b = 1
+    k7 = pygame.sprite.groupcollide(eye_list1, parem_torn_sprite, False, False, collided=None)
+    for i in k7:
+        eye_list1.remove(i)
+        parema_torni_elud -= 1
+        if parema_torni_elud == 0:
+            b = 1
+    k8 = pygame.sprite.groupcollide(eye_list2, vasak_torn_sprite, False, False, collided=None)
+    for i in k8:
+        eye_list2.remove(i)
+        vasaku_torni_elud -= 1
+        if vasaku_torni_elud == 0:
+            b = 1
+    k9 = pygame.sprite.groupcollide(orc_list1, parem_torn_sprite, False, False, collided=None)
+    for i in k9:
+        orc_list1.remove(i)
+        parema_torni_elud -= 1
+        if parema_torni_elud == 0:
+            b = 1
+    k10 = pygame.sprite.groupcollide(orc_list2, vasak_torn_sprite, False, False, collided=None)
+    for i in k10:
+        orc_list2.remove(i)
+        vasaku_torni_elud -= 1
+        if vasaku_torni_elud == 0:
+            b = 1
+    k11 = pygame.sprite.groupcollide(wizard_list1, parem_torn_sprite, False, False, collided=None)
+    for i in k11:
+        wizard_list1.remove(i)
+        parema_torni_elud -= 1
+        if parema_torni_elud == 0:
+            b = 1
+    k12 = pygame.sprite.groupcollide(wizard_list2, vasak_torn_sprite, False, False, collided=None)
+    for i in k12:
+        wizard_list2.remove(i)
+        vasaku_torni_elud -= 1
+        if vasaku_torni_elud == 0:
+            b = 1
+
 
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             a = False
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_a:
+            if event.key == pygame.K_q:
                 if tegelane1_aeg == tegelane_lisamis_delay:
                     player1()
                     tegelane1_aeg -= tegelane_lisamis_delay
-            if event.key == pygame.K_j:
+            if event.key == pygame.K_u:
                 if tegelane2_aeg == tegelane_lisamis_delay:
                     player2()
                     tegelane2_aeg -= tegelane_lisamis_delay
-            if event.key == pygame.K_d:
+            if event.key == pygame.K_e:
                 if tegelane1_aeg == tegelane_lisamis_delay:
                     knight1()
                     tegelane1_aeg -= tegelane_lisamis_delay
-            if event.key == pygame.K_l:
+            if event.key == pygame.K_o:
                 if tegelane2_aeg == tegelane_lisamis_delay:
                     knight2()
                     tegelane2_aeg -= tegelane_lisamis_delay
-            if event.key == pygame.K_s:
+            if event.key == pygame.K_w:
                 if tegelane1_aeg == tegelane_lisamis_delay:
                     skeleton1()
                     tegelane1_aeg -= tegelane_lisamis_delay
-            if event.key == pygame.K_k:
+            if event.key == pygame.K_i:
                 if tegelane2_aeg == tegelane_lisamis_delay:
                     skeleton2()
+                    tegelane2_aeg -= tegelane_lisamis_delay
+            if event.key == pygame.K_s:
+                if tegelane1_aeg == tegelane_lisamis_delay:
+                    eye1()
+                    tegelane1_aeg -= tegelane_lisamis_delay
+            if event.key == pygame.K_k:
+                if tegelane2_aeg == tegelane_lisamis_delay:
+                    eye2()
+                    tegelane2_aeg -= tegelane_lisamis_delay
+            if event.key == pygame.K_a:
+                if tegelane1_aeg == tegelane_lisamis_delay:
+                    orc1()
+                    tegelane1_aeg -= tegelane_lisamis_delay
+            if event.key == pygame.K_j:
+                if tegelane2_aeg == tegelane_lisamis_delay:
+                    orc2()
+                    tegelane2_aeg -= tegelane_lisamis_delay
+            if event.key == pygame.K_d:
+                if tegelane1_aeg == tegelane_lisamis_delay:
+                    wizard1()
+                    tegelane1_aeg -= tegelane_lisamis_delay
+            if event.key == pygame.K_l:
+                if tegelane2_aeg == tegelane_lisamis_delay:
+                    wizard2()
                     tegelane2_aeg -= tegelane_lisamis_delay
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
