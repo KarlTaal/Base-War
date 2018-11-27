@@ -89,6 +89,17 @@ parem_elud2 = pygame.transform.scale(parem_elud2, (int(0.1 * y_global), int(0.03
 parem_elud1 = pygame.image.load("images/parem_elud/parem_elud1.png")
 parem_elud1 = pygame.transform.scale(parem_elud1, (int(0.1 * y_global), int(0.03 * x_global)))
 
+
+punanekuul_pildid = [pygame.image.load("images/punane_kuul/punane1.png"), pygame.image.load("images/punane_kuul/punane2.png"), pygame.image.load("images/punane_kuul/punane3.png"),\
+pygame.image.load("images/punane_kuul/punane4.png"), pygame.image.load("images/punane_kuul/punane5.png"), pygame.image.load("images/punane_kuul/punane6.png")]
+punanekuul_walkRight = []
+punanekuul_walkLeft = []
+for kuul in punanekuul_pildid:
+    punanekuul_walkRight.append(pygame.transform.scale(kuul, (int(0.1 * x_global), int(0.1 * y_global))))
+for kuul in punanekuul_walkRight:
+    punanekuul_walkLeft.append(pygame.transform.flip(kuul, True, False))
+
+
 lillakuul_pildid = [pygame.image.load("images/lilla_kuul/lilla1.png"), pygame.image.load("images/lilla_kuul/lilla2.png"), pygame.image.load("images/lilla_kuul/lilla3.png"),\
 pygame.image.load("images/lilla_kuul/lilla4.png"), pygame.image.load("images/lilla_kuul/lilla5.png"), pygame.image.load("images/lilla_kuul/lilla6.png")]
 lillakuul_walkRight = []
@@ -189,6 +200,60 @@ class paremtorn(pygame.sprite.Sprite):
 parem_torn_sprite = pygame.sprite.Group()
 paremtorn = paremtorn()
 parem_torn_sprite.add(paremtorn)
+
+
+class Punanekuul1(pygame.sprite.Sprite):
+    def __init__(self, position, punanekuul_walkRight):
+        super(Punanekuul1, self).__init__()
+        size = (int(0.1 * x_global), int(0.1 * y_global))
+        self.rect = pygame.Rect(position, size)
+        self.punanekuul_walkRight = punanekuul_walkRight
+        self.index = 0
+        self.image = punanekuul_walkRight[self.index]
+        self.velocity = pygame.math.Vector2(0, 0)
+        self.animation_time = 0.01
+        self.current_time = 0
+
+    def update_time_dependent(self, dt):
+        self.current_time += dt
+        if self.current_time >= self.animation_time:
+            self.current_time = 0
+            self.index = (self.index + 1) % len(self.punanekuul_walkRight)
+            self.image = self.punanekuul_walkRight[self.index]
+
+    def update(self, dt):
+        self.update_time_dependent(dt)
+        self.rect.x += 15
+def punanekuul1():
+    punanekuul1 = Punanekuul1(position=(0, y_global * 0.78), punanekuul_walkRight=punanekuul_walkRight)
+    punanekuul_list1.add(punanekuul1)
+
+
+class Punanekuul2(pygame.sprite.Sprite):
+    def __init__(self, position, punanekuul_walkLeft):
+        super(Punanekuul2, self).__init__()
+        size = (int(0.1 * x_global), int(0.1 * y_global))
+        self.rect = pygame.Rect(position, size)
+        self.images = punanekuul_walkLeft
+        self.index = 0
+        self.image = punanekuul_walkLeft[self.index]
+        self.velocity = pygame.math.Vector2(0, 0)
+        self.animation_time = 0.01
+        self.current_time = 0
+
+    def update_time_dependent(self, dt):
+        self.current_time += dt
+        if self.current_time >= self.animation_time:
+            self.current_time = 0
+            self.index = (self.index + 1) % len(self.images)
+            self.image = self.images[self.index]
+
+    def update(self, dt):
+        self.update_time_dependent(dt)
+        self.rect.x -= 15
+def punanekuul2():
+    punanekuul2 = Punanekuul2(position=(x_global - int(0.1 * x_global), y_global * 0.78), punanekuul_walkLeft=punanekuul_walkLeft)
+    punanekuul_list2.add(punanekuul2)
 
 
 class Lillakuul1(pygame.sprite.Sprite):
@@ -996,6 +1061,10 @@ def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2):
     lillakuul_list2.update(dt)
     lillakuul_list1.draw(mängu_screen)
     lillakuul_list2.draw(mängu_screen)
+    punanekuul_list1.update(dt)
+    punanekuul_list2.update(dt)
+    punanekuul_list1.draw(mängu_screen)
+    punanekuul_list2.draw(mängu_screen)
     vasak_torn_sprite.update()
     #vasak_torn_sprite.draw(mängu_screen)
     mängu_screen.blit(vasaktorn, (-0.01 * x_global, 0.55 * y_global))
@@ -1037,6 +1106,8 @@ wizard_list2 = pygame.sprite.Group()
 wizard_list1 = pygame.sprite.Group()
 lillakuul_list2 = pygame.sprite.Group()
 lillakuul_list1 = pygame.sprite.Group()
+punanekuul_list2 = pygame.sprite.Group()
+punanekuul_list1 = pygame.sprite.Group()
 a = True
 b = 0
 
@@ -1125,6 +1196,18 @@ while a:
     k14 = pygame.sprite.groupcollide(lillakuul_list2, vasak_torn_sprite, False, False, collided=None)
     for i in k14:
         lillakuul_list2.remove(i)
+    k15 = pygame.sprite.groupcollide(punanekuul_list1, parem_torn_sprite, False, False, collided=None)
+    for i in k15:
+        punanekuul_list1.remove(i)
+        parema_torni_elud -= 1
+        if parema_torni_elud == 0:
+            b = 1
+    k16 = pygame.sprite.groupcollide(punanekuul_list2, vasak_torn_sprite, False, False, collided=None)
+    for i in k16:
+        punanekuul_list2.remove(i)
+        vasaku_torni_elud -= 1
+        if vasaku_torni_elud == 0:
+            b = 1
 
 
 
@@ -1187,6 +1270,14 @@ while a:
             if event.key == pygame.K_n:
                 if tegelane2_aeg == tegelane_lisamis_delay:
                     lillakuul2()
+                    tegelane2_aeg -= tegelane_lisamis_delay
+            if event.key == pygame.K_x:
+                if tegelane1_aeg == tegelane_lisamis_delay:
+                    punanekuul1()
+                    tegelane1_aeg -= tegelane_lisamis_delay
+            if event.key == pygame.K_m:
+                if tegelane2_aeg == tegelane_lisamis_delay:
+                    punanekuul2()
                     tegelane2_aeg -= tegelane_lisamis_delay
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:

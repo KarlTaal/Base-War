@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/parem_torn.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/taust.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/vasak_torn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TowerDefence/images/taust.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/taust.png" afterDir="false" />
     </list>
@@ -34,14 +35,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="png" value="1" />
+          <entry key="png" value="2" />
           <entry key="py" value="145" />
           <entry key="txt" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Image" value="1" />
+          <entry key="Image" value="2" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="Python" value="144" />
           <entry key="Scratch" value="1" />
@@ -51,13 +52,13 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="39" />
-          <entry key="Python" value="35313" />
+          <entry key="Python" value="35699" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="38" />
-          <entry key="py" value="35313" />
+          <entry key="py" value="35699" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -71,14 +72,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="1050" column="16" lean-forward="true" selection-start-line="1050" selection-start-column="16" selection-end-line="1050" selection-end-column="16" />
+            <state relative-caret-position="332">
+              <caret line="1069" column="4" selection-start-line="1069" selection-start-column="4" selection-end-line="1069" selection-end-column="4" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1543309044626" expanded="true" signature="38113:38118" ph="..." />
+                <marker date="1543325225399" expanded="true" signature="40833:40838" ph="..." />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TowerDefence/images/mehike/mehike3.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -150,7 +156,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-440" />
     <option name="y" value="52" />
     <option name="width" value="1362" />
@@ -361,7 +367,7 @@
       <window_info id="Favorites" order="2" sideWeight="0.17259787" side_tool="true" weight="0.145469" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291815" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49920508" visible="true" weight="0.23131673" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49920508" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.481409" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -402,13 +408,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö10/kodu1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
@@ -634,13 +633,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TowerDefence/images/mehike/mehike3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="1050" column="16" lean-forward="true" selection-start-line="1050" selection-start-column="16" selection-end-line="1050" selection-end-column="16" />
+        <state relative-caret-position="332">
+          <caret line="1069" column="4" selection-start-line="1069" selection-start-column="4" selection-end-line="1069" selection-end-column="4" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1543309044626" expanded="true" signature="38113:38118" ph="..." />
+            <marker date="1543325225399" expanded="true" signature="40833:40838" ph="..." />
           </folding>
         </state>
       </provider>
