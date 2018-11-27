@@ -9,6 +9,10 @@
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/parem_torn.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/taust.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/vasak_torn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tornid/parem_torn3.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tornid/parem_torn3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tornid/vasak_torn3.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tornid/vasak_torn3.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +24,7 @@
     <session id="855116060">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="34" />
+          <entry key="project.closed" value="35" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="5" />
           <entry key="project.open.time.4" value="13" />
@@ -49,13 +53,13 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="39" />
-          <entry key="Python" value="35699" />
+          <entry key="Python" value="35946" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="38" />
-          <entry key="py" value="35699" />
+          <entry key="py" value="35946" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -69,19 +73,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4158">
-              <caret line="1069" column="4" selection-start-line="1069" selection-start-column="4" selection-end-line="1069" selection-end-column="4" />
+            <state relative-caret-position="249">
+              <caret line="1049" column="56" selection-start-line="1049" selection-start-column="56" selection-end-line="1049" selection-end-column="56" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1543325225399" expanded="true" signature="40833:40838" ph="..." />
+                <marker date="1543353461379" expanded="true" signature="41346:41351" ph="..." />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TowerDefence/images/mehike/mehike3.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -153,11 +152,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-440" />
-    <option name="y" value="52" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="378" />
+    <option name="y" value="7" />
     <option name="width" value="1362" />
-    <option name="height" value="915" />
+    <option name="height" value="974" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -356,15 +355,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8274021" weight="0.32114467" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.17259787" side_tool="true" weight="0.145469" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291815" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49920508" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49920508" weight="0.081850536" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.481409" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -384,11 +382,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kõndiv mehike.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/pygame/sprite.py</url>
           <line>165</line>
@@ -635,11 +628,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4158">
-          <caret line="1069" column="4" selection-start-line="1069" selection-start-column="4" selection-end-line="1069" selection-end-column="4" />
+        <state relative-caret-position="249">
+          <caret line="1049" column="56" selection-start-line="1049" selection-start-column="56" selection-end-line="1049" selection-end-column="56" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1543325225399" expanded="true" signature="40833:40838" ph="..." />
+            <marker date="1543353461379" expanded="true" signature="41346:41351" ph="..." />
           </folding>
         </state>
       </provider>

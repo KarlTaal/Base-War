@@ -31,6 +31,12 @@ pygame.display.set_caption("TOWER DEFENCE")
 game_over = pygame.image.load("images/game_over.png")
 game_over = pygame.transform.scale(game_over, (x_global,y_global))
 
+vasakud_tegelased = [pygame.image.load("images/vasakud_tegelased/raam1.png"), pygame.image.load("images/vasakud_tegelased/raam2.png"), pygame.image.load("images/vasakud_tegelased/raam3.png"),\
+pygame.image.load("images/vasakud_tegelased/raam4.png"), pygame.image.load("images/vasakud_tegelased/raam5.png"), pygame.image.load("images/vasakud_tegelased/raam6.png")]
+vasakud_ikoonid = []
+for i in vasakud_tegelased:
+    vasakud_ikoonid.append(pygame.transform.scale(i, (int(0.05 * x_global), int(0.1 * y_global))))
+
 
 taust = pygame.image.load("images/taust.png")
 taust = pygame.transform.scale(taust, (x_global, y_global))
@@ -1033,6 +1039,16 @@ def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2):
     kokkupuude49()
 
     mängu_screen.blit(taust, (0, 0))
+
+
+#(int(0.05 * x_global), int(0.1 * y_global)) - ruutude suurused
+    mängu_screen.blit(vasakud_ikoonid[0], (0, 0))
+    mängu_screen.blit(vasakud_ikoonid[1], ((int(0.05 * x_global) + 5), 0))
+    mängu_screen.blit(vasakud_ikoonid[2], (2 * (int(0.05 * x_global) + 5), 0))
+    mängu_screen.blit(vasakud_ikoonid[3], (3 * (int(0.05 * x_global) + 5), 0))
+    mängu_screen.blit(vasakud_ikoonid[4], (4 * (int(0.05 * x_global) + 5), 0))
+    mängu_screen.blit(vasakud_ikoonid[5], (5 * (int(0.05 * x_global) + 5), 0))
+
     player_list1.update(dt)
     player_list2.update(dt)
     player_list1.draw(mängu_screen)
