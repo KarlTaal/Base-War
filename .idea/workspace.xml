@@ -9,17 +9,8 @@
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/parem_torn.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/taust.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/vasak_torn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TowerDefence/images/taust.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/taust.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/veel lisamata tegelased/eye monster idle (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/veel lisamata tegelased/orc2 - siin walking animation parem vist kui esimesel orcil/mehike1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/veel lisamata tegelased/orc2 - siin walking animation parem vist kui esimesel orcil/mehike2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/veel lisamata tegelased/orc2 - siin walking animation parem vist kui esimesel orcil/mehike3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/veel lisamata tegelased/orc2 - siin walking animation parem vist kui esimesel orcil/mehike4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/veel lisamata tegelased/orc2 - siin walking animation parem vist kui esimesel orcil/mehike5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/veel lisamata tegelased/orc2 - siin walking animation parem vist kui esimesel orcil/mehike6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/veel lisamata tegelased/wizard idle (1).png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +35,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="png" value="1" />
-          <entry key="py" value="144" />
+          <entry key="py" value="145" />
           <entry key="txt" value="4" />
         </counts>
       </usages-collector>
@@ -52,7 +43,7 @@
         <counts>
           <entry key="Image" value="1" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="143" />
+          <entry key="Python" value="144" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -60,13 +51,13 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="39" />
-          <entry key="Python" value="34381" />
+          <entry key="Python" value="35313" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="38" />
-          <entry key="py" value="34381" />
+          <entry key="py" value="35313" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -80,20 +71,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="834" column="18" lean-forward="true" selection-start-line="834" selection-start-column="18" selection-end-line="834" selection-end-column="18" />
+            <state relative-caret-position="282">
+              <caret line="1050" column="16" lean-forward="true" selection-start-line="1050" selection-start-column="16" selection-end-line="1050" selection-end-column="16" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
+                <marker date="1543309044626" expanded="true" signature="38113:38118" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../lisaülesanded/anagrammid/anagrammide leidmine.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -378,7 +361,7 @@
       <window_info id="Favorites" order="2" sideWeight="0.17259787" side_tool="true" weight="0.145469" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291815" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49920508" visible="true" weight="0.14768684" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49920508" visible="true" weight="0.23131673" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.481409" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -611,13 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/pygame/sprite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="377" selection-start-line="377" selection-end-line="377" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö13/kasutatud auto hind rekursiivselt.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -651,12 +627,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/pygame/sprite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="1554" selection-start-line="1554" selection-end-line="1554" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="834" column="18" lean-forward="true" selection-start-line="834" selection-start-column="18" selection-end-line="834" selection-end-column="18" />
+        <state relative-caret-position="282">
+          <caret line="1050" column="16" lean-forward="true" selection-start-line="1050" selection-start-column="16" selection-end-line="1050" selection-end-column="16" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
+            <marker date="1543309044626" expanded="true" signature="38113:38118" ph="..." />
           </folding>
         </state>
       </provider>
