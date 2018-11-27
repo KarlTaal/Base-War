@@ -31,11 +31,41 @@ pygame.display.set_caption("TOWER DEFENCE")
 game_over = pygame.image.load("images/game_over.png")
 game_over = pygame.transform.scale(game_over, (x_global,y_global))
 
-vasakud_tegelased = [pygame.image.load("images/vasakud_tegelased/raam1.png"), pygame.image.load("images/vasakud_tegelased/raam2.png"), pygame.image.load("images/vasakud_tegelased/raam3.png"),\
-pygame.image.load("images/vasakud_tegelased/raam4.png"), pygame.image.load("images/vasakud_tegelased/raam5.png"), pygame.image.load("images/vasakud_tegelased/raam6.png")]
-vasakud_ikoonid = []
-for i in vasakud_tegelased:
-    vasakud_ikoonid.append(pygame.transform.scale(i, (int(0.05 * x_global), int(0.1 * y_global))))
+vasakud_ikoonid1 = pygame.image.load("images/vasakud_tegelased/raam1.png")
+vasakud_ikoonid1 = pygame.transform.scale(vasakud_ikoonid1, (int(0.05 * x_global), int(0.1 * y_global)))
+
+vasakud_ikoonid2 = pygame.image.load("images/vasakud_tegelased/raam2.png")
+vasakud_ikoonid2 = pygame.transform.scale(vasakud_ikoonid2, (int(0.05 * x_global), int(0.1 * y_global)))
+
+vasakud_ikoonid3 = pygame.image.load("images/vasakud_tegelased/raam3.png")
+vasakud_ikoonid3 = pygame.transform.scale(vasakud_ikoonid3, (int(0.05 * x_global), int(0.1 * y_global)))
+
+vasakud_ikoonid4 = pygame.image.load("images/vasakud_tegelased/raam4.png")
+vasakud_ikoonid4 = pygame.transform.scale(vasakud_ikoonid4, (int(0.05 * x_global), int(0.1 * y_global)))
+
+vasakud_ikoonid5 = pygame.image.load("images/vasakud_tegelased/raam5.png")
+vasakud_ikoonid5 = pygame.transform.scale(vasakud_ikoonid5, (int(0.05 * x_global), int(0.1 * y_global)))
+
+vasakud_ikoonid6 = pygame.image.load("images/vasakud_tegelased/raam6.png")
+vasakud_ikoonid6 = pygame.transform.scale(vasakud_ikoonid6, (int(0.05 * x_global), int(0.1 * y_global)))
+
+paremad_ikoonid1 = pygame.image.load("images/paremad_tegelased/raam1.png")
+paremad_ikoonid1 = pygame.transform.scale(paremad_ikoonid1, (int(0.05 * x_global), int(0.1 * y_global)))
+
+paremad_ikoonid2 = pygame.image.load("images/paremad_tegelased/raam2.png")
+paremad_ikoonid2 = pygame.transform.scale(paremad_ikoonid2, (int(0.05 * x_global), int(0.1 * y_global)))
+
+paremad_ikoonid3 = pygame.image.load("images/paremad_tegelased/raam3.png")
+paremad_ikoonid3 = pygame.transform.scale(paremad_ikoonid3, (int(0.05 * x_global), int(0.1 * y_global)))
+
+paremad_ikoonid4 = pygame.image.load("images/paremad_tegelased/raam4.png")
+paremad_ikoonid4 = pygame.transform.scale(paremad_ikoonid4, (int(0.05 * x_global), int(0.1 * y_global)))
+
+paremad_ikoonid5 = pygame.image.load("images/paremad_tegelased/raam5.png")
+paremad_ikoonid5 = pygame.transform.scale(paremad_ikoonid5, (int(0.05 * x_global), int(0.1 * y_global)))
+
+paremad_ikoonid6 = pygame.image.load("images/paremad_tegelased/raam6.png")
+paremad_ikoonid6 = pygame.transform.scale(paremad_ikoonid6, (int(0.05 * x_global), int(0.1 * y_global)))
 
 
 taust = pygame.image.load("images/taust.png")
@@ -1040,14 +1070,19 @@ def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2):
 
     mängu_screen.blit(taust, (0, 0))
 
-
-#(int(0.05 * x_global), int(0.1 * y_global)) - ruutude suurused
-    mängu_screen.blit(vasakud_ikoonid[0], (0, 0))
-    mängu_screen.blit(vasakud_ikoonid[1], ((int(0.05 * x_global) + 5), 0))
-    mängu_screen.blit(vasakud_ikoonid[2], (2 * (int(0.05 * x_global) + 5), 0))
-    mängu_screen.blit(vasakud_ikoonid[3], (3 * (int(0.05 * x_global) + 5), 0))
-    mängu_screen.blit(vasakud_ikoonid[4], (4 * (int(0.05 * x_global) + 5), 0))
-    mängu_screen.blit(vasakud_ikoonid[5], (5 * (int(0.05 * x_global) + 5), 0))
+    #(int(0.05 * x_global), int(0.1 * y_global)) - ruutude suurused
+    mängu_screen.blit(vasakud_ikoonid1, (0, 0))
+    mängu_screen.blit(vasakud_ikoonid2, ((int(0.05 * x_global) + 5), 0))
+    mängu_screen.blit(vasakud_ikoonid3, (2 * (int(0.05 * x_global) + 5), 0))
+    mängu_screen.blit(vasakud_ikoonid4, (3 * (int(0.05 * x_global) + 5), 0))
+    mängu_screen.blit(vasakud_ikoonid5, (4 * (int(0.05 * x_global) + 5), 0))
+    mängu_screen.blit(vasakud_ikoonid6, (5 * (int(0.05 * x_global) + 5), 0))
+    mängu_screen.blit(paremad_ikoonid6, (x_global - int(0.05 * x_global), 0))
+    mängu_screen.blit(paremad_ikoonid5, (x_global - 2 * (int(0.05 * x_global)) - 5, 0))
+    mängu_screen.blit(paremad_ikoonid4, (x_global - 3 * (int(0.05 * x_global)) - 10, 0))
+    mängu_screen.blit(paremad_ikoonid3, (x_global - 4 * (int(0.05 * x_global)) - 15, 0))
+    mängu_screen.blit(paremad_ikoonid2, (x_global - 5 * (int(0.05 * x_global)) - 20, 0))
+    mängu_screen.blit(paremad_ikoonid1, (x_global - 6 * (int(0.05 * x_global)) - 25, 0))
 
     player_list1.update(dt)
     player_list2.update(dt)
