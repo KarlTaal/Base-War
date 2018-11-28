@@ -1535,25 +1535,25 @@ while a:
                     wizard2()
                     paremad_coinid -= 30
                     tegelane2_aeg -= tegelane_lisamis_delay
-            if event.key == pygame.K_z and vasakud_coinid >= 200:
+            if event.key == pygame.K_z and vasakud_coinid >= 80:
                 if tegelane1_aeg == tegelane_lisamis_delay:
                     lillakuul1()
-                    vasakud_coinid -= 200
+                    vasakud_coinid -= 80
                     tegelane1_aeg -= tegelane_lisamis_delay
-            if event.key == pygame.K_n and paremad_coinid >= 200:
+            if event.key == pygame.K_n and paremad_coinid >= 80:
                 if tegelane2_aeg == tegelane_lisamis_delay:
                     lillakuul2()
-                    paremad_coinid -= 200
+                    paremad_coinid -= 80
                     tegelane2_aeg -= tegelane_lisamis_delay
-            if event.key == pygame.K_x and vasakud_coinid >= 200:
+            if event.key == pygame.K_x and vasakud_coinid >= 80:
                 if tegelane1_aeg == tegelane_lisamis_delay:
                     punanekuul1()
-                    vasakud_coinid -= 200
+                    vasakud_coinid -= 80
                     tegelane1_aeg -= tegelane_lisamis_delay
-            if event.key == pygame.K_m and paremad_coinid >= 200:
+            if event.key == pygame.K_m and paremad_coinid >= 80:
                 if tegelane2_aeg == tegelane_lisamis_delay:
                     punanekuul2()
-                    paremad_coinid -= 200
+                    paremad_coinid -= 80
                     tegelane2_aeg -= tegelane_lisamis_delay
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
@@ -1626,11 +1626,11 @@ while a:
         vasak6 = vasakud_tuhm6
     else:
         vasak6 = vasakud_ikoonid6
-    if round(coins1) < 200:
+    if round(coins1) < 80:
         vasak7 = vasakud_tuhm7
     else:
         vasak7 = vasakud_ikoonid7
-    if round(coins1) < 200:
+    if round(coins1) < 80:
         vasak8 = vasakud_tuhm8
     else:
         vasak8 = vasakud_ikoonid8
@@ -1660,11 +1660,11 @@ while a:
         parem6 = paremad_tuhm6
     else:
         parem6 = paremad_ikoonid6
-    if round(coins2) < 200:
+    if round(coins2) < 80:
         parem7 = paremad_tuhm7
     else:
         parem7 = paremad_ikoonid7
-    if round(coins2) < 200:
+    if round(coins2) < 80:
         parem8 = paremad_tuhm8
     else:
         parem8 = paremad_ikoonid8
