@@ -10,8 +10,8 @@ clock = pygame.time.Clock()
 tegelane_lisamis_delay = 20
 vasaku_torni_elud = 5
 parema_torni_elud = 5
-vasakud_coinid = 0
-paremad_coinid = 0
+vasakud_coinid = 10
+paremad_coinid = 10
 
 
 #VÕTAB ARVUTI EKRAANI MÕÕTME JA LOOB MÄNGU EKRAANI SUURUSE 
@@ -732,292 +732,436 @@ def skeleton2():
 
 def kokkupuude1():
     tegelane_hit_list = pygame.sprite.groupcollide(player_list1, player_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 1)
         if suvaline == 0:
             player_list1.remove(i)
+            paremad_coinid += 6
         elif suvaline == 1:
             player_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 6
 def kokkupuude2():
     tegelane_hit_list = pygame.sprite.groupcollide(knight_list1, knight_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 1)
         if suvaline == 0:
             knight_list1.remove(i)
+            paremad_coinid += 6
         elif suvaline == 1:
             knight_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 6
 def kokkupuude3():
     tegelane_hit_list = pygame.sprite.groupcollide(knight_list1, player_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 10)
         if suvaline == 0:
             knight_list1.remove(i)
+            paremad_coinid  += 8
         elif suvaline > 0:
             player_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 4
 def kokkupuude4():
     tegelane_hit_list = pygame.sprite.groupcollide(player_list1, knight_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 10)
         if suvaline > 0:
             player_list1.remove(i)
+            paremad_coinid += 4
         elif suvaline == 0:
             knight_list2.remove(tegelane_hit_list[i])
+            paremad_coinid += 8
 def kokkupuude5():
     tegelane_hit_list = pygame.sprite.groupcollide(player_list1, skeleton_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 5)
         if suvaline > 0:
             player_list1.remove(i)
+            paremad_coinid += 5
         elif suvaline == 0:
             skeleton_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 7
 def kokkupuude6():
     tegelane_hit_list = pygame.sprite.groupcollide(knight_list1, skeleton_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 5)
         if suvaline == 0:
             knight_list1.remove(i)
+            paremad_coinid += 7
         elif suvaline > 0:
             skeleton_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 5
 def kokkupuude7():
     tegelane_hit_list = pygame.sprite.groupcollide(skeleton_list1, knight_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 5)
         if suvaline > 0:
             skeleton_list1.remove(i)
+            paremad_coinid += 5
         elif suvaline == 0:
             knight_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 7
 def kokkupuude8():
     tegelane_hit_list = pygame.sprite.groupcollide(skeleton_list1, player_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 5)
         if suvaline == 0:
             skeleton_list1.remove(i)
+            paremad_coinid += 7
         elif suvaline > 0:
             player_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 5
 def kokkupuude9():
     tegelane_hit_list = pygame.sprite.groupcollide(skeleton_list1, skeleton_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 1)
         if suvaline == 1:
             skeleton_list1.remove(i)
+            paremad_coinid += 6
         elif suvaline == 0:
             skeleton_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 6
 def kokkupuude10():
     tegelane_hit_list = pygame.sprite.groupcollide(player_list1, orc_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 15)
         if suvaline > 0:
             player_list1.remove(i)
+            paremad_coinid += 3
         elif suvaline == 0:
             orc_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 9
 def kokkupuude11():
     tegelane_hit_list = pygame.sprite.groupcollide(player_list1, eye_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 20)
         if suvaline > 0:
             player_list1.remove(i)
+            paremad_coinid += 2
         elif suvaline == 0:
             eye_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 10
 def kokkupuude12():
     tegelane_hit_list = pygame.sprite.groupcollide(player_list1, wizard_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 25)
         if suvaline > 0:
             player_list1.remove(i)
+            paremad_coinid += 1
         elif suvaline == 0:
             wizard_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 11
 def kokkupuude13():
     tegelane_hit_list = pygame.sprite.groupcollide(skeleton_list1, orc_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 10)
         if suvaline > 0:
             skeleton_list1.remove(i)
+            paremad_coinid += 4
         elif suvaline == 0:
             orc_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 8
 def kokkupuude14():
     tegelane_hit_list = pygame.sprite.groupcollide(skeleton_list1, eye_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 15)
         if suvaline > 0:
             skeleton_list1.remove(i)
+            paremad_coinid += 3
         elif suvaline == 0:
             eye_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 9
 def kokkupuude15():
     tegelane_hit_list = pygame.sprite.groupcollide(skeleton_list1, wizard_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 20)
         if suvaline > 0:
             skeleton_list1.remove(i)
+            paremad_coinid += 2
         elif suvaline == 0:
             wizard_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 10
 def kokkupuude16():
     tegelane_hit_list = pygame.sprite.groupcollide(knight_list1, orc_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 5)
         if suvaline > 0:
             knight_list1.remove(i)
+            paremad_coinid += 5
         elif suvaline == 0:
             orc_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 7
 def kokkupuude17():
     tegelane_hit_list = pygame.sprite.groupcollide(knight_list1, eye_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 10)
         if suvaline > 0:
             knight_list1.remove(i)
+            paremad_coinid += 4
         elif suvaline == 0:
             eye_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 8
 def kokkupuude18():
     tegelane_hit_list = pygame.sprite.groupcollide(knight_list1, wizard_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 15)
         if suvaline > 0:
             knight_list1.remove(i)
+            paremad_coinid += 3
         elif suvaline == 0:
             wizard_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 9
 def kokkupuude19():
     tegelane_hit_list = pygame.sprite.groupcollide(orc_list1, player_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 15)
         if suvaline == 0:
             orc_list1.remove(i)
+            paremad_coinid += 9
         elif suvaline > 0:
             player_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 3
 def kokkupuude20():
     tegelane_hit_list = pygame.sprite.groupcollide(orc_list1, skeleton_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 10)
         if suvaline == 0:
             orc_list1.remove(i)
+            paremad_coinid += 8
         elif suvaline > 0:
             skeleton_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 4
 def kokkupuude21():
     tegelane_hit_list = pygame.sprite.groupcollide(orc_list1, knight_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 5)
         if suvaline == 0:
             orc_list1.remove(i)
+            paremad_coinid += 7
         elif suvaline > 0:
             knight_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 5
 def kokkupuude22():
     tegelane_hit_list = pygame.sprite.groupcollide(orc_list1, orc_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 1)
         if suvaline == 0:
             orc_list1.remove(i)
+            paremad_coinid += 6
         elif suvaline == 1:
             orc_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 6
 def kokkupuude23():
     tegelane_hit_list = pygame.sprite.groupcollide(orc_list1, eye_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 5)
         if suvaline > 0:
             orc_list1.remove(i)
+            paremad_coinid += 5
         elif suvaline == 0:
             eye_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 7
 def kokkupuude24():
     tegelane_hit_list = pygame.sprite.groupcollide(orc_list1, wizard_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 10)
         if suvaline > 0:
             orc_list1.remove(i)
+            paremad_coinid += 4
         elif suvaline == 0:
             wizard_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 8
 def kokkupuude25():
     tegelane_hit_list = pygame.sprite.groupcollide(eye_list1, player_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 20)
         if suvaline == 0:
             eye_list1.remove(i)
+            paremad_coinid += 10
         elif suvaline > 0:
             player_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 2
 def kokkupuude26():
     tegelane_hit_list = pygame.sprite.groupcollide(eye_list1, skeleton_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 15)
         if suvaline == 0:
             eye_list1.remove(i)
+            paremad_coinid += 9
         elif suvaline > 0:
             skeleton_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 3
 def kokkupuude27():
     tegelane_hit_list = pygame.sprite.groupcollide(eye_list1, knight_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 10)
         if suvaline == 0:
             eye_list1.remove(i)
+            paremad_coinid += 8
         elif suvaline > 0:
             knight_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 4
 def kokkupuude28():
     tegelane_hit_list = pygame.sprite.groupcollide(eye_list1, orc_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 5)
         if suvaline == 0:
             eye_list1.remove(i)
+            paremad_coinid += 7
         elif suvaline > 0:
             orc_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 5
 def kokkupuude29():
     tegelane_hit_list = pygame.sprite.groupcollide(eye_list1, eye_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 1)
         if suvaline == 0:
             eye_list1.remove(i)
+            paremad_coinid += 6
         elif suvaline == 1:
             eye_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 6
 def kokkupuude30():
     tegelane_hit_list = pygame.sprite.groupcollide(eye_list1, wizard_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 5)
         if suvaline > 0:
             eye_list1.remove(i)
+            paremad_coinid += 5
         elif suvaline == 0:
             wizard_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 7
 def kokkupuude31():
     tegelane_hit_list = pygame.sprite.groupcollide(wizard_list1, player_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 25)
         if suvaline == 0:
             wizard_list1.remove(i)
+            paremad_coinid += 11
         elif suvaline > 0:
             player_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 1
 def kokkupuude32():
     tegelane_hit_list = pygame.sprite.groupcollide(wizard_list1, skeleton_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 20)
         if suvaline == 0:
             wizard_list1.remove(i)
+            paremad_coinid += 10
         elif suvaline > 0:
             skeleton_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 2
 def kokkupuude33():
     tegelane_hit_list = pygame.sprite.groupcollide(wizard_list1, knight_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 15)
         if suvaline == 0:
             wizard_list1.remove(i)
+            paremad_coinid += 9
         elif suvaline > 0:
             knight_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 3
 def kokkupuude34():
     tegelane_hit_list = pygame.sprite.groupcollide(wizard_list1, orc_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 10)
         if suvaline == 0:
             wizard_list1.remove(i)
+            paremad_coinid += 8
         elif suvaline > 0:
             orc_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 4
 def kokkupuude35():
     tegelane_hit_list = pygame.sprite.groupcollide(wizard_list1, eye_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 5)
         if suvaline == 0:
             wizard_list1.remove(i)
+            paremad_coinid += 7
         elif suvaline > 0:
             eye_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 5
 def kokkupuude36():
     tegelane_hit_list = pygame.sprite.groupcollide(wizard_list1, wizard_list2, False, False, collided=None)
+    global vasakud_coinid
+    global paremad_coinid
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 1)
         if suvaline == 0:
             wizard_list1.remove(i)
+            paremad_coinid += 6
         elif suvaline == 1:
             wizard_list2.remove(tegelane_hit_list[i])
+            vasakud_coinid += 6
 def kokkupuude37():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list1, player_list2, False, False, collided=None)
     for i in tegelane_hit_list:
@@ -1195,11 +1339,11 @@ def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2, vasak
 
     basicfont1 = pygame.font.SysFont(None, 80)
     text1 = basicfont1.render(str(round(coins1)), True, (139, 117, 0))
-    mängu_screen.blit(text1, (0.045 * x_global, 0.43* y_global))
+    mängu_screen.blit(text1, (0.04 * x_global, 0.43* y_global))
 
     basicfont2 = pygame.font.SysFont(None, 80)
     text2 = basicfont2.render(str(round(coins2)), True, (139, 117, 0))
-    mängu_screen.blit(text2, (0.955 * x_global, 0.43 * y_global))
+    mängu_screen.blit(text2, (0.95 * x_global, 0.43 * y_global))
 
     pygame.display.update()
 
@@ -1334,66 +1478,82 @@ while a:
             if event.key == pygame.K_q:
                 if tegelane1_aeg == tegelane_lisamis_delay:
                     player1()
+                    vasakud_coinid -= 10
                     tegelane1_aeg -= tegelane_lisamis_delay
             if event.key == pygame.K_u:
                 if tegelane2_aeg == tegelane_lisamis_delay:
                     player2()
+                    paremad_coinid -= 10
                     tegelane2_aeg -= tegelane_lisamis_delay
             if event.key == pygame.K_e:
                 if tegelane1_aeg == tegelane_lisamis_delay:
                     knight1()
+                    vasakud_coinid -= 30
                     tegelane1_aeg -= tegelane_lisamis_delay
             if event.key == pygame.K_o:
                 if tegelane2_aeg == tegelane_lisamis_delay:
                     knight2()
+                    paremad_coinid -= 30
                     tegelane2_aeg -= tegelane_lisamis_delay
             if event.key == pygame.K_w:
                 if tegelane1_aeg == tegelane_lisamis_delay:
                     skeleton1()
+                    vasakud_coinid -= 20
                     tegelane1_aeg -= tegelane_lisamis_delay
             if event.key == pygame.K_i:
                 if tegelane2_aeg == tegelane_lisamis_delay:
                     skeleton2()
+                    paremad_coinid -= 20
                     tegelane2_aeg -= tegelane_lisamis_delay
             if event.key == pygame.K_s:
                 if tegelane1_aeg == tegelane_lisamis_delay:
                     eye1()
+                    vasakud_coinid -= 50
                     tegelane1_aeg -= tegelane_lisamis_delay
             if event.key == pygame.K_k:
                 if tegelane2_aeg == tegelane_lisamis_delay:
                     eye2()
+                    paremad_coinid -= 50
                     tegelane2_aeg -= tegelane_lisamis_delay
             if event.key == pygame.K_a:
                 if tegelane1_aeg == tegelane_lisamis_delay:
                     orc1()
+                    vasakud_coinid -= 40
                     tegelane1_aeg -= tegelane_lisamis_delay
             if event.key == pygame.K_j:
                 if tegelane2_aeg == tegelane_lisamis_delay:
                     orc2()
+                    paremad_coinid -= 40
                     tegelane2_aeg -= tegelane_lisamis_delay
             if event.key == pygame.K_d:
                 if tegelane1_aeg == tegelane_lisamis_delay:
                     wizard1()
+                    vasakud_coinid -= 60
                     tegelane1_aeg -= tegelane_lisamis_delay
             if event.key == pygame.K_l:
                 if tegelane2_aeg == tegelane_lisamis_delay:
                     wizard2()
+                    paremad_coinid -= 60
                     tegelane2_aeg -= tegelane_lisamis_delay
             if event.key == pygame.K_z:
                 if tegelane1_aeg == tegelane_lisamis_delay:
                     lillakuul1()
+                    vasakud_coinid -= 100
                     tegelane1_aeg -= tegelane_lisamis_delay
             if event.key == pygame.K_n:
                 if tegelane2_aeg == tegelane_lisamis_delay:
                     lillakuul2()
+                    paremad_coinid -= 100
                     tegelane2_aeg -= tegelane_lisamis_delay
             if event.key == pygame.K_x:
                 if tegelane1_aeg == tegelane_lisamis_delay:
                     punanekuul1()
+                    vasakud_coinid -= 100
                     tegelane1_aeg -= tegelane_lisamis_delay
             if event.key == pygame.K_m:
                 if tegelane2_aeg == tegelane_lisamis_delay:
                     punanekuul2()
+                    paremad_coinid -= 100
                     tegelane2_aeg -= tegelane_lisamis_delay
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
@@ -1434,10 +1594,10 @@ while a:
     if parema_torni_elud == 1:
         paremad_elud = parem_elud1
 
-    if vasakud_coinid < 50:
+    if vasakud_coinid < 999:
         vasakud_coinid += 0.05
         coins1 = vasakud_coinid
-    if paremad_coinid < 50:
+    if paremad_coinid < 999:
         paremad_coinid += 0.05
         coins2 = paremad_coinid
 
@@ -1522,3 +1682,6 @@ while a:
     if tegelane2_aeg < tegelane_lisamis_delay:
         tegelane2_aeg += 1
 pygame.quit()
+
+#meelespea:
+# if paremad_coinid < 999 lause neile juurde, et kui lisab coine battle võidu pealt
