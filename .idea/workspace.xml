@@ -9,14 +9,8 @@
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/parem_torn.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/taust.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/vasak_torn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/taust.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/taust.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam3.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam4.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam5.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam6.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam6.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,9 +27,9 @@
           <entry key="project.open.time.3" value="5" />
           <entry key="project.open.time.4" value="13" />
           <entry key="project.open.time.5" value="6" />
-          <entry key="project.open.time.6" value="7" />
+          <entry key="project.open.time.6" value="8" />
           <entry key="project.open.time.7" value="5" />
-          <entry key="project.opened" value="38" />
+          <entry key="project.opened" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -57,13 +51,13 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="39" />
-          <entry key="Python" value="36290" />
+          <entry key="Python" value="36400" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="38" />
-          <entry key="py" value="36290" />
+          <entry key="py" value="36400" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -77,11 +71,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="1084" column="38" selection-start-line="1084" selection-start-column="38" selection-end-line="1084" selection-end-column="38" />
+            <state relative-caret-position="142">
+              <caret line="1100" column="38" selection-start-line="1100" selection-start-column="38" selection-end-line="1100" selection-end-column="38" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1543359436246" expanded="true" signature="43005:43010" ph="..." />
+                <marker date="1543387538453" expanded="true" signature="43712:43717" ph="..." />
               </folding>
             </state>
           </provider>
@@ -156,7 +150,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="378" />
     <option name="y" value="6" />
     <option name="width" value="1362" />
@@ -326,13 +320,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8274021" weight="0.32114467" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.17259787" side_tool="true" weight="0.145469" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291815" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49920508" weight="0.12455516" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49920508" visible="true" weight="0.24733096" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.481409" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -580,11 +575,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="1084" column="38" selection-start-line="1084" selection-start-column="38" selection-end-line="1084" selection-end-column="38" />
+        <state relative-caret-position="142">
+          <caret line="1100" column="38" selection-start-line="1100" selection-start-column="38" selection-end-line="1100" selection-end-column="38" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1543359436246" expanded="true" signature="43005:43010" ph="..." />
+            <marker date="1543387538453" expanded="true" signature="43712:43717" ph="..." />
           </folding>
         </state>
       </provider>
