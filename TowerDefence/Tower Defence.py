@@ -31,6 +31,54 @@ pygame.display.set_caption("TOWER DEFENCE")
 game_over = pygame.image.load("images/game_over.png")
 game_over = pygame.transform.scale(game_over, (x_global,y_global))
 
+vasakud_tuhm1 = pygame.image.load("images/vasakud_tegelased/tuhm1.png")
+vasakud_tuhm1 = pygame.transform.scale(vasakud_tuhm1, (int(0.05 * x_global), int(0.1 * y_global)))
+
+vasakud_tuhm2 = pygame.image.load("images/vasakud_tegelased/tuhm2.png")
+vasakud_tuhm2 = pygame.transform.scale(vasakud_tuhm2, (int(0.05 * x_global), int(0.1 * y_global)))
+
+vasakud_tuhm3 = pygame.image.load("images/vasakud_tegelased/tuhm3.png")
+vasakud_tuhm3 = pygame.transform.scale(vasakud_tuhm3, (int(0.05 * x_global), int(0.1 * y_global)))
+
+vasakud_tuhm4 = pygame.image.load("images/vasakud_tegelased/tuhm4.png")
+vasakud_tuhm4 = pygame.transform.scale(vasakud_tuhm4, (int(0.05 * x_global), int(0.1 * y_global)))
+
+vasakud_tuhm5 = pygame.image.load("images/vasakud_tegelased/tuhm5.png")
+vasakud_tuhm5 = pygame.transform.scale(vasakud_tuhm5, (int(0.05 * x_global), int(0.1 * y_global)))
+
+vasakud_tuhm6 = pygame.image.load("images/vasakud_tegelased/tuhm6.png")
+vasakud_tuhm6 = pygame.transform.scale(vasakud_tuhm6, (int(0.05 * x_global), int(0.1 * y_global)))
+
+vasakud_tuhm7 = pygame.image.load("images/vasakud_kuulid/tuhm1.png")
+vasakud_tuhm7 = pygame.transform.scale(vasakud_tuhm7, (int(0.1 * x_global), int(0.1 * y_global)))
+
+vasakud_tuhm8 = pygame.image.load("images/vasakud_kuulid/tuhm2.png")
+vasakud_tuhm8 = pygame.transform.scale(vasakud_tuhm8, (int(0.1 * x_global), int(0.1 * y_global)))
+
+paremad_tuhm1 = pygame.image.load("images/paremad_tegelased/tuhm1.png")
+paremad_tuhm1 = pygame.transform.scale(paremad_tuhm1, (int(0.05 * x_global), int(0.1 * y_global)))
+
+paremad_tuhm2 = pygame.image.load("images/paremad_tegelased/tuhm2.png")
+paremad_tuhm2 = pygame.transform.scale(paremad_tuhm2, (int(0.05 * x_global), int(0.1 * y_global)))
+
+paremad_tuhm3 = pygame.image.load("images/paremad_tegelased/tuhm3.png")
+paremad_tuhm3 = pygame.transform.scale(paremad_tuhm3, (int(0.05 * x_global), int(0.1 * y_global)))
+
+paremad_tuhm4 = pygame.image.load("images/paremad_tegelased/tuhm4.png")
+paremad_tuhm4 = pygame.transform.scale(paremad_tuhm4, (int(0.05 * x_global), int(0.1 * y_global)))
+
+paremad_tuhm5 = pygame.image.load("images/paremad_tegelased/tuhm5.png")
+paremad_tuhm5 = pygame.transform.scale(paremad_tuhm5, (int(0.05 * x_global), int(0.1 * y_global)))
+
+paremad_tuhm6 = pygame.image.load("images/paremad_tegelased/tuhm6.png")
+paremad_tuhm6 = pygame.transform.scale(paremad_tuhm6, (int(0.05 * x_global), int(0.1 * y_global)))
+
+paremad_tuhm7 = pygame.image.load("images/paremad_kuulid/tuhm1.png")
+paremad_tuhm7 = pygame.transform.scale(paremad_tuhm7, (int(0.1 * x_global), int(0.1 * y_global)))
+
+paremad_tuhm8 = pygame.image.load("images/paremad_kuulid/tuhm2.png")
+paremad_tuhm8 = pygame.transform.scale(paremad_tuhm8, (int(0.1 * x_global), int(0.1 * y_global)))
+
 vasakud_ikoonid1 = pygame.image.load("images/vasakud_tegelased/raam1.png")
 vasakud_ikoonid1 = pygame.transform.scale(vasakud_ikoonid1, (int(0.05 * x_global), int(0.1 * y_global)))
 
@@ -1028,7 +1076,8 @@ def kokkupuude49():
 
 
 
-def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2):
+def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2, vasak1, vasak2, vasak3, vasak4, vasak5, vasak6, vasak7, vasak8,\
+         parem1, parem2, parem3, parem4, parem5, parem6, parem7, parem8):
     kokkupuude1()
     kokkupuude2()
     kokkupuude3()
@@ -1082,23 +1131,23 @@ def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2):
     mängu_screen.blit(taust, (0, 0))
 
     #(int(0.05 * x_global), int(0.1 * y_global)) - ruutude suurused
-    mängu_screen.blit(vasakud_ikoonid1, (0, 0))
-    mängu_screen.blit(vasakud_ikoonid2, ((int(0.05 * x_global) + 5), 0))
-    mängu_screen.blit(vasakud_ikoonid3, (2 * (int(0.05 * x_global) + 5), 0))
-    mängu_screen.blit(vasakud_ikoonid4, (3 * (int(0.05 * x_global) + 5), 0))
-    mängu_screen.blit(vasakud_ikoonid5, (4 * (int(0.05 * x_global) + 5), 0))
-    mängu_screen.blit(vasakud_ikoonid6, (5 * (int(0.05 * x_global) + 5), 0))
-    mängu_screen.blit(paremad_ikoonid6, (x_global - int(0.05 * x_global), 0))
-    mängu_screen.blit(paremad_ikoonid5, (x_global - 2 * (int(0.05 * x_global)) - 5, 0))
-    mängu_screen.blit(paremad_ikoonid4, (x_global - 3 * (int(0.05 * x_global)) - 10, 0))
-    mängu_screen.blit(paremad_ikoonid3, (x_global - 4 * (int(0.05 * x_global)) - 15, 0))
-    mängu_screen.blit(paremad_ikoonid2, (x_global - 5 * (int(0.05 * x_global)) - 20, 0))
-    mängu_screen.blit(paremad_ikoonid1, (x_global - 6 * (int(0.05 * x_global)) - 25, 0))
+    mängu_screen.blit(vasak1, (0, 0))
+    mängu_screen.blit(vasak2, ((int(0.05 * x_global) + 5), 0))
+    mängu_screen.blit(vasak3, (2 * (int(0.05 * x_global) + 5), 0))
+    mängu_screen.blit(vasak4, (3 * (int(0.05 * x_global) + 5), 0))
+    mängu_screen.blit(vasak5, (4 * (int(0.05 * x_global) + 5), 0))
+    mängu_screen.blit(vasak6, (5 * (int(0.05 * x_global) + 5), 0))
+    mängu_screen.blit(parem6, (x_global - int(0.05 * x_global), 0))
+    mängu_screen.blit(parem5, (x_global - 2 * (int(0.05 * x_global)) - 5, 0))
+    mängu_screen.blit(parem4, (x_global - 3 * (int(0.05 * x_global)) - 10, 0))
+    mängu_screen.blit(parem3, (x_global - 4 * (int(0.05 * x_global)) - 15, 0))
+    mängu_screen.blit(parem2, (x_global - 5 * (int(0.05 * x_global)) - 20, 0))
+    mängu_screen.blit(parem1, (x_global - 6 * (int(0.05 * x_global)) - 25, 0))
 
-    mängu_screen.blit(vasakud_ikoonid7, (0, int(0.1 * y_global) + 5))
-    mängu_screen.blit(vasakud_ikoonid8, ((int(0.1 * x_global) + 5), int(0.1 * y_global) + 5))
-    mängu_screen.blit(paremad_ikoonid8, (x_global - int(0.1 * x_global), int(0.1 * y_global) + 5))
-    mängu_screen.blit(paremad_ikoonid7, (x_global - 2 * (int(0.1 * x_global)) - 5, int(0.1 * y_global) + 5))
+    mängu_screen.blit(vasak7, (0, int(0.1 * y_global) + 5))
+    mängu_screen.blit(vasak8, ((int(0.1 * x_global) + 5), int(0.1 * y_global) + 5))
+    mängu_screen.blit(parem8, (x_global - int(0.1 * x_global), int(0.1 * y_global) + 5))
+    mängu_screen.blit(parem7, (x_global - 2 * (int(0.1 * x_global)) - 5, int(0.1 * y_global) + 5))
 
     player_list1.update(dt)
     player_list2.update(dt)
@@ -1385,17 +1434,85 @@ while a:
     if parema_torni_elud == 1:
         paremad_elud = parem_elud1
 
-    if vasakud_coinid < 30:
-        vasakud_coinid += 0.01
+    if vasakud_coinid < 50:
+        vasakud_coinid += 0.05
         coins1 = vasakud_coinid
-    if paremad_coinid < 30:
-        paremad_coinid += 0.01
+    if paremad_coinid < 50:
+        paremad_coinid += 0.05
         coins2 = paremad_coinid
 
 
+    if round(coins1) < 5:
+        vasak1 = vasakud_tuhm1
+    else:
+        vasak1 = vasakud_ikoonid1
+    if round(coins1) < 10:
+        vasak2 = vasakud_tuhm2
+    else:
+        vasak2 = vasakud_ikoonid2
+    if round(coins1) < 15:
+        vasak3 = vasakud_tuhm3
+    else:
+        vasak3 = vasakud_ikoonid3
+    if round(coins1) < 20:
+        vasak4 = vasakud_tuhm4
+    else:
+        vasak4 = vasakud_ikoonid4
+    if round(coins1) < 25:
+        vasak5 = vasakud_tuhm5
+    else:
+        vasak5 = vasakud_ikoonid5
+    if round(coins1) < 30:
+        vasak6 = vasakud_tuhm6
+    else:
+        vasak6 = vasakud_ikoonid6
+    if round(coins1) < 40:
+        vasak7 = vasakud_tuhm7
+    else:
+        vasak7 = vasakud_ikoonid7
+    if round(coins1) < 40:
+        vasak8 = vasakud_tuhm8
+    else:
+        vasak8 = vasakud_ikoonid8
+
+
+    if round(coins1) < 5:
+        parem1 = paremad_tuhm1
+    else:
+        parem1 = paremad_ikoonid1
+    if round(coins1) < 10:
+        parem2 = paremad_tuhm2
+    else:
+        parem2 = paremad_ikoonid2
+    if round(coins1) < 15:
+        parem3 = paremad_tuhm3
+    else:
+        parem3 = paremad_ikoonid3
+    if round(coins1) < 20:
+        parem4 = paremad_tuhm4
+    else:
+        parem4 = paremad_ikoonid4
+    if round(coins1) < 25:
+        parem5 = paremad_tuhm5
+    else:
+        parem5 = paremad_ikoonid5
+    if round(coins1) < 30:
+        parem6 = paremad_tuhm6
+    else:
+        parem6 = paremad_ikoonid6
+    if round(coins1) < 40:
+        parem7 = paremad_tuhm7
+    else:
+        parem7 = paremad_ikoonid7
+    if round(coins1) < 40:
+        parem8 = paremad_tuhm8
+    else:
+        parem8 = paremad_ikoonid8
+
 
     if b == 0:
-        draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2)
+        draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2, vasak1, vasak2, vasak3, vasak4, vasak5, vasak6, vasak7, vasak8,\
+         parem1, parem2, parem3, parem4, parem5, parem6, parem7, parem8)
     if b == 1:
         draw_game_over()
 

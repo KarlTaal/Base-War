@@ -35,7 +35,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="png" value="2" />
-          <entry key="py" value="145" />
+          <entry key="py" value="149" />
           <entry key="txt" value="4" />
         </counts>
       </usages-collector>
@@ -43,7 +43,7 @@
         <counts>
           <entry key="Image" value="2" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="144" />
+          <entry key="Python" value="148" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -51,13 +51,13 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="39" />
-          <entry key="Python" value="36400" />
+          <entry key="Python" value="38102" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="38" />
-          <entry key="py" value="36400" />
+          <entry key="py" value="38102" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -71,11 +71,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="1100" column="38" selection-start-line="1100" selection-start-column="38" selection-end-line="1100" selection-end-column="38" />
+            <state relative-caret-position="-24167">
+              <caret line="79" column="97" selection-start-line="79" selection-start-column="97" selection-end-line="79" selection-end-column="97" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1543387538453" expanded="true" signature="43712:43717" ph="..." />
+                <marker date="1543396043122" expanded="true" signature="46586:46591" ph="..." />
               </folding>
             </state>
           </provider>
@@ -151,8 +151,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="378" />
-    <option name="y" value="6" />
+    <option name="x" value="291" />
+    <option name="y" value="18" />
     <option name="width" value="1362" />
     <option name="height" value="975" />
   </component>
@@ -163,7 +163,42 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proge" type="462c0819:PsiDirectoryNode" />
+              <item name="projekt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proge" type="462c0819:PsiDirectoryNode" />
+              <item name="projekt" type="462c0819:PsiDirectoryNode" />
+              <item name="TowerDefence" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proge" type="462c0819:PsiDirectoryNode" />
+              <item name="Kodutööd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proge" type="462c0819:PsiDirectoryNode" />
+              <item name="Kodutööd" type="462c0819:PsiDirectoryNode" />
+              <item name="kodutöö13" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
@@ -322,12 +357,12 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8274021" weight="0.32114467" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8274021" weight="0.3298887" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.17259787" side_tool="true" weight="0.145469" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291815" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49920508" visible="true" weight="0.24733096" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49920508" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.481409" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -544,13 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö13/sarnaste ruutude fraktal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../ns/joonistus.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-95" />
@@ -573,13 +601,23 @@
     <entry file="file://$PROJECT_DIR$/TowerDefence/images/mehike/mehike3.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö13/sarnaste ruutude fraktal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <marker date="1543392435593" expanded="true" signature="51:280" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="1100" column="38" selection-start-line="1100" selection-start-column="38" selection-end-line="1100" selection-end-column="38" />
+        <state relative-caret-position="-24167">
+          <caret line="79" column="97" selection-start-line="79" selection-start-column="97" selection-end-line="79" selection-end-column="97" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1543387538453" expanded="true" signature="43712:43717" ph="..." />
+            <marker date="1543396043122" expanded="true" signature="46586:46591" ph="..." />
           </folding>
         </state>
       </provider>
