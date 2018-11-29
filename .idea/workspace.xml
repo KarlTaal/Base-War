@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/parem_torn.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/taust.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/vasak_torn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,13 +51,13 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="39" />
-          <entry key="Python" value="41691" />
+          <entry key="Python" value="41797" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="38" />
-          <entry key="py" value="41691" />
+          <entry key="py" value="41797" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -70,11 +71,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="1348" column="52" selection-start-line="1348" selection-start-column="52" selection-end-line="1348" selection-end-column="52" />
+            <state relative-caret-position="114">
+              <caret line="214" column="120" selection-start-line="214" selection-start-column="120" selection-end-line="214" selection-end-column="120" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1543513509381" expanded="true" signature="50978:50983" ph="..." />
+                <marker date="1543523716267" expanded="true" signature="49599:49604" ph="..." />
               </folding>
             </state>
           </provider>
@@ -94,6 +95,7 @@
       <find>8</find>
       <find>vasak_</find>
       <find>100</find>
+      <find>80</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -153,7 +155,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="10" />
     <option name="width" value="1824" />
     <option name="height" value="1031" />
@@ -608,11 +610,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="1348" column="52" selection-start-line="1348" selection-start-column="52" selection-end-line="1348" selection-end-column="52" />
+        <state relative-caret-position="114">
+          <caret line="214" column="120" selection-start-line="214" selection-start-column="120" selection-end-line="214" selection-end-column="120" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1543513509381" expanded="true" signature="50978:50983" ph="..." />
+            <marker date="1543523716267" expanded="true" signature="49599:49604" ph="..." />
           </folding>
         </state>
       </provider>
