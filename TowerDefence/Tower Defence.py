@@ -1344,13 +1344,13 @@ def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2, vasak
     mängu_screen.blit(coin1, (0.015 * x_global, 0.425* y_global))
     mängu_screen.blit(coin2, (0.925 * x_global, 0.425 * y_global))
 
-    basicfont1 = pygame.font.SysFont(None, 80)
+    basicfont1 = pygame.font.SysFont("Arial", 70)
     text1 = basicfont1.render(str(round(coins1)), True, (139, 117, 0))
-    mängu_screen.blit(text1, (0.04 * x_global, 0.43* y_global))
+    mängu_screen.blit(text1, (0.04 * x_global, 0.415* y_global))
 
-    basicfont2 = pygame.font.SysFont(None, 80)
+    basicfont2 = pygame.font.SysFont("Arial", 70)
     text2 = basicfont2.render(str(round(coins2)), True, (139, 117, 0))
-    mängu_screen.blit(text2, (0.95 * x_global, 0.43 * y_global))
+    mängu_screen.blit(text2, (0.95 * x_global, 0.415 * y_global))
 
     pygame.display.update()
 
