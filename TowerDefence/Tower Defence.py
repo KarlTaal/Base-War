@@ -1,5 +1,4 @@
 import pygame
-import ctypes
 import random
 import time
 
@@ -13,15 +12,23 @@ parema_torni_elud = 5
 vasakud_coinid = 0
 paremad_coinid = 0
 
+try:
+    import ctypes
+    #VÕTAB ARVUTI EKRAANI MÕÕTME JA LOOB MÄNGU EKRAANI SUURUSE
+    ctypes.windll.user32.SetProcessDPIAware()
+    true_res = (ctypes.windll.user32.GetSystemMetrics(0), ctypes.windll.user32.GetSystemMetrics(1))
+    mängu_screen = pygame.display.set_mode(true_res,pygame.FULLSCREEN)
 
-#VÕTAB ARVUTI EKRAANI MÕÕTME JA LOOB MÄNGU EKRAANI SUURUSE 
-ctypes.windll.user32.SetProcessDPIAware()
-true_res = (ctypes.windll.user32.GetSystemMetrics(0), ctypes.windll.user32.GetSystemMetrics(1))
-mängu_screen = pygame.display.set_mode(true_res,pygame.FULLSCREEN)
+    #Kogu ekraani suurused
+    x_global = int(true_res[0])  #1920
+    y_global = int(true_res[1])  #1080
 
-#Kogu ekraani suurused
-x_global = int(true_res[0])  #1920
-y_global = int(true_res[1])  #1080
+except:
+    from AppKit import NSScreen
+    x_global = NSScreen.mainScreen().frame().size.width
+    y_global = NSScreen.mainScreen().frame().size.height
+
+
 
 
 #MÄNGU NIMI
