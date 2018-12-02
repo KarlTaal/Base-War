@@ -48,8 +48,11 @@ except:
 pygame.display.set_caption("TOWER DEFENCE")
 
 #LAEB PILDID JA MUUDAB NEED SOBIVAKS SUURUSEKS
-game_over = pygame.image.load("images/game_over.png")
-game_over = pygame.transform.scale(game_over, (x_global,y_global))
+game_over_vasakpool = pygame.image.load("images/game_over_parem.png")
+game_over_vasakpool = pygame.transform.scale(game_over_vasakpool, (x_global, y_global))
+game_over_parempool = pygame.image.load("images/game_over_vasak.png")
+game_over_parempool = pygame.transform.scale(game_over_parempool, (x_global, y_global))
+
 
 vasakud_tuhm1 = pygame.image.load("images/vasakud_tegelased/tuhm1.png")
 vasakud_tuhm1 = pygame.transform.scale(vasakud_tuhm1, (int(0.05 * x_global), int(0.1 * y_global)))
@@ -1325,10 +1328,13 @@ def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2, vasak
 
     pygame.display.update()
 
-def draw_game_over():
-    mängu_screen.blit(game_over, (0, 0))
+def draw_game_over_parem():
+    mängu_screen.blit(game_over_vasakpool, (0, 0))
     pygame.display.update()
 
+def draw_game_over_vasak():
+    mängu_screen.blit(game_over_parempool, (0, 0))
+    pygame.display.update()
 
 player_list2 = pygame.sprite.Group()
 player_list1 = pygame.sprite.Group()
@@ -1347,7 +1353,8 @@ lillakuul_list1 = pygame.sprite.Group()
 punanekuul_list2 = pygame.sprite.Group()
 punanekuul_list1 = pygame.sprite.Group()
 a = True
-b = 0
+b_parem = 0
+b_vasak = 0
 
 #viivitus tegelaste lisamiseks, 1- vasak   2-parem
 tegelane1_aeg = tegelane_lisamis_delay
@@ -1361,73 +1368,73 @@ while a:
         player_list1.remove(i)
         parema_torni_elud -= 1
         if parema_torni_elud == 0:
-            b = 1
+            b_parem = 1
     k2 = pygame.sprite.groupcollide(player_list2, vasak_torn_sprite, False, False, collided=None)
     for i in k2:
         player_list2.remove(i)
         vasaku_torni_elud -= 1
         if vasaku_torni_elud == 0:
-            b = 1
+            b_vasak = 1
     k3 = pygame.sprite.groupcollide(knight_list1, parem_torn_sprite, False, False, collided=None)
     for i in k3:
         knight_list1.remove(i)
         parema_torni_elud -= 1
         if parema_torni_elud == 0:
-            b = 1
+            b_parem = 1
     k4 = pygame.sprite.groupcollide(knight_list2, vasak_torn_sprite, False, False, collided=None)
     for i in k4:
         knight_list2.remove(i)
         vasaku_torni_elud -= 1
         if vasaku_torni_elud == 0:
-            b = 1
+            b_vasak = 1
     k5 = pygame.sprite.groupcollide(skeleton_list1, parem_torn_sprite, False, False, collided=None)
     for i in k5:
         skeleton_list1.remove(i)
         parema_torni_elud -= 1
         if parema_torni_elud == 0:
-            b = 1
+            b_parem = 1
     k6 = pygame.sprite.groupcollide(skeleton_list2, vasak_torn_sprite, False, False, collided=None)
     for i in k6:
         skeleton_list2.remove(i)
         vasaku_torni_elud -= 1
         if vasaku_torni_elud == 0:
-            b = 1
+            b_vasak = 1
     k7 = pygame.sprite.groupcollide(eye_list1, parem_torn_sprite, False, False, collided=None)
     for i in k7:
         eye_list1.remove(i)
         parema_torni_elud -= 1
         if parema_torni_elud == 0:
-            b = 1
+            b_parem = 1
     k8 = pygame.sprite.groupcollide(eye_list2, vasak_torn_sprite, False, False, collided=None)
     for i in k8:
         eye_list2.remove(i)
         vasaku_torni_elud -= 1
         if vasaku_torni_elud == 0:
-            b = 1
+            b_vasak = 1
     k9 = pygame.sprite.groupcollide(orc_list1, parem_torn_sprite, False, False, collided=None)
     for i in k9:
         orc_list1.remove(i)
         parema_torni_elud -= 1
         if parema_torni_elud == 0:
-            b = 1
+            b_parem = 1
     k10 = pygame.sprite.groupcollide(orc_list2, vasak_torn_sprite, False, False, collided=None)
     for i in k10:
         orc_list2.remove(i)
         vasaku_torni_elud -= 1
         if vasaku_torni_elud == 0:
-            b = 1
+            b_vasak = 1
     k11 = pygame.sprite.groupcollide(wizard_list1, parem_torn_sprite, False, False, collided=None)
     for i in k11:
         wizard_list1.remove(i)
         parema_torni_elud -= 1
         if parema_torni_elud == 0:
-            b = 1
+            b_parem = 1
     k12 = pygame.sprite.groupcollide(wizard_list2, vasak_torn_sprite, False, False, collided=None)
     for i in k12:
         wizard_list2.remove(i)
         vasaku_torni_elud -= 1
         if vasaku_torni_elud == 0:
-            b = 1
+            b_vasak = 1
     k13 = pygame.sprite.groupcollide(lillakuul_list1, parem_torn_sprite, False, False, collided=None)
     for i in k13:
         lillakuul_list1.remove(i)
@@ -1439,13 +1446,13 @@ while a:
         punanekuul_list1.remove(i)
         parema_torni_elud -= 1
         if parema_torni_elud == 0:
-            b = 1
+            b_parem = 1
     k16 = pygame.sprite.groupcollide(punanekuul_list2, vasak_torn_sprite, False, False, collided=None)
     for i in k16:
         punanekuul_list2.remove(i)
         vasaku_torni_elud -= 1
         if vasaku_torni_elud == 0:
-            b = 1
+            b_vasak = 1
 
 
 
@@ -1647,12 +1654,16 @@ while a:
     else:
         parem8 = paremad_ikoonid8
 
+    if b_parem == 0 and b_vasak == 0:
+        draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2, vasak1, vasak2, vasak3, vasak4, vasak5,
+             vasak6, vasak7, vasak8, \
+             parem1, parem2, parem3, parem4, parem5, parem6, parem7, parem8)
 
-    if b == 0:
-        draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2, vasak1, vasak2, vasak3, vasak4, vasak5, vasak6, vasak7, vasak8,\
-         parem1, parem2, parem3, parem4, parem5, parem6, parem7, parem8)
-    if b == 1:
-        draw_game_over()
+    if b_parem == 1:
+        draw_game_over_parem()
+
+    if b_vasak == 1:
+        draw_game_over_vasak()
 
 #    1 on vasakpoolsed ja 2 on parempoolsed
     if tegelane1_aeg < tegelane_lisamis_delay:
