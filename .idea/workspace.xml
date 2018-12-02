@@ -22,20 +22,20 @@
     <session id="855116060">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="36" />
+          <entry key="project.closed" value="40" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="6" />
           <entry key="project.open.time.4" value="13" />
-          <entry key="project.open.time.5" value="6" />
-          <entry key="project.open.time.6" value="8" />
-          <entry key="project.open.time.7" value="5" />
-          <entry key="project.opened" value="40" />
+          <entry key="project.open.time.5" value="8" />
+          <entry key="project.open.time.6" value="9" />
+          <entry key="project.open.time.7" value="6" />
+          <entry key="project.opened" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="png" value="2" />
-          <entry key="py" value="170" />
+          <entry key="py" value="175" />
           <entry key="txt" value="5" />
         </counts>
       </usages-collector>
@@ -43,7 +43,7 @@
         <counts>
           <entry key="Image" value="2" />
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="169" />
+          <entry key="Python" value="174" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -51,13 +51,13 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="39" />
-          <entry key="Python" value="41797" />
+          <entry key="Python" value="44010" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="38" />
-          <entry key="py" value="41797" />
+          <entry key="py" value="44010" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -67,15 +67,15 @@
     <favorites_list name="projekt" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="214" column="120" selection-start-line="214" selection-start-column="120" selection-end-line="214" selection-end-column="120" />
+            <state relative-caret-position="289">
+              <caret line="1575" column="29" selection-start-line="1575" selection-start-column="29" selection-end-line="1575" selection-end-column="29" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1543523716267" expanded="true" signature="49599:49604" ph="..." />
+                <marker date="1543777841604" expanded="true" signature="49947:49952" ph="..." />
               </folding>
             </state>
           </provider>
@@ -96,6 +96,7 @@
       <find>vasak_</find>
       <find>100</find>
       <find>80</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,14 +152,18 @@
         <option value="$PROJECT_DIR$/../Kodutööd/kodutöö13/sarnaste ruutude fraktal.py" />
         <option value="$PROJECT_DIR$/../Praktikumid/praks11/terase ül.py" />
         <option value="$PROJECT_DIR$/../Praktikumid/terase ül.py" />
+        <option value="$USER_HOME$/Desktop/projekt/TowerDefence/Tower Defence.py" />
+        <option value="$PROJECT_DIR$/../Kodutööd/kodutöö14/tasemed.py" />
+        <option value="$PROJECT_DIR$/../Kodutööd/kodutöö14/väljasta liin.py" />
         <option value="$PROJECT_DIR$/TowerDefence/Tower Defence.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
-    <option name="width" value="1824" />
-    <option name="height" value="1031" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="886" />
+    <option name="y" value="4" />
+    <option name="width" value="1038" />
+    <option name="height" value="1025" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -168,6 +173,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -190,12 +196,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/projekt/TowerDefence/Tower Defence.py" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
@@ -211,7 +216,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.Tower Defence">
-    <configuration name="Tower Defence (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Tower Defence (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="projekt" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -219,11 +224,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/mäng/TowerDefence" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/projekt/TowerDefence" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/mäng/TowerDefence/Tower Defence.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/projekt/TowerDefence/Tower Defence.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -253,7 +258,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="asdfasf" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="tasemed" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="proge" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -261,32 +266,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Kodutööd/kodutöö13" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Kodutööd/kodutöö14" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Kodutööd/kodutöö13/asdfasf.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sarnaste ruutude fraktal" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="proge" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Kodutööd/kodutöö13" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Kodutööd/kodutöö13/sarnaste ruutude fraktal.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Kodutööd/kodutöö14/tasemed.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -316,20 +300,41 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="väljasta liin" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="proge" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Kodutööd/kodutöö14" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Kodutööd/kodutöö14/väljasta liin.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.Tower Defence" />
-      <item itemvalue="Python.sarnaste ruutude fraktal" />
-      <item itemvalue="Python.asdfasf" />
-      <item itemvalue="Python.Tower Defence (1)" />
       <item itemvalue="Python.terase ül" />
+      <item itemvalue="Python.Tower Defence (2)" />
+      <item itemvalue="Python.tasemed" />
+      <item itemvalue="Python.väljasta liin" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Tower Defence" />
+        <item itemvalue="Python.väljasta liin" />
+        <item itemvalue="Python.tasemed" />
+        <item itemvalue="Python.Tower Defence (2)" />
         <item itemvalue="Python.terase ül" />
-        <item itemvalue="Python.sarnaste ruutude fraktal" />
-        <item itemvalue="Python.Tower Defence (1)" />
-        <item itemvalue="Python.asdfasf" />
       </list>
     </recent_temporary>
   </component>
@@ -347,16 +352,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="0" width="1216" height="687" extended-state="0" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8274021" visible="true" weight="0.15351993" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8274021" visible="true" weight="0.16852146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.17259787" side_tool="true" weight="0.145469" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291815" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49920508" visible="true" weight="0.2400722" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.481409" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49920508" visible="true" weight="0.13879004" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.48" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -391,15 +396,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../lisaülesanded/veiderdav tekst/veiderdav tekst/veiderdav tekst.py" />
-    <entry file="file://$PROJECT_DIR$/../lisaülesanded/veiderdav tekst/veiderdav tekst/veiderdav tekst one line.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/encodings/cp1252.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../lisaülesanded/veiderdav tekst/veiderdav tekst vol2.py" />
     <entry file="file://$PROJECT_DIR$/TowerDefence/images/game_over.png">
       <provider selected="true" editor-type-id="images" />
@@ -543,13 +539,7 @@
         <state relative-caret-position="-663" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Praktikumid/praks11/terase ül.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" selection-start-column="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../Praktikumid/praks11/terase ül.py" />
     <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö11/kodu2.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -581,9 +571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-          <folding>
-            <marker date="1543489126444" expanded="true" signature="75:80" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -608,13 +595,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/projekt/TowerDefence/Tower Defence.py" />
+    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö14/tasemed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="38" column="17" lean-forward="true" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö14/väljasta liin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <marker date="1543765535611" expanded="true" signature="390:874" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="214" column="120" selection-start-line="214" selection-start-column="120" selection-end-line="214" selection-end-column="120" />
+        <state relative-caret-position="289">
+          <caret line="1575" column="29" selection-start-line="1575" selection-start-column="29" selection-end-line="1575" selection-end-column="29" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1543523716267" expanded="true" signature="49599:49604" ph="..." />
+            <marker date="1543777841604" expanded="true" signature="49947:49952" ph="..." />
           </folding>
         </state>
       </provider>
