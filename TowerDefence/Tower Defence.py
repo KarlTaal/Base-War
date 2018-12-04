@@ -14,15 +14,12 @@ paremad_coinid = 0
 
 
 
-#mängu_screen = pygame.display.set_mode((1600, 900), pygame.FULLSCREEN)
-#x_global, y_global = mängu_screen.get_size()
 
-
-#infoObject = pygame.display.Info()
-#print(infoObject)
-#x_global = infoObject.current_w
-#y_global = infoObject.current_h
-#mängu_screen = pygame.display.set_mode((infoObject.current_w, infoObject.current_h), pygame.FULLSCREEN)
+# infoObject = pygame.display.Info()
+# print(infoObject)
+# x_global = infoObject.current_w
+# y_global = infoObject.current_h
+# mängu_screen = pygame.display.set_mode((infoObject.current_w, infoObject.current_h), pygame.FULLSCREEN)
 
 
 try:
@@ -37,10 +34,15 @@ try:
     y_global = int(true_res[1])  #1080
 
 except:
-    from AppKit import NSScreen
-    x_global = NSScreen.mainScreen().frame().size.width
-    y_global = NSScreen.mainScreen().frame().size.height
+    infoObject = pygame.display.Info()
+    x_global = infoObject.current_w
+    y_global = infoObject.current_h
+    mängu_screen = pygame.display.set_mode((infoObject.current_w, infoObject.current_h), pygame.FULLSCREEN)
 
+
+    #     from AppKit import NSScreen
+    #     x_global = NSScreen.mainScreen().frame().size.width
+    #     y_global = NSScreen.mainScreen().frame().size.height
 
 
 
@@ -1660,10 +1662,10 @@ while a:
              parem1, parem2, parem3, parem4, parem5, parem6, parem7, parem8)
 
     if b_parem == 1:
-        draw_game_over_parem()
+        draw_game_over_vasak()
 
     if b_vasak == 1:
-        draw_game_over_vasak()
+        draw_game_over_parem()
 
 #    1 on vasakpoolsed ja 2 on parempoolsed
     if tegelane1_aeg < tegelane_lisamis_delay:

@@ -35,7 +35,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="png" value="2" />
-          <entry key="py" value="175" />
+          <entry key="py" value="178" />
           <entry key="txt" value="5" />
         </counts>
       </usages-collector>
@@ -43,7 +43,7 @@
         <counts>
           <entry key="Image" value="2" />
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="174" />
+          <entry key="Python" value="177" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -51,13 +51,13 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="39" />
-          <entry key="Python" value="44010" />
+          <entry key="Python" value="44129" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="38" />
-          <entry key="py" value="44010" />
+          <entry key="py" value="44129" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -71,11 +71,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="1575" column="29" selection-start-line="1575" selection-start-column="29" selection-end-line="1575" selection-end-column="29" />
+            <state relative-caret-position="-407">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1543777841604" expanded="true" signature="49947:49952" ph="..." />
               </folding>
             </state>
           </provider>
@@ -97,6 +96,8 @@
       <find>100</find>
       <find>80</find>
       <find>print</find>
+      <find>game_over</find>
+      <find>dept</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -153,8 +154,8 @@
         <option value="$PROJECT_DIR$/../Praktikumid/praks11/terase ül.py" />
         <option value="$PROJECT_DIR$/../Praktikumid/terase ül.py" />
         <option value="$USER_HOME$/Desktop/projekt/TowerDefence/Tower Defence.py" />
-        <option value="$PROJECT_DIR$/../Kodutööd/kodutöö14/tasemed.py" />
         <option value="$PROJECT_DIR$/../Kodutööd/kodutöö14/väljasta liin.py" />
+        <option value="$PROJECT_DIR$/../Kodutööd/kodutöö14/tasemed.py" />
         <option value="$PROJECT_DIR$/TowerDefence/Tower Defence.py" />
       </list>
     </option>
@@ -191,6 +192,17 @@
               <item name="proge" type="462c0819:PsiDirectoryNode" />
               <item name="projekt" type="462c0819:PsiDirectoryNode" />
               <item name="TowerDefence" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proge" type="462c0819:PsiDirectoryNode" />
+              <item name="Kodutööd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proge" type="462c0819:PsiDirectoryNode" />
+              <item name="Kodutööd" type="462c0819:PsiDirectoryNode" />
+              <item name="kodutöö14" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -360,7 +372,7 @@
       <window_info id="Favorites" order="2" sideWeight="0.17259787" side_tool="true" weight="0.145469" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291815" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49920508" visible="true" weight="0.13879004" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49920508" visible="true" weight="0.065836295" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.48" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -596,16 +608,9 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/projekt/TowerDefence/Tower Defence.py" />
-    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö14/tasemed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="38" column="17" lean-forward="true" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö14/väljasta liin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
+        <state relative-caret-position="347">
           <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
           <folding>
             <marker date="1543765535611" expanded="true" signature="390:874" ph="..." />
@@ -613,13 +618,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö14/tasemed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="25" column="49" lean-forward="true" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="1575" column="29" selection-start-line="1575" selection-start-column="29" selection-end-line="1575" selection-end-column="29" />
+        <state relative-caret-position="-407">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1543777841604" expanded="true" signature="49947:49952" ph="..." />
           </folding>
         </state>
       </provider>
