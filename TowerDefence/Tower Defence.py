@@ -45,7 +45,7 @@ except:
 
     y_global = infoObject.current_h
     x_global = int(y_global * (16/9))
-    
+
     mängu_screen = pygame.display.set_mode((x_global, y_global), pygame.FULLSCREEN)
 
 #MÄNGU NIMI
@@ -345,7 +345,7 @@ class Punanekuul1(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x += 15
+        self.rect.x += int(0.014 * y_global)
 def punanekuul1():
     punanekuul1 = Punanekuul1(position=(0, y_global * 0.78), punanekuul_walkRight=punanekuul_walkRight)
     punanekuul_list1.add(punanekuul1)
@@ -372,7 +372,7 @@ class Punanekuul2(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x -= 15
+        self.rect.x -= int(0.014 * y_global)
 def punanekuul2():
     punanekuul2 = Punanekuul2(position=(x_global - int(0.1 * x_global), y_global * 0.78), punanekuul_walkLeft=punanekuul_walkLeft)
     punanekuul_list2.add(punanekuul2)
@@ -399,7 +399,7 @@ class Lillakuul1(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x += 15
+        self.rect.x += int(0.014 * y_global)
 def lillakuul1():
     lillakuul1 = Lillakuul1(position=(0, y_global * 0.78), lillakuul_walkRight=lillakuul_walkRight)
     lillakuul_list1.add(lillakuul1)
@@ -426,7 +426,7 @@ class Lillakuul2(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x -= 15
+        self.rect.x -= int(0.014 * y_global)
 def lillakuul2():
     lillakuul2 = Lillakuul2(position=(x_global - int(0.1 * x_global), y_global * 0.78), lillakuul_walkLeft=lillakuul_walkLeft)
     lillakuul_list2.add(lillakuul2)
@@ -453,7 +453,7 @@ class Orc1(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x += 5
+        self.rect.x += int(0.0047 * y_global)
 def orc1():
     orc1 = Orc1(position=(0, y_global * 0.78), orc_walkRight=orc_walkRight)
     orc_list1.add(orc1)
@@ -480,7 +480,7 @@ class Orc2(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x -= 5
+        self.rect.x -= int(0.0047 * y_global)
 def orc2():
     orc2 = Orc2(position=(x_global - int(0.08 * x_global) , y_global * 0.78), orc_walkLeft=orc_walkLeft)
     orc_list2.add(orc2)
@@ -507,7 +507,7 @@ class Wizard1(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x += 5
+        self.rect.x += int(0.0047 * y_global)
 def wizard1():
     wizard1 = Wizard1(position=(0, y_global * 0.73), wizard_walkRight=wizard_walkRight)
     wizard_list1.add(wizard1)
@@ -534,7 +534,7 @@ class Wizard2(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x -= 5
+        self.rect.x -= int(0.0047 * y_global)
 def wizard2():
     wizard2 = Wizard2(position=(x_global - int(0.05 * x_global) , y_global * 0.73), wizard_walkLeft=wizard_walkLeft)
     wizard_list2.add(wizard2)
@@ -561,7 +561,7 @@ class Eye1(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x += 5
+        self.rect.x += int(0.0047 * y_global)
 def eye1():
     eye1 = Eye1(position=(0, y_global * 0.74), eye_walkRight=eye_walkRight)
     eye_list1.add(eye1)
@@ -588,7 +588,7 @@ class Eye2(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x -= 5
+        self.rect.x -= int(0.0047 * y_global)
 def eye2():
     eye2 = Eye2(position=(x_global - int(0.06 * x_global), y_global * 0.74), eye_walkLeft=eye_walkLeft)
     eye_list2.add(eye2)
@@ -615,7 +615,7 @@ class Player1(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x += 5
+        self.rect.x += int(0.0047 * y_global)
 def player1():
     player1 = Player1(position=(0, y_global * 0.79), mehike_walkRight=mehike_walkRight)
     player_list1.add(player1)
@@ -642,7 +642,7 @@ class Player2(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x -= 5
+        self.rect.x -= int(0.0047 * y_global)
 def player2():
     player2 = Player2(position=(x_global - int(0.03 * x_global), y_global * 0.79), mehike_walkLeft=mehike_walkLeft)
     player_list2.add(player2)
@@ -669,7 +669,7 @@ class Knight1(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x += 5
+        self.rect.x += int(0.0047 * y_global)
 def knight1():
     knight1 = Knight1(position=(0, y_global * 0.75), knight_walkRight=knight_walkRight)
     knight_list1.add(knight1)
@@ -696,7 +696,7 @@ class Knight2(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x -= 5
+        self.rect.x -= int(0.0047 * y_global)
 def knight2():
     knight2 = Knight2(position=(x_global - int(0.05 * x_global), y_global * 0.75), knight_walkLeft=knight_walkLeft)
     knight_list2.add(knight2)
@@ -723,7 +723,7 @@ class Skeleton1(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x += 5
+        self.rect.x += int(0.0047 * y_global)
 def skeleton1():
     skeleton1 = Skeleton1(position=(0, y_global * 0.76), skeleton_walkRight=skeleton_walkRight)
     skeleton_list1.add(skeleton1)
@@ -750,7 +750,7 @@ class Skeleton2(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x -= 5
+        self.rect.x -= int(0.0047 * y_global)
 def skeleton2():
     skeleton2 = Skeleton2(position=(x_global - int(0.05 * x_global), y_global * 0.76), skeleton_walkLeft=skeleton_walkLeft)
     skeleton_list2.add(skeleton2)
