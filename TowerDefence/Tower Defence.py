@@ -15,43 +15,45 @@ paremad_coinid = 0
 
 
 
-# infoObject = pygame.display.Info()
-# print(infoObject)
-# x_global = infoObject.current_w
-# y_global = infoObject.current_h
-# mängu_screen = pygame.display.set_mode((infoObject.current_w, infoObject.current_h), pygame.FULLSCREEN)
 
+
+#x_global = int(2880 * 0.5)
+#y_global = int(1800 * 0.5)
+
+# y_global = int(1080)
+# x_global = int(y_global * (16/9))
+#
+# mängu_screen = pygame.display.set_mode((x_global, y_global), pygame.FULLSCREEN)
+
+#infoObject = pygame.display.Info()
+# y_global = 800
+# x_global = int(y_global * (16 / 9))
+# mängu_screen = pygame.display.set_mode((x_global, y_global), pygame.FULLSCREEN)
 
 try:
     import ctypes
-    #VÕTAB ARVUTI EKRAANI MÕÕTME JA LOOB MÄNGU EKRAANI SUURUSE
     ctypes.windll.user32.SetProcessDPIAware()
     true_res = (ctypes.windll.user32.GetSystemMetrics(0), ctypes.windll.user32.GetSystemMetrics(1))
-    mängu_screen = pygame.display.set_mode(true_res,pygame.FULLSCREEN)
 
-    #Kogu ekraani suurused
-    x_global = int(true_res[0])  #1920
-    y_global = int(true_res[1])  #1080
+    y_global = int(true_res[1])
+    x_global = int(y_global * (16/9))# arvutab suhte järgi x'i, siis on suhe koguaeg sama, ükskõik mis resolutsiooniga
+
+    mängu_screen = pygame.display.set_mode((x_global, y_global), pygame.FULLSCREEN)
 
 except:
     infoObject = pygame.display.Info()
-    x_global = infoObject.current_w
+
     y_global = infoObject.current_h
-    mängu_screen = pygame.display.set_mode((infoObject.current_w, infoObject.current_h), pygame.FULLSCREEN)
-
-
-    #     from AppKit import NSScreen
-    #     x_global = NSScreen.mainScreen().frame().size.width
-    #     y_global = NSScreen.mainScreen().frame().size.height
-
-
+    x_global = int(y_global * (16/9))
+    
+    mängu_screen = pygame.display.set_mode((x_global, y_global), pygame.FULLSCREEN)
 
 #MÄNGU NIMI
 pygame.display.set_caption("TOWER DEFENCE")
 
 #LAEB PILDID JA MUUDAB NEED SOBIVAKS SUURUSEKS
 game_over_vasakpool = pygame.image.load("images/game_over_parem.png")
-game_over_vasakpool = pygame.transform.scale(game_over_vasakpool, (x_global, y_global))
+game_over_vasakpool = pygame.transform.scale(game_over_vasakpool,(x_global, y_global))
 game_over_parempool = pygame.image.load("images/game_over_vasak.png")
 game_over_parempool = pygame.transform.scale(game_over_parempool, (x_global, y_global))
 
@@ -1320,11 +1322,11 @@ def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2, vasak
     mängu_screen.blit(coin1, (0.015 * x_global, 0.425* y_global))
     mängu_screen.blit(coin2, (0.925 * x_global, 0.425 * y_global))
 
-    basicfont1 = pygame.font.SysFont("Arial", 70)
+    basicfont1 = pygame.font.SysFont("Arial", int(x_global * 0.036))
     text1 = basicfont1.render(str(round(coins1)), True, (139, 117, 0))
     mängu_screen.blit(text1, (0.04 * x_global, 0.415* y_global))
 
-    basicfont2 = pygame.font.SysFont("Arial", 70)
+    basicfont2 = pygame.font.SysFont("Arial", int(x_global * 0.036))
     text2 = basicfont2.render(str(round(coins2)), True, (139, 117, 0))
     mängu_screen.blit(text2, (0.95 * x_global, 0.415 * y_global))
 
@@ -1658,8 +1660,7 @@ while a:
 
     if b_parem == 0 and b_vasak == 0:
         draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2, vasak1, vasak2, vasak3, vasak4, vasak5,
-             vasak6, vasak7, vasak8, \
-             parem1, parem2, parem3, parem4, parem5, parem6, parem7, parem8)
+             vasak6, vasak7, vasak8, parem1, parem2, parem3, parem4, parem5, parem6, parem7, parem8)
 
     if b_parem == 1:
         draw_game_over_vasak()
