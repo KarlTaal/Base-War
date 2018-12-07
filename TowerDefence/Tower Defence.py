@@ -333,7 +333,7 @@ class Punanekuul1(pygame.sprite.Sprite):
         self.index = 0
         self.image = punanekuul_walkRight[self.index]
         self.velocity = pygame.math.Vector2(0, 0)
-        self.animation_time = 0.01
+        self.animation_time = (y_global * 0.00009259)
         self.current_time = 0
 
     def update_time_dependent(self, dt):
@@ -360,7 +360,7 @@ class Punanekuul2(pygame.sprite.Sprite):
         self.index = 0
         self.image = punanekuul_walkLeft[self.index]
         self.velocity = pygame.math.Vector2(0, 0)
-        self.animation_time = 0.01
+        self.animation_time = (y_global * 0.00009259)
         self.current_time = 0
 
     def update_time_dependent(self, dt):
@@ -387,7 +387,7 @@ class Lillakuul1(pygame.sprite.Sprite):
         self.index = 0
         self.image = lillakuul_walkRight[self.index]
         self.velocity = pygame.math.Vector2(0, 0)
-        self.animation_time = 0.01
+        self.animation_time = (y_global * 0.00009259)
         self.current_time = 0
 
     def update_time_dependent(self, dt):
@@ -414,7 +414,7 @@ class Lillakuul2(pygame.sprite.Sprite):
         self.index = 0
         self.image = lillakuul_walkLeft[self.index]
         self.velocity = pygame.math.Vector2(0, 0)
-        self.animation_time = 0.01
+        self.animation_time = (y_global * 0.00009259)
         self.current_time = 0
 
     def update_time_dependent(self, dt):
@@ -441,7 +441,7 @@ class Orc1(pygame.sprite.Sprite):
         self.index = 0
         self.image = orc_walkRight[self.index]
         self.velocity = pygame.math.Vector2(0, 0)
-        self.animation_time = 0.1
+        self.animation_time = (y_global * 0.000092593)
         self.current_time = 0
 
     def update_time_dependent(self, dt):
@@ -468,7 +468,7 @@ class Orc2(pygame.sprite.Sprite):
         self.index = 0
         self.image = orc_walkLeft[self.index]
         self.velocity = pygame.math.Vector2(0, 0)
-        self.animation_time = 0.1
+        self.animation_time = (y_global * 0.000092593)
         self.current_time = 0
 
     def update_time_dependent(self, dt):
@@ -495,7 +495,7 @@ class Wizard1(pygame.sprite.Sprite):
         self.index = 0
         self.image = wizard_walkRight[self.index]
         self.velocity = pygame.math.Vector2(0, 0)
-        self.animation_time = 0.1
+        self.animation_time = (y_global * 0.000092593)
         self.current_time = 0
 
     def update_time_dependent(self, dt):
@@ -522,7 +522,7 @@ class Wizard2(pygame.sprite.Sprite):
         self.index = 0
         self.image = wizard_walkLeft[self.index]
         self.velocity = pygame.math.Vector2(0, 0)
-        self.animation_time = 0.1
+        self.animation_time = (y_global * 0.000092593)
         self.current_time = 0
 
     def update_time_dependent(self, dt):
@@ -549,7 +549,7 @@ class Eye1(pygame.sprite.Sprite):
         self.index = 0
         self.image = eye_walkRight[self.index]
         self.velocity = pygame.math.Vector2(0, 0)
-        self.animation_time = 0.1
+        self.animation_time = (y_global * 0.000092593)
         self.current_time = 0
 
     def update_time_dependent(self, dt):
@@ -576,7 +576,7 @@ class Eye2(pygame.sprite.Sprite):
         self.index = 0
         self.image = eye_walkLeft[self.index]
         self.velocity = pygame.math.Vector2(0, 0)
-        self.animation_time = 0.1
+        self.animation_time = (y_global * 0.000092593)
         self.current_time = 0
 
     def update_time_dependent(self, dt):
@@ -603,7 +603,7 @@ class Player1(pygame.sprite.Sprite):
         self.index = 0
         self.image = mehike_walkRight[self.index]
         self.velocity = pygame.math.Vector2(0, 0)
-        self.animation_time = 0.1
+        self.animation_time = (y_global * 0.000092593)
         self.current_time = 0
 
     def update_time_dependent(self, dt):
@@ -630,7 +630,7 @@ class Player2(pygame.sprite.Sprite):
         self.index = 0
         self.image = mehike_walkLeft[self.index]
         self.velocity = pygame.math.Vector2(0, 0)
-        self.animation_time = 0.1
+        self.animation_time = (y_global * 0.000092593)
         self.current_time = 0
 
     def update_time_dependent(self, dt):
@@ -657,7 +657,7 @@ class Knight1(pygame.sprite.Sprite):
         self.index = 0
         self.image = knight_walkRight[self.index]
         self.velocity = pygame.math.Vector2(0, 0)
-        self.animation_time = 0.1
+        self.animation_time = (y_global * 0.000092593)
         self.current_time = 0
 
     def update_time_dependent(self, dt):
@@ -684,7 +684,7 @@ class Knight2(pygame.sprite.Sprite):
         self.index = 0
         self.image = knight_walkLeft[self.index]
         self.velocity = pygame.math.Vector2(0, 0)
-        self.animation_time = 0.1
+        self.animation_time = (y_global * 0.000092593)
         self.current_time = 0
 
     def update_time_dependent(self, dt):
@@ -711,7 +711,7 @@ class Skeleton1(pygame.sprite.Sprite):
         self.index = 0
         self.image = skeleton_walkRight[self.index]
         self.velocity = pygame.math.Vector2(0, 0)
-        self.animation_time = 0.1
+        self.animation_time = (y_global * 0.000046296)
         self.current_time = 0
 
     def update_time_dependent(self, dt):
@@ -738,7 +738,7 @@ class Skeleton2(pygame.sprite.Sprite):
         self.index = 0
         self.image = skeleton_walkLeft[self.index]
         self.velocity = pygame.math.Vector2(0, 0)
-        self.animation_time = 0.1
+        self.animation_time = (y_global * 0.000046296)
         self.current_time = 0
 
     def update_time_dependent(self, dt):
@@ -1202,11 +1202,9 @@ def kokkupuude49():
         lillakuul_list2.remove(tegelane_hit_list[i])
 
 
-
-
-
 def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2, vasak1, vasak2, vasak3, vasak4, vasak5, vasak6, vasak7, vasak8,\
          parem1, parem2, parem3, parem4, parem5, parem6, parem7, parem8):
+
     kokkupuude1()
     kokkupuude2()
     kokkupuude3()
