@@ -2,6 +2,7 @@ import pygame
 import random
 import time
 
+
 pygame.init()
 
 FPS = 60
@@ -12,23 +13,6 @@ parema_torni_elud = 5
 vasakud_coinid = 0
 paremad_coinid = 0
 
-
-
-
-
-
-#x_global = int(2880 * 0.5)
-#y_global = int(1800 * 0.5)
-
-# y_global = int(1080)
-# x_global = int(y_global * (16/9))
-#
-# mängu_screen = pygame.display.set_mode((x_global, y_global), pygame.FULLSCREEN)
-
-#infoObject = pygame.display.Info()
-# y_global = 800
-# x_global = int(y_global * (16 / 9))
-# mängu_screen = pygame.display.set_mode((x_global, y_global), pygame.FULLSCREEN)
 
 try:
     import ctypes
@@ -52,10 +36,14 @@ except:
 pygame.display.set_caption("TOWER DEFENCE")
 
 #LAEB PILDID JA MUUDAB NEED SOBIVAKS SUURUSEKS
-game_over_vasakpool = pygame.image.load("images/game_over_parem.png")
-game_over_vasakpool = pygame.transform.scale(game_over_vasakpool,(x_global, y_global))
-game_over_parempool = pygame.image.load("images/game_over_vasak.png")
+game_over_vasakpool = pygame.image.load("images/taustad/game_over_parem.png")
+game_over_vasakpool = pygame.transform.scale(game_over_vasakpool, (x_global, y_global))
+game_over_parempool = pygame.image.load("images/taustad/game_over_vasak.png")
 game_over_parempool = pygame.transform.scale(game_over_parempool, (x_global, y_global))
+start_screen = pygame.image.load("images/taustad/start_screen.png")
+start_screen = pygame.transform.scale(start_screen, (x_global, y_global))
+instructions = pygame.image.load("images/taustad/instructions.png")
+instructions = pygame.transform.scale(instructions, (x_global, y_global))
 
 
 vasakud_tuhm1 = pygame.image.load("images/vasakud_tegelased/tuhm1.png")
@@ -154,7 +142,7 @@ paremad_ikoonid7 = pygame.transform.scale(paremad_ikoonid7, (int(0.1 * x_global)
 paremad_ikoonid8 = pygame.image.load("images/paremad_kuulid/raam2.png")
 paremad_ikoonid8 = pygame.transform.scale(paremad_ikoonid8, (int(0.1 * x_global), int(0.1 * y_global)))
 
-taust = pygame.image.load("images/taust.png")
+taust = pygame.image.load("images/taustad/taust.png")
 taust = pygame.transform.scale(taust, (x_global, y_global))
 
 coin1 = pygame.image.load("images/coins/coin1.png")
@@ -785,7 +773,8 @@ def kokkupuude3():
         suvaline = random.randint(0, 5)
         if suvaline == 5:
             knight_list1.remove(i)
-            paremad_coinid += 4
+            if paremad_coinid < 999:
+                paremad_coinid += 4
         elif suvaline < 5:
             player_list2.remove(tegelane_hit_list[i])
 def kokkupuude4():
@@ -798,7 +787,8 @@ def kokkupuude4():
             player_list1.remove(i)
         elif suvaline == 5:
             knight_list2.remove(tegelane_hit_list[i])
-            paremad_coinid += 4
+            if paremad_coinid < 999:
+                paremad_coinid += 4
 def kokkupuude5():
     tegelane_hit_list = pygame.sprite.groupcollide(player_list1, skeleton_list2, False, False, collided=None)
     global vasakud_coinid
@@ -809,7 +799,8 @@ def kokkupuude5():
             player_list1.remove(i)
         elif suvaline == 3:
             skeleton_list2.remove(tegelane_hit_list[i])
-            vasakud_coinid += 2
+            if vasakud_coinid < 999:
+                vasakud_coinid += 2
 def kokkupuude6():
     tegelane_hit_list = pygame.sprite.groupcollide(knight_list1, skeleton_list2, False, False, collided=None)
     global vasakud_coinid
@@ -818,7 +809,8 @@ def kokkupuude6():
         suvaline = random.randint(0, 3)
         if suvaline == 3:
             knight_list1.remove(i)
-            paremad_coinid += 2
+            if paremad_coinid < 999:
+                paremad_coinid += 2
         elif suvaline < 3:
             skeleton_list2.remove(tegelane_hit_list[i])
 def kokkupuude7():
@@ -831,7 +823,8 @@ def kokkupuude7():
             skeleton_list1.remove(i)
         elif suvaline == 3:
             knight_list2.remove(tegelane_hit_list[i])
-            vasakud_coinid += 2
+            if vasakud_coinid < 999:
+                vasakud_coinid += 2
 def kokkupuude8():
     tegelane_hit_list = pygame.sprite.groupcollide(skeleton_list1, player_list2, False, False, collided=None)
     global vasakud_coinid
@@ -840,7 +833,8 @@ def kokkupuude8():
         suvaline = random.randint(0, 3)
         if suvaline == 3:
             skeleton_list1.remove(i)
-            paremad_coinid += 2
+            if paremad_coinid < 999:
+                paremad_coinid += 2
         elif suvaline < 3:
             player_list2.remove(tegelane_hit_list[i])
 def kokkupuude9():
@@ -863,7 +857,8 @@ def kokkupuude10():
             player_list1.remove(i)
         elif suvaline == 7:
             orc_list2.remove(tegelane_hit_list[i])
-            vasakud_coinid += 6
+            if vasakud_coinid < 999:
+                vasakud_coinid += 6
 def kokkupuude11():
     tegelane_hit_list = pygame.sprite.groupcollide(player_list1, eye_list2, False, False, collided=None)
     global vasakud_coinid
@@ -874,7 +869,8 @@ def kokkupuude11():
             player_list1.remove(i)
         elif suvaline == 9:
             eye_list2.remove(tegelane_hit_list[i])
-            vasakud_coinid += 8
+            if vasakud_coinid < 999:
+                vasakud_coinid += 8
 def kokkupuude12():
     tegelane_hit_list = pygame.sprite.groupcollide(player_list1, wizard_list2, False, False, collided=None)
     global vasakud_coinid
@@ -885,7 +881,8 @@ def kokkupuude12():
             player_list1.remove(i)
         elif suvaline == 11:
             wizard_list2.remove(tegelane_hit_list[i])
-            vasakud_coinid += 10
+            if vasakud_coinid < 999:
+                vasakud_coinid += 10
 def kokkupuude13():
     tegelane_hit_list = pygame.sprite.groupcollide(skeleton_list1, orc_list2, False, False, collided=None)
     global vasakud_coinid
@@ -896,7 +893,8 @@ def kokkupuude13():
             skeleton_list1.remove(i)
         elif suvaline == 5:
             orc_list2.remove(tegelane_hit_list[i])
-            vasakud_coinid += 4
+            if vasakud_coinid < 999:
+                vasakud_coinid += 4
 def kokkupuude14():
     tegelane_hit_list = pygame.sprite.groupcollide(skeleton_list1, eye_list2, False, False, collided=None)
     global vasakud_coinid
@@ -907,7 +905,8 @@ def kokkupuude14():
             skeleton_list1.remove(i)
         elif suvaline == 7:
             eye_list2.remove(tegelane_hit_list[i])
-            vasakud_coinid += 6
+            if vasakud_coinid < 999:
+                vasakud_coinid += 6
 def kokkupuude15():
     tegelane_hit_list = pygame.sprite.groupcollide(skeleton_list1, wizard_list2, False, False, collided=None)
     global vasakud_coinid
@@ -918,7 +917,8 @@ def kokkupuude15():
             skeleton_list1.remove(i)
         elif suvaline == 9:
             wizard_list2.remove(tegelane_hit_list[i])
-            vasakud_coinid += 8
+            if vasakud_coinid < 999:
+                vasakud_coinid += 8
 def kokkupuude16():
     tegelane_hit_list = pygame.sprite.groupcollide(knight_list1, orc_list2, False, False, collided=None)
     global vasakud_coinid
@@ -929,7 +929,8 @@ def kokkupuude16():
             knight_list1.remove(i)
         elif suvaline == 3:
             orc_list2.remove(tegelane_hit_list[i])
-            vasakud_coinid += 2
+            if vasakud_coinid < 999:
+                vasakud_coinid += 2
 def kokkupuude17():
     tegelane_hit_list = pygame.sprite.groupcollide(knight_list1, eye_list2, False, False, collided=None)
     global vasakud_coinid
@@ -940,7 +941,8 @@ def kokkupuude17():
             knight_list1.remove(i)
         elif suvaline == 5:
             eye_list2.remove(tegelane_hit_list[i])
-            vasakud_coinid += 4
+            if vasakud_coinid < 999:
+                vasakud_coinid += 4
 def kokkupuude18():
     tegelane_hit_list = pygame.sprite.groupcollide(knight_list1, wizard_list2, False, False, collided=None)
     global vasakud_coinid
@@ -951,7 +953,8 @@ def kokkupuude18():
             knight_list1.remove(i)
         elif suvaline == 7:
             wizard_list2.remove(tegelane_hit_list[i])
-            vasakud_coinid += 6
+            if vasakud_coinid < 999:
+                vasakud_coinid += 6
 def kokkupuude19():
     tegelane_hit_list = pygame.sprite.groupcollide(orc_list1, player_list2, False, False, collided=None)
     global vasakud_coinid
@@ -960,7 +963,8 @@ def kokkupuude19():
         suvaline = random.randint(0, 7)
         if suvaline == 7:
             orc_list1.remove(i)
-            paremad_coinid += 6
+            if paremad_coinid < 999:
+                paremad_coinid += 6
         elif suvaline < 7:
             player_list2.remove(tegelane_hit_list[i])
 def kokkupuude20():
@@ -971,7 +975,8 @@ def kokkupuude20():
         suvaline = random.randint(0, 5)
         if suvaline == 5:
             orc_list1.remove(i)
-            paremad_coinid += 6
+            if paremad_coinid < 999:
+                paremad_coinid += 6
         elif suvaline < 5:
             skeleton_list2.remove(tegelane_hit_list[i])
 def kokkupuude21():
@@ -982,7 +987,8 @@ def kokkupuude21():
         suvaline = random.randint(0, 3)
         if suvaline == 3:
             orc_list1.remove(i)
-            paremad_coinid += 2
+            if paremad_coinid < 999:
+                paremad_coinid += 2
         elif suvaline < 3:
             knight_list2.remove(tegelane_hit_list[i])
 def kokkupuude22():
@@ -1005,7 +1011,8 @@ def kokkupuude23():
             orc_list1.remove(i)
         elif suvaline == 3:
             eye_list2.remove(tegelane_hit_list[i])
-            vasakud_coinid += 2
+            if vasakud_coinid < 999:
+                vasakud_coinid += 2
 def kokkupuude24():
     tegelane_hit_list = pygame.sprite.groupcollide(orc_list1, wizard_list2, False, False, collided=None)
     global vasakud_coinid
@@ -1016,7 +1023,8 @@ def kokkupuude24():
             orc_list1.remove(i)
         elif suvaline == 5:
             wizard_list2.remove(tegelane_hit_list[i])
-            vasakud_coinid += 4
+            if vasakud_coinid < 999:
+                vasakud_coinid += 4
 def kokkupuude25():
     tegelane_hit_list = pygame.sprite.groupcollide(eye_list1, player_list2, False, False, collided=None)
     global vasakud_coinid
@@ -1025,7 +1033,8 @@ def kokkupuude25():
         suvaline = random.randint(0, 9)
         if suvaline == 9:
             eye_list1.remove(i)
-            paremad_coinid += 8
+            if paremad_coinid < 999:
+                paremad_coinid += 8
         elif suvaline < 9:
             player_list2.remove(tegelane_hit_list[i])
 def kokkupuude26():
@@ -1036,7 +1045,8 @@ def kokkupuude26():
         suvaline = random.randint(0, 7)
         if suvaline == 7:
             eye_list1.remove(i)
-            paremad_coinid += 6
+            if paremad_coinid < 999:
+                paremad_coinid += 6
         elif suvaline < 7:
             skeleton_list2.remove(tegelane_hit_list[i])
 def kokkupuude27():
@@ -1047,7 +1057,8 @@ def kokkupuude27():
         suvaline = random.randint(0, 5)
         if suvaline == 5:
             eye_list1.remove(i)
-            paremad_coinid += 4
+            if paremad_coinid < 999:
+                paremad_coinid += 4
         elif suvaline < 5:
             knight_list2.remove(tegelane_hit_list[i])
 def kokkupuude28():
@@ -1058,7 +1069,8 @@ def kokkupuude28():
         suvaline = random.randint(0, 3)
         if suvaline == 3:
             eye_list1.remove(i)
-            paremad_coinid += 2
+            if paremad_coinid < 999:
+                paremad_coinid += 2
         elif suvaline < 3:
             orc_list2.remove(tegelane_hit_list[i])
 def kokkupuude29():
@@ -1081,7 +1093,8 @@ def kokkupuude30():
             eye_list1.remove(i)
         elif suvaline == 3:
             wizard_list2.remove(tegelane_hit_list[i])
-            vasakud_coinid += 2
+            if vasakud_coinid < 999:
+                vasakud_coinid += 2
 def kokkupuude31():
     tegelane_hit_list = pygame.sprite.groupcollide(wizard_list1, player_list2, False, False, collided=None)
     global vasakud_coinid
@@ -1090,7 +1103,8 @@ def kokkupuude31():
         suvaline = random.randint(0, 11)
         if suvaline == 11:
             wizard_list1.remove(i)
-            paremad_coinid += 10
+            if paremad_coinid < 999:
+                paremad_coinid += 10
         elif suvaline < 11:
             player_list2.remove(tegelane_hit_list[i])
 def kokkupuude32():
@@ -1101,7 +1115,8 @@ def kokkupuude32():
         suvaline = random.randint(0, 9)
         if suvaline == 9:
             wizard_list1.remove(i)
-            paremad_coinid += 8
+            if paremad_coinid < 999:
+                paremad_coinid += 8
         elif suvaline < 9:
             skeleton_list2.remove(tegelane_hit_list[i])
 def kokkupuude33():
@@ -1112,7 +1127,8 @@ def kokkupuude33():
         suvaline = random.randint(0, 7)
         if suvaline == 7:
             wizard_list1.remove(i)
-            paremad_coinid += 6
+            if paremad_coinid < 999:
+                paremad_coinid += 6
         elif suvaline < 7:
             knight_list2.remove(tegelane_hit_list[i])
 def kokkupuude34():
@@ -1123,7 +1139,8 @@ def kokkupuude34():
         suvaline = random.randint(0, 5)
         if suvaline == 5:
             wizard_list1.remove(i)
-            paremad_coinid += 4
+            if paremad_coinid < 999:
+                paremad_coinid += 4
         elif suvaline < 5:
             orc_list2.remove(tegelane_hit_list[i])
 def kokkupuude35():
@@ -1134,7 +1151,8 @@ def kokkupuude35():
         suvaline = random.randint(0, 3)
         if suvaline == 3:
             wizard_list1.remove(i)
-            paremad_coinid += 2
+            if paremad_coinid < 999:
+                paremad_coinid += 2
         elif suvaline < 3:
             eye_list2.remove(tegelane_hit_list[i])
 def kokkupuude36():
@@ -1200,6 +1218,272 @@ def kokkupuude49():
     for i in tegelane_hit_list:
         lillakuul_list1.remove(i)
         lillakuul_list2.remove(tegelane_hit_list[i])
+
+
+class Button_Play:
+    def __init__(self, rect, command, **kwargs):
+        self.process_kwargs(kwargs)
+        self.rect = pygame.Rect(rect)
+        self.image = pygame.Surface(self.rect.size).convert()
+        self.function = command
+        self.text = self.font.render(self.text, True, self.font_color)
+        self.text_rect = self.text.get_rect(center=self.rect.center)
+
+    def process_kwargs(self, kwargs):
+        settings = {
+            'color': pygame.Color(122, 197, 205),
+            'text': 'Play',
+            'font': pygame.font.SysFont('Comic Sans MS', int(y_global * 0.045)),
+            'hover_color': (83,134,139),
+            'font_color': pygame.Color('white'),
+        }
+        for kwarg in kwargs:
+            if kwarg in settings:
+                settings[kwarg] = kwargs[kwarg]
+            else:
+                raise AttributeError("{} has no keyword: {}".format(self.__class__.__name__, kwarg))
+        self.__dict__.update(settings)
+
+    def is_hovering(self):
+        if self.rect.collidepoint(pygame.mouse.get_pos()):
+            return True
+
+    def draw(self, surf):
+        if self.is_hovering():
+            self.image.fill(self.hover_color)
+        else:
+            self.image.fill(self.color)
+        surf.blit(self.image, self.rect)
+        surf.blit(self.text, self.text_rect)
+button_play = Button_Play(((x_global * 0.5 - x_global * 0.1 * 0.5),(y_global * 0.55), (x_global * 0.1), (y_global * 0.07)), command=None)  #asukoht, suurus
+
+
+class Button_Instructions:
+    def __init__(self, rect, command, **kwargs):
+        self.process_kwargs(kwargs)
+        self.rect = pygame.Rect(rect)
+        self.image = pygame.Surface(self.rect.size).convert()
+        self.function = command
+        self.text = self.font.render(self.text, True, self.font_color)
+        self.text_rect = self.text.get_rect(center=self.rect.center)
+
+    def process_kwargs(self, kwargs):
+        settings = {
+            'color': pygame.Color(122, 197, 205),
+            'text': 'Instructions',
+            'font': pygame.font.SysFont('Comic Sans MS', int(y_global * 0.025)),
+            'hover_color': (83,134,139),
+            'font_color': pygame.Color('white'),
+        }
+        for kwarg in kwargs:
+            if kwarg in settings:
+                settings[kwarg] = kwargs[kwarg]
+            else:
+                raise AttributeError("{} has no keyword: {}".format(self.__class__.__name__, kwarg))
+        self.__dict__.update(settings)
+
+    def is_hovering(self):
+        if self.rect.collidepoint(pygame.mouse.get_pos()):
+            return True
+
+    def draw(self, surf):
+        if self.is_hovering():
+            self.image.fill(self.hover_color)
+        else:
+            self.image.fill(self.color)
+        surf.blit(self.image, self.rect)
+        surf.blit(self.text, self.text_rect)
+button_instructions = Button_Instructions(((x_global * 0.5 - x_global * 0.1 * 0.5),(y_global * 0.645), (x_global * 0.1), (y_global * 0.07)), command=None)  #asukoht, suurus
+
+
+class Button_ESC1:
+    def __init__(self, rect, command, **kwargs):
+        self.process_kwargs(kwargs)
+        self.rect = pygame.Rect(rect)
+        self.image = pygame.Surface(self.rect.size).convert()
+        self.function = command
+        self.text = self.font.render(self.text, True, self.font_color)
+        self.text_rect = self.text.get_rect(center=self.rect.center)
+
+    def process_kwargs(self, kwargs):
+        settings = {
+            'color': pygame.Color(122, 197, 205),
+            'text': 'Quit',
+            'font': pygame.font.SysFont('Comic Sans MS', int(y_global * 0.025)),
+            'hover_color': (83,134,139),
+            'font_color': pygame.Color('white'),
+        }
+        for kwarg in kwargs:
+            if kwarg in settings:
+                settings[kwarg] = kwargs[kwarg]
+            else:
+                raise AttributeError("{} has no keyword: {}".format(self.__class__.__name__, kwarg))
+        self.__dict__.update(settings)
+
+    def is_hovering(self):
+        if self.rect.collidepoint(pygame.mouse.get_pos()):
+            return True
+
+    def draw(self, surf):
+        if self.is_hovering():
+            self.image.fill(self.hover_color)
+        else:
+            self.image.fill(self.color)
+        surf.blit(self.image, self.rect)
+        surf.blit(self.text, self.text_rect)
+button_ESC1 = Button_ESC1(((x_global * 0.5 - x_global * 0.1 * 0.5),(y_global * 0.74), (x_global * 0.1), (y_global * 0.07)), command=None)  #asukoht, suurus
+
+
+class Button_Back:
+    def __init__(self, rect, command, **kwargs):
+        self.process_kwargs(kwargs)
+        self.rect = pygame.Rect(rect)
+        self.image = pygame.Surface(self.rect.size).convert()
+        self.function = command
+        self.text = self.font.render(self.text, True, self.font_color)
+        self.text_rect = self.text.get_rect(center=self.rect.center)
+
+    def process_kwargs(self, kwargs):
+        settings = {
+            'color': pygame.Color(122, 197, 205),
+            'text': 'Back',
+            'font': pygame.font.SysFont('Comic Sans MS', int(y_global * 0.025)),
+            'hover_color': (83,134,139),
+            'font_color': pygame.Color('white'),
+        }
+        for kwarg in kwargs:
+            if kwarg in settings:
+                settings[kwarg] = kwargs[kwarg]
+            else:
+                raise AttributeError("{} has no keyword: {}".format(self.__class__.__name__, kwarg))
+        self.__dict__.update(settings)
+
+    def is_hovering(self):
+        if self.rect.collidepoint(pygame.mouse.get_pos()):
+            return True
+
+    def draw(self, surf):
+        if self.is_hovering():
+            self.image.fill(self.hover_color)
+        else:
+            self.image.fill(self.color)
+        surf.blit(self.image, self.rect)
+        surf.blit(self.text, self.text_rect)
+button_back = Button_Back((5, 5, (x_global * 0.1), (y_global * 0.07)), command=None)  #asukoht, suurus
+
+
+class Button_Play_Again:
+    def __init__(self, rect, command, **kwargs):
+        self.process_kwargs(kwargs)
+        self.rect = pygame.Rect(rect)
+        self.image = pygame.Surface(self.rect.size).convert()
+        self.function = command
+        self.text = self.font.render(self.text, True, self.font_color)
+        self.text_rect = self.text.get_rect(center=self.rect.center)
+
+    def process_kwargs(self, kwargs):
+        settings = {
+            'color': pygame.Color(122, 197, 205),
+            'text': 'Play again',
+            'font': pygame.font.SysFont('Comic Sans MS', int(y_global * 0.025)),
+            'hover_color': (83,134,139),
+            'font_color': pygame.Color('white'),
+        }
+        for kwarg in kwargs:
+            if kwarg in settings:
+                settings[kwarg] = kwargs[kwarg]
+            else:
+                raise AttributeError("{} has no keyword: {}".format(self.__class__.__name__, kwarg))
+        self.__dict__.update(settings)
+
+    def is_hovering(self):
+        if self.rect.collidepoint(pygame.mouse.get_pos()):
+            return True
+
+    def draw(self, surf):
+        if self.is_hovering():
+            self.image.fill(self.hover_color)
+        else:
+            self.image.fill(self.color)
+        surf.blit(self.image, self.rect)
+        surf.blit(self.text, self.text_rect)
+button_play_again = Button_Play_Again(((x_global * 0.5 - x_global * 0.1 * 0.5),(y_global * 0.55), (x_global * 0.1), (y_global * 0.07)), command=None)  #asukoht, suurus
+
+
+class Button_Mainmenu:
+    def __init__(self, rect, command, **kwargs):
+        self.process_kwargs(kwargs)
+        self.rect = pygame.Rect(rect)
+        self.image = pygame.Surface(self.rect.size).convert()
+        self.function = command
+        self.text = self.font.render(self.text, True, self.font_color)
+        self.text_rect = self.text.get_rect(center=self.rect.center)
+
+    def process_kwargs(self, kwargs):
+        settings = {
+            'color': pygame.Color(122, 197, 205),
+            'text': 'Main menu',
+            'font': pygame.font.SysFont('Comic Sans MS', int(y_global * 0.025)),
+            'hover_color': (83,134,139),
+            'font_color': pygame.Color('white'),
+        }
+        for kwarg in kwargs:
+            if kwarg in settings:
+                settings[kwarg] = kwargs[kwarg]
+            else:
+                raise AttributeError("{} has no keyword: {}".format(self.__class__.__name__, kwarg))
+        self.__dict__.update(settings)
+
+    def is_hovering(self):
+        if self.rect.collidepoint(pygame.mouse.get_pos()):
+            return True
+
+    def draw(self, surf):
+        if self.is_hovering():
+            self.image.fill(self.hover_color)
+        else:
+            self.image.fill(self.color)
+        surf.blit(self.image, self.rect)
+        surf.blit(self.text, self.text_rect)
+button_mainmenu = Button_Mainmenu(((x_global * 0.5 - x_global * 0.1 * 0.5),(y_global * 0.645), (x_global * 0.1), (y_global * 0.07)), command=None)  #asukoht, suurus
+
+
+class Button_ESC2:
+    def __init__(self, rect, command, **kwargs):
+        self.process_kwargs(kwargs)
+        self.rect = pygame.Rect(rect)
+        self.image = pygame.Surface(self.rect.size).convert()
+        self.function = command
+        self.text = self.font.render(self.text, True, self.font_color)
+        self.text_rect = self.text.get_rect(center=self.rect.center)
+
+    def process_kwargs(self, kwargs):
+        settings = {
+            'color': pygame.Color(122, 197, 205),
+            'text': 'Quit',
+            'font': pygame.font.SysFont('Comic Sans MS', int(y_global * 0.025)),
+            'hover_color': (83,134,139),
+            'font_color': pygame.Color('white'),
+        }
+        for kwarg in kwargs:
+            if kwarg in settings:
+                settings[kwarg] = kwargs[kwarg]
+            else:
+                raise AttributeError("{} has no keyword: {}".format(self.__class__.__name__, kwarg))
+        self.__dict__.update(settings)
+
+    def is_hovering(self):
+        if self.rect.collidepoint(pygame.mouse.get_pos()):
+            return True
+
+    def draw(self, surf):
+        if self.is_hovering():
+            self.image.fill(self.hover_color)
+        else:
+            self.image.fill(self.color)
+        surf.blit(self.image, self.rect)
+        surf.blit(self.text, self.text_rect)
+button_ESC2 = Button_ESC2(((x_global * 0.5 - x_global * 0.1 * 0.5),(y_global * 0.74), (x_global * 0.1), (y_global * 0.07)), command=None)  #asukoht, suurus
 
 
 def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2, vasak1, vasak2, vasak3, vasak4, vasak5, vasak6, vasak7, vasak8,\
@@ -1330,13 +1614,34 @@ def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2, vasak
 
     pygame.display.update()
 
-def draw_game_over_parem():
-    mängu_screen.blit(game_over_vasakpool, (0, 0))
+def draw_game_over(t):
+    mängu_screen.blit(t, (0, 0))
+    pygame.draw.rect(mängu_screen, (0, 0, 0), [x_global * 0.5 - (x_global * 0.1 + 10) * 0.5, y_global * 0.55 - 5, (x_global * 0.1 + 10), (y_global * 0.07 + 10)])  # asukoht, suurus
+    button_play_again.draw(mängu_screen)
+    pygame.draw.rect(mängu_screen, (0, 0, 0), [x_global * 0.5 - (x_global * 0.1 + 10) * 0.5, y_global * 0.645 - 5, (x_global * 0.1 + 10), (y_global * 0.07 + 10)])  # asukoht, suurus
+    button_mainmenu.draw(mängu_screen)
+    pygame.draw.rect(mängu_screen, (0, 0, 0), [x_global * 0.5 - (x_global * 0.1 + 10) * 0.5, y_global * 0.74 - 5, (x_global * 0.1 + 10), (y_global * 0.07 + 10)])  # asukoht, suurus
+    button_ESC2.draw(mängu_screen)
     pygame.display.update()
 
-def draw_game_over_vasak():
-    mängu_screen.blit(game_over_parempool, (0, 0))
+
+def draw_start_screen():
+    mängu_screen.blit(start_screen, (0, 0))
+    pygame.draw.rect(mängu_screen, (0, 0, 0), [x_global * 0.5 - (x_global * 0.1 + 10) * 0.5, y_global * 0.55 - 5, (x_global * 0.1 + 10), (y_global * 0.07 + 10)])  #asukoht, suurus
+    button_play.draw(mängu_screen)
+    pygame.draw.rect(mängu_screen, (0, 0, 0), [x_global * 0.5 - (x_global * 0.1 + 10) * 0.5, y_global * 0.645 - 5, (x_global * 0.1 + 10), (y_global * 0.07 + 10)])  # asukoht, suurus
+    button_instructions.draw(mängu_screen)
+    pygame.draw.rect(mängu_screen, (0, 0, 0), [x_global * 0.5 - (x_global * 0.1 + 10) * 0.5, y_global * 0.74 - 5, (x_global * 0.1 + 10), (y_global * 0.07 + 10)])  # asukoht, suurus
+    button_ESC1.draw(mängu_screen)
     pygame.display.update()
+
+def draw_instructions():
+    mängu_screen.blit(instructions, (0, 0))
+    pygame.draw.rect(mängu_screen, (0, 0, 0), [0, 0, (x_global * 0.1 + 10), (y_global * 0.07 + 10)])  # asukoht, suurus
+    button_back.draw(mängu_screen)
+    pygame.display.update()
+
+
 
 player_list2 = pygame.sprite.Group()
 player_list1 = pygame.sprite.Group()
@@ -1354,9 +1659,10 @@ lillakuul_list2 = pygame.sprite.Group()
 lillakuul_list1 = pygame.sprite.Group()
 punanekuul_list2 = pygame.sprite.Group()
 punanekuul_list1 = pygame.sprite.Group()
+
 a = True
-b_parem = 0
-b_vasak = 0
+b_parem = 3
+b_vasak = 3
 
 #viivitus tegelaste lisamiseks, 1- vasak   2-parem
 tegelane1_aeg = tegelane_lisamis_delay
@@ -1456,12 +1762,110 @@ while a:
         if vasaku_torni_elud == 0:
             b_vasak = 1
 
-
-
+    #b_vasak ja b_parem:
+        #b = 3 - start screen
+        #b = 0 - mäng
+        #b = 1 - end screen
+        #b = 2 - instructions
     for event in pygame.event.get():
+
+        cursor = pygame.mouse.get_pos()
+
+        #Play vajutamine
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and b_vasak == 3 and b_parem == 3 \
+        and (x_global * 0.5 - x_global * 0.1 * 0.5) <= cursor[0] <= (x_global * 0.5 - x_global * 0.1 * 0.5 + x_global * 0.1) \
+        and (y_global * 0.55) <= cursor[1] <= (y_global * 0.55 + y_global * 0.07):
+            b_parem = 0
+            b_vasak = 0
+            paremad_coinid = 0
+            vasakud_coinid = 0
+            vasaku_torni_elud = 5
+            parema_torni_elud = 5
+            player_list2.empty()
+            player_list1.empty()
+            knight_list2.empty()
+            knight_list1.empty()
+            skeleton_list2.empty()
+            skeleton_list1.empty()
+            orc_list2.empty()
+            orc_list1.empty()
+            eye_list2.empty()
+            eye_list1.empty()
+            wizard_list2.empty()
+            wizard_list1.empty()
+            lillakuul_list2.empty()
+            lillakuul_list1.empty()
+            punanekuul_list2.empty()
+            punanekuul_list1 .empty()
+
+        #Instructons vajutamine
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and b_vasak == 3 and b_parem == 3 \
+        and (x_global * 0.5 - x_global * 0.1 * 0.5) <= cursor[0] <= (x_global * 0.5 - x_global * 0.1 * 0.5 + x_global * 0.1) \
+        and (y_global * 0.645) <= cursor[1] <= (y_global * 0.645 + y_global * 0.07):
+            b_parem = 2
+            b_vasak = 2
+
+        #Quit vajutamine 1
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and b_vasak == 3 and b_parem == 3 \
+        and (x_global * 0.5 - x_global * 0.1 * 0.5) <= cursor[0] <= (x_global * 0.5 - x_global * 0.1 * 0.5 + x_global * 0.1) \
+        and (y_global * 0.74) <= cursor[1] <= (y_global * 0.74 + y_global * 0.07):
+            a = False
+
+        #Back vajutamine, instructionite alt
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and b_vasak == 2 and b_parem == 2 \
+        and 5 <= cursor[0] <= x_global * 0.1 + 5 \
+        and 5 <= cursor[1] <= (y_global * 0.07 + 5):
+            b_vasak = 3
+            b_parem = 3
+
+
+        #play again vajutamine
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 \
+        and (x_global * 0.5 - x_global * 0.1 * 0.5) <= cursor[0] <= (x_global * 0.5 - x_global * 0.1 * 0.5 + x_global * 0.1) \
+        and (y_global * 0.55) <= cursor[1] <= (y_global * 0.55 + y_global * 0.07):
+            if b_vasak == 1 or b_parem == 1:
+                vasaku_torni_elud = 5
+                parema_torni_elud = 5
+                b_parem = 0
+                b_vasak = 0
+                paremad_coinid = 0
+                vasakud_coinid = 0
+                player_list2.empty()
+                player_list1.empty()
+                knight_list2.empty()
+                knight_list1.empty()
+                skeleton_list2.empty()
+                skeleton_list1.empty()
+                orc_list2.empty()
+                orc_list1.empty()
+                eye_list2.empty()
+                eye_list1.empty()
+                wizard_list2.empty()
+                wizard_list1.empty()
+                lillakuul_list2.empty()
+                lillakuul_list1.empty()
+                punanekuul_list2.empty()
+                punanekuul_list1.empty()
+
+        #mainmenu vajutamine
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 \
+        and (x_global * 0.5 - x_global * 0.1 * 0.5) <= cursor[0] <= (x_global * 0.5 - x_global * 0.1 * 0.5 + x_global * 0.1) \
+        and (y_global * 0.645) <= cursor[1] <= (y_global * 0.645 + y_global * 0.07):
+            if b_vasak == 1 or b_parem == 1:
+
+                b_parem = 3
+                b_vasak = 3
+
+        #Quit vajutamine 2
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 \
+        and (x_global * 0.5 - x_global * 0.1 * 0.5) <= cursor[0] <= (x_global * 0.5 - x_global * 0.1 * 0.5 + x_global * 0.1) \
+        and (y_global * 0.74) <= cursor[1] <= (y_global * 0.74 + y_global * 0.07):
+            if b_vasak == 1 or b_parem == 1:
+                a = False
+
         if event.type == pygame.QUIT:
             a = False
-        if event.type == pygame.KEYDOWN:
+        if event.type == pygame.KEYDOWN and b_vasak == 0 and b_parem == 0:
             if event.key == pygame.K_q and vasakud_coinid >= 5:
                 if tegelane1_aeg == tegelane_lisamis_delay:
                     player1()
@@ -1656,15 +2060,21 @@ while a:
     else:
         parem8 = paremad_ikoonid8
 
+    #otsustab millist ekraani näidata
+    if b_parem == 3 and b_vasak == 3:
+        draw_start_screen()
     if b_parem == 0 and b_vasak == 0:
         draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2, vasak1, vasak2, vasak3, vasak4, vasak5,
              vasak6, vasak7, vasak8, parem1, parem2, parem3, parem4, parem5, parem6, parem7, parem8)
-
     if b_parem == 1:
-        draw_game_over_vasak()
-
+        t = game_over_parempool
+        draw_game_over(t)
     if b_vasak == 1:
-        draw_game_over_parem()
+        t = game_over_vasakpool
+        draw_game_over(t)
+    if b_parem == 2 and b_vasak == 2:
+        draw_instructions()
+
 
 #    1 on vasakpoolsed ja 2 on parempoolsed
     if tegelane1_aeg < tegelane_lisamis_delay:
@@ -1674,5 +2084,4 @@ while a:
 pygame.quit()
 
 #meelespea:
-# if paremad_coinid < 999 lause neile juurde, et kui lisab coine battle võidu pealt
 #hetkel kui nõrgem võidab siis tuleb coine juurde, sama tugevad on vastakuti või siis tugevam võidab nõrgemat- siis ei tule coine juurde
