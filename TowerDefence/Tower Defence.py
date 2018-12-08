@@ -5,8 +5,9 @@ import time
 
 pygame.init()
 # initialize pygame.mixer
-pygame.mixer.init(frequency = 44100, size = -16, channels = 1, buffer = 2**12)
+pygame.mixer.init(frequency = 44100, size = -16, channels = 2, buffer = 2**12)
 channel1 = pygame.mixer.Channel(0)
+channel2 = pygame.mixer.Channel(1)
 
 
 FPS = 60
@@ -220,6 +221,9 @@ suremine_skeleton = pygame.mixer.Sound("audio/suremine_skeleton.wav")
 energia_kokkupuude = pygame.mixer.Sound("audio/energia_kokkupuude.wav")
 kuul_heli = pygame.mixer.Sound("audio/kuul.wav")
 torni_pihtasaamine = pygame.mixer.Sound("audio/torni_pihtasaamine.wav")
+taustamuusika = pygame.mixer.Sound("audio/taustamuusika.wav")
+
+
 
 
 punanekuul_walkRight = []
@@ -1789,8 +1793,12 @@ b_vasak = 3
 tegelane1_aeg = tegelane_lisamis_delay
 tegelane2_aeg = tegelane_lisamis_delay
 
+#taustamuusika
+channel2.play(taustamuusika, loops=-1)
+
 while a:
     dt = clock.tick(FPS) / 1000
+
 
     k1 = pygame.sprite.groupcollide(player_list1, parem_torn_sprite, False, False, collided=None)
     for i in k1:
