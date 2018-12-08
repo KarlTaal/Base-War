@@ -4,14 +4,18 @@ import time
 
 
 pygame.init()
+# initialize pygame.mixer
+pygame.mixer.init(frequency = 44100, size = -16, channels = 1, buffer = 2**12)
+channel1 = pygame.mixer.Channel(0)
+
 
 FPS = 60
 clock = pygame.time.Clock()
 tegelane_lisamis_delay = 20
 vasaku_torni_elud = 5
 parema_torni_elud = 5
-vasakud_coinid = 0
-paremad_coinid = 0
+vasakud_coinid = 100
+paremad_coinid = 100
 
 
 try:
@@ -202,6 +206,22 @@ parem_elud1 = pygame.transform.scale(parem_elud1, (int(0.1 * y_global), int(0.03
 
 punanekuul_pildid = [pygame.image.load("images/punane_kuul/punane1.png"), pygame.image.load("images/punane_kuul/punane2.png"), pygame.image.load("images/punane_kuul/punane3.png"),\
 pygame.image.load("images/punane_kuul/punane4.png"), pygame.image.load("images/punane_kuul/punane5.png"), pygame.image.load("images/punane_kuul/punane6.png")]
+
+
+
+#Laeb heli
+
+suremine_mees = pygame.mixer.Sound("audio/suremine_mees.wav")
+suremine_knight = pygame.mixer.Sound("audio/suremine_knight.wav")
+suremine_võlur = pygame.mixer.Sound("audio/suremine_võlur.wav")
+suremine_orc = pygame.mixer.Sound("audio/suremine_orc.wav")
+suremine_eye = pygame.mixer.Sound("audio/suremine_eye.wav")
+suremine_skeleton = pygame.mixer.Sound("audio/suremine_skeleton.wav")
+energia_kokkupuude = pygame.mixer.Sound("audio/energia_kokkupuude.wav")
+kuul_heli = pygame.mixer.Sound("audio/kuul.wav")
+torni_pihtasaamine = pygame.mixer.Sound("audio/torni_pihtasaamine.wav")
+
+
 punanekuul_walkRight = []
 punanekuul_walkLeft = []
 for kuul in punanekuul_pildid:
@@ -337,6 +357,7 @@ class Punanekuul1(pygame.sprite.Sprite):
 def punanekuul1():
     punanekuul1 = Punanekuul1(position=(0, y_global * 0.78), punanekuul_walkRight=punanekuul_walkRight)
     punanekuul_list1.add(punanekuul1)
+    channel1.play(kuul_heli, loops=-1)
 
 
 class Punanekuul2(pygame.sprite.Sprite):
@@ -364,6 +385,7 @@ class Punanekuul2(pygame.sprite.Sprite):
 def punanekuul2():
     punanekuul2 = Punanekuul2(position=(x_global - int(0.1 * x_global), y_global * 0.78), punanekuul_walkLeft=punanekuul_walkLeft)
     punanekuul_list2.add(punanekuul2)
+    channel1.play(kuul_heli, loops=-1)
 
 
 class Lillakuul1(pygame.sprite.Sprite):
@@ -391,7 +413,7 @@ class Lillakuul1(pygame.sprite.Sprite):
 def lillakuul1():
     lillakuul1 = Lillakuul1(position=(0, y_global * 0.78), lillakuul_walkRight=lillakuul_walkRight)
     lillakuul_list1.add(lillakuul1)
-
+    channel1.play(kuul_heli, loops=-1)
 
 class Lillakuul2(pygame.sprite.Sprite):
     def __init__(self, position, lillakuul_walkLeft):
@@ -418,6 +440,7 @@ class Lillakuul2(pygame.sprite.Sprite):
 def lillakuul2():
     lillakuul2 = Lillakuul2(position=(x_global - int(0.1 * x_global), y_global * 0.78), lillakuul_walkLeft=lillakuul_walkLeft)
     lillakuul_list2.add(lillakuul2)
+    channel1.play(kuul_heli, loops=-1)
 
 
 class Orc1(pygame.sprite.Sprite):
@@ -752,8 +775,10 @@ def kokkupuude1():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 1)
         if suvaline == 0:
+            pygame.mixer.Sound.play(suremine_mees)
             player_list1.remove(i)
         elif suvaline == 1:
+            pygame.mixer.Sound.play(suremine_mees)
             player_list2.remove(tegelane_hit_list[i])
 def kokkupuude2():
     tegelane_hit_list = pygame.sprite.groupcollide(knight_list1, knight_list2, False, False, collided=None)
@@ -762,8 +787,10 @@ def kokkupuude2():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 1)
         if suvaline == 0:
+            pygame.mixer.Sound.play(suremine_knight)
             knight_list1.remove(i)
         elif suvaline == 1:
+            pygame.mixer.Sound.play(suremine_knight)
             knight_list2.remove(tegelane_hit_list[i])
 def kokkupuude3():
     tegelane_hit_list = pygame.sprite.groupcollide(knight_list1, player_list2, False, False, collided=None)
@@ -772,10 +799,12 @@ def kokkupuude3():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 5)
         if suvaline == 5:
+            pygame.mixer.Sound.play(suremine_knight)
             knight_list1.remove(i)
             if paremad_coinid < 999:
                 paremad_coinid += 4
         elif suvaline < 5:
+            pygame.mixer.Sound.play(suremine_mees)
             player_list2.remove(tegelane_hit_list[i])
 def kokkupuude4():
     tegelane_hit_list = pygame.sprite.groupcollide(player_list1, knight_list2, False, False, collided=None)
@@ -784,8 +813,10 @@ def kokkupuude4():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 5)
         if suvaline < 5:
+            pygame.mixer.Sound.play(suremine_mees)
             player_list1.remove(i)
         elif suvaline == 5:
+            pygame.mixer.Sound.play(suremine_knight)
             knight_list2.remove(tegelane_hit_list[i])
             if paremad_coinid < 999:
                 paremad_coinid += 4
@@ -796,8 +827,10 @@ def kokkupuude5():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 3)
         if suvaline < 3:
+            pygame.mixer.Sound.play(suremine_mees)
             player_list1.remove(i)
         elif suvaline == 3:
+            pygame.mixer.Sound.play(suremine_skeleton)
             skeleton_list2.remove(tegelane_hit_list[i])
             if vasakud_coinid < 999:
                 vasakud_coinid += 2
@@ -808,10 +841,12 @@ def kokkupuude6():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 3)
         if suvaline == 3:
+            pygame.mixer.Sound.play(suremine_knight)
             knight_list1.remove(i)
             if paremad_coinid < 999:
                 paremad_coinid += 2
         elif suvaline < 3:
+            pygame.mixer.Sound.play(suremine_skeleton)
             skeleton_list2.remove(tegelane_hit_list[i])
 def kokkupuude7():
     tegelane_hit_list = pygame.sprite.groupcollide(skeleton_list1, knight_list2, False, False, collided=None)
@@ -820,8 +855,10 @@ def kokkupuude7():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 3)
         if suvaline < 3:
+            pygame.mixer.Sound.play(suremine_skeleton)
             skeleton_list1.remove(i)
         elif suvaline == 3:
+            pygame.mixer.Sound.play(suremine_knight)
             knight_list2.remove(tegelane_hit_list[i])
             if vasakud_coinid < 999:
                 vasakud_coinid += 2
@@ -832,10 +869,12 @@ def kokkupuude8():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 3)
         if suvaline == 3:
+            pygame.mixer.Sound.play(suremine_skeleton)
             skeleton_list1.remove(i)
             if paremad_coinid < 999:
                 paremad_coinid += 2
         elif suvaline < 3:
+            pygame.mixer.Sound.play(suremine_mees)
             player_list2.remove(tegelane_hit_list[i])
 def kokkupuude9():
     tegelane_hit_list = pygame.sprite.groupcollide(skeleton_list1, skeleton_list2, False, False, collided=None)
@@ -844,8 +883,10 @@ def kokkupuude9():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 1)
         if suvaline == 1:
+            pygame.mixer.Sound.play(suremine_skeleton)
             skeleton_list1.remove(i)
         elif suvaline == 0:
+            pygame.mixer.Sound.play(suremine_skeleton)
             skeleton_list2.remove(tegelane_hit_list[i])
 def kokkupuude10():
     tegelane_hit_list = pygame.sprite.groupcollide(player_list1, orc_list2, False, False, collided=None)
@@ -854,8 +895,10 @@ def kokkupuude10():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 7)
         if suvaline < 7:
+            pygame.mixer.Sound.play(suremine_mees)
             player_list1.remove(i)
         elif suvaline == 7:
+            pygame.mixer.Sound.play(suremine_orc)
             orc_list2.remove(tegelane_hit_list[i])
             if vasakud_coinid < 999:
                 vasakud_coinid += 6
@@ -866,8 +909,10 @@ def kokkupuude11():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 9)
         if suvaline < 9:
+            pygame.mixer.Sound.play(suremine_mees)
             player_list1.remove(i)
         elif suvaline == 9:
+            pygame.mixer.Sound.play(suremine_eye)
             eye_list2.remove(tegelane_hit_list[i])
             if vasakud_coinid < 999:
                 vasakud_coinid += 8
@@ -878,8 +923,10 @@ def kokkupuude12():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 11)
         if suvaline < 11:
+            pygame.mixer.Sound.play(suremine_mees)
             player_list1.remove(i)
         elif suvaline == 11:
+            pygame.mixer.Sound.play(suremine_võlur)
             wizard_list2.remove(tegelane_hit_list[i])
             if vasakud_coinid < 999:
                 vasakud_coinid += 10
@@ -890,8 +937,10 @@ def kokkupuude13():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 5)
         if suvaline < 5:
+            pygame.mixer.Sound.play(suremine_skeleton)
             skeleton_list1.remove(i)
         elif suvaline == 5:
+            pygame.mixer.Sound.play(suremine_orc)
             orc_list2.remove(tegelane_hit_list[i])
             if vasakud_coinid < 999:
                 vasakud_coinid += 4
@@ -902,8 +951,10 @@ def kokkupuude14():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 7)
         if suvaline < 7:
+            pygame.mixer.Sound.play(suremine_skeleton)
             skeleton_list1.remove(i)
         elif suvaline == 7:
+            pygame.mixer.Sound.play(suremine_eye)
             eye_list2.remove(tegelane_hit_list[i])
             if vasakud_coinid < 999:
                 vasakud_coinid += 6
@@ -914,8 +965,10 @@ def kokkupuude15():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 9)
         if suvaline < 9:
+            pygame.mixer.Sound.play(suremine_skeleton)
             skeleton_list1.remove(i)
         elif suvaline == 9:
+            pygame.mixer.Sound.play(suremine_võlur)
             wizard_list2.remove(tegelane_hit_list[i])
             if vasakud_coinid < 999:
                 vasakud_coinid += 8
@@ -926,8 +979,10 @@ def kokkupuude16():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 3)
         if suvaline < 3:
+            pygame.mixer.Sound.play(suremine_knight)
             knight_list1.remove(i)
         elif suvaline == 3:
+            pygame.mixer.Sound.play(suremine_orc)
             orc_list2.remove(tegelane_hit_list[i])
             if vasakud_coinid < 999:
                 vasakud_coinid += 2
@@ -938,8 +993,10 @@ def kokkupuude17():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 5)
         if suvaline < 5:
+            pygame.mixer.Sound.play(suremine_knight)
             knight_list1.remove(i)
         elif suvaline == 5:
+            pygame.mixer.Sound.play(suremine_eye)
             eye_list2.remove(tegelane_hit_list[i])
             if vasakud_coinid < 999:
                 vasakud_coinid += 4
@@ -950,8 +1007,10 @@ def kokkupuude18():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 7)
         if suvaline < 7:
+            pygame.mixer.Sound.play(suremine_knight)
             knight_list1.remove(i)
         elif suvaline == 7:
+            pygame.mixer.Sound.play(suremine_võlur)
             wizard_list2.remove(tegelane_hit_list[i])
             if vasakud_coinid < 999:
                 vasakud_coinid += 6
@@ -962,10 +1021,12 @@ def kokkupuude19():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 7)
         if suvaline == 7:
+            pygame.mixer.Sound.play(suremine_orc)
             orc_list1.remove(i)
             if paremad_coinid < 999:
                 paremad_coinid += 6
         elif suvaline < 7:
+            pygame.mixer.Sound.play(suremine_mees)
             player_list2.remove(tegelane_hit_list[i])
 def kokkupuude20():
     tegelane_hit_list = pygame.sprite.groupcollide(orc_list1, skeleton_list2, False, False, collided=None)
@@ -974,10 +1035,12 @@ def kokkupuude20():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 5)
         if suvaline == 5:
+            pygame.mixer.Sound.play(suremine_orc)
             orc_list1.remove(i)
             if paremad_coinid < 999:
                 paremad_coinid += 6
         elif suvaline < 5:
+            pygame.mixer.Sound.play(suremine_skeleton)
             skeleton_list2.remove(tegelane_hit_list[i])
 def kokkupuude21():
     tegelane_hit_list = pygame.sprite.groupcollide(orc_list1, knight_list2, False, False, collided=None)
@@ -986,10 +1049,12 @@ def kokkupuude21():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 3)
         if suvaline == 3:
+            pygame.mixer.Sound.play(suremine_orc)
             orc_list1.remove(i)
             if paremad_coinid < 999:
                 paremad_coinid += 2
         elif suvaline < 3:
+            pygame.mixer.Sound.play(suremine_knight)
             knight_list2.remove(tegelane_hit_list[i])
 def kokkupuude22():
     tegelane_hit_list = pygame.sprite.groupcollide(orc_list1, orc_list2, False, False, collided=None)
@@ -998,8 +1063,10 @@ def kokkupuude22():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 1)
         if suvaline == 0:
+            pygame.mixer.Sound.play(suremine_orc)
             orc_list1.remove(i)
         elif suvaline == 1:
+            pygame.mixer.Sound.play(suremine_orc)
             orc_list2.remove(tegelane_hit_list[i])
 def kokkupuude23():
     tegelane_hit_list = pygame.sprite.groupcollide(orc_list1, eye_list2, False, False, collided=None)
@@ -1008,8 +1075,10 @@ def kokkupuude23():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 3)
         if suvaline < 3:
+            pygame.mixer.Sound.play(suremine_orc)
             orc_list1.remove(i)
         elif suvaline == 3:
+            pygame.mixer.Sound.play(suremine_eye)
             eye_list2.remove(tegelane_hit_list[i])
             if vasakud_coinid < 999:
                 vasakud_coinid += 2
@@ -1020,8 +1089,10 @@ def kokkupuude24():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 5)
         if suvaline < 5:
+            pygame.mixer.Sound.play(suremine_orc)
             orc_list1.remove(i)
         elif suvaline == 5:
+            pygame.mixer.Sound.play(suremine_võlur)
             wizard_list2.remove(tegelane_hit_list[i])
             if vasakud_coinid < 999:
                 vasakud_coinid += 4
@@ -1032,10 +1103,12 @@ def kokkupuude25():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 9)
         if suvaline == 9:
+            pygame.mixer.Sound.play(suremine_eye)
             eye_list1.remove(i)
             if paremad_coinid < 999:
                 paremad_coinid += 8
         elif suvaline < 9:
+            pygame.mixer.Sound.play(suremine_mees)
             player_list2.remove(tegelane_hit_list[i])
 def kokkupuude26():
     tegelane_hit_list = pygame.sprite.groupcollide(eye_list1, skeleton_list2, False, False, collided=None)
@@ -1044,10 +1117,12 @@ def kokkupuude26():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 7)
         if suvaline == 7:
+            pygame.mixer.Sound.play(suremine_eye)
             eye_list1.remove(i)
             if paremad_coinid < 999:
                 paremad_coinid += 6
         elif suvaline < 7:
+            pygame.mixer.Sound.play(suremine_skeleton)
             skeleton_list2.remove(tegelane_hit_list[i])
 def kokkupuude27():
     tegelane_hit_list = pygame.sprite.groupcollide(eye_list1, knight_list2, False, False, collided=None)
@@ -1056,10 +1131,12 @@ def kokkupuude27():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 5)
         if suvaline == 5:
+            pygame.mixer.Sound.play(suremine_eye)
             eye_list1.remove(i)
             if paremad_coinid < 999:
                 paremad_coinid += 4
         elif suvaline < 5:
+            pygame.mixer.Sound.play(suremine_knight)
             knight_list2.remove(tegelane_hit_list[i])
 def kokkupuude28():
     tegelane_hit_list = pygame.sprite.groupcollide(eye_list1, orc_list2, False, False, collided=None)
@@ -1068,10 +1145,12 @@ def kokkupuude28():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 3)
         if suvaline == 3:
+            pygame.mixer.Sound.play(suremine_eye)
             eye_list1.remove(i)
             if paremad_coinid < 999:
                 paremad_coinid += 2
         elif suvaline < 3:
+            pygame.mixer.Sound.play(suremine_orc)
             orc_list2.remove(tegelane_hit_list[i])
 def kokkupuude29():
     tegelane_hit_list = pygame.sprite.groupcollide(eye_list1, eye_list2, False, False, collided=None)
@@ -1080,8 +1159,10 @@ def kokkupuude29():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 1)
         if suvaline == 0:
+            pygame.mixer.Sound.play(suremine_eye)
             eye_list1.remove(i)
         elif suvaline == 1:
+            pygame.mixer.Sound.play(suremine_eye)
             eye_list2.remove(tegelane_hit_list[i])
 def kokkupuude30():
     tegelane_hit_list = pygame.sprite.groupcollide(eye_list1, wizard_list2, False, False, collided=None)
@@ -1090,8 +1171,10 @@ def kokkupuude30():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 3)
         if suvaline < 3:
+            pygame.mixer.Sound.play(suremine_eye)
             eye_list1.remove(i)
         elif suvaline == 3:
+            pygame.mixer.Sound.play(suremine_võlur)
             wizard_list2.remove(tegelane_hit_list[i])
             if vasakud_coinid < 999:
                 vasakud_coinid += 2
@@ -1102,10 +1185,12 @@ def kokkupuude31():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 11)
         if suvaline == 11:
+            pygame.mixer.Sound.play(suremine_võlur)
             wizard_list1.remove(i)
             if paremad_coinid < 999:
                 paremad_coinid += 10
         elif suvaline < 11:
+            pygame.mixer.Sound.play(suremine_mees)
             player_list2.remove(tegelane_hit_list[i])
 def kokkupuude32():
     tegelane_hit_list = pygame.sprite.groupcollide(wizard_list1, skeleton_list2, False, False, collided=None)
@@ -1114,10 +1199,12 @@ def kokkupuude32():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 9)
         if suvaline == 9:
+            pygame.mixer.Sound.play(suremine_võlur)
             wizard_list1.remove(i)
             if paremad_coinid < 999:
                 paremad_coinid += 8
         elif suvaline < 9:
+            pygame.mixer.Sound.play(suremine_skeleton)
             skeleton_list2.remove(tegelane_hit_list[i])
 def kokkupuude33():
     tegelane_hit_list = pygame.sprite.groupcollide(wizard_list1, knight_list2, False, False, collided=None)
@@ -1126,10 +1213,12 @@ def kokkupuude33():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 7)
         if suvaline == 7:
+            pygame.mixer.Sound.play(suremine_võlur)
             wizard_list1.remove(i)
             if paremad_coinid < 999:
                 paremad_coinid += 6
         elif suvaline < 7:
+            pygame.mixer.Sound.play(suremine_knight)
             knight_list2.remove(tegelane_hit_list[i])
 def kokkupuude34():
     tegelane_hit_list = pygame.sprite.groupcollide(wizard_list1, orc_list2, False, False, collided=None)
@@ -1138,10 +1227,12 @@ def kokkupuude34():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 5)
         if suvaline == 5:
+            pygame.mixer.Sound.play(suremine_võlur)
             wizard_list1.remove(i)
             if paremad_coinid < 999:
                 paremad_coinid += 4
         elif suvaline < 5:
+            pygame.mixer.Sound.play(suremine_orc)
             orc_list2.remove(tegelane_hit_list[i])
 def kokkupuude35():
     tegelane_hit_list = pygame.sprite.groupcollide(wizard_list1, eye_list2, False, False, collided=None)
@@ -1150,10 +1241,12 @@ def kokkupuude35():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 3)
         if suvaline == 3:
+            pygame.mixer.Sound.play(suremine_võlur)
             wizard_list1.remove(i)
             if paremad_coinid < 999:
                 paremad_coinid += 2
         elif suvaline < 3:
+            pygame.mixer.Sound.play(suremine_eye)
             eye_list2.remove(tegelane_hit_list[i])
 def kokkupuude36():
     tegelane_hit_list = pygame.sprite.groupcollide(wizard_list1, wizard_list2, False, False, collided=None)
@@ -1162,60 +1255,88 @@ def kokkupuude36():
     for i in tegelane_hit_list:
         suvaline = random.randint(0, 1)
         if suvaline == 0:
+            pygame.mixer.Sound.play(suremine_võlur)
             wizard_list1.remove(i)
         elif suvaline == 1:
+            pygame.mixer.Sound.play(suremine_võlur)
             wizard_list2.remove(tegelane_hit_list[i])
 def kokkupuude37():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list1, player_list2, False, False, collided=None)
     for i in tegelane_hit_list:
+        pygame.mixer.Sound.play(energia_kokkupuude)
+        pygame.mixer.Sound.play(suremine_mees)
         player_list2.remove(tegelane_hit_list[i])
 def kokkupuude38():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list1, skeleton_list2, False, False, collided=None)
     for i in tegelane_hit_list:
+        pygame.mixer.Sound.play(energia_kokkupuude)
+        pygame.mixer.Sound.play(suremine_skeleton)
         skeleton_list2.remove(tegelane_hit_list[i])
 def kokkupuude39():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list1, knight_list2, False, False, collided=None)
     for i in tegelane_hit_list:
+        pygame.mixer.Sound.play(energia_kokkupuude)
+        pygame.mixer.Sound.play(suremine_knight)
         knight_list2.remove(tegelane_hit_list[i])
 def kokkupuude40():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list1, eye_list2, False, False, collided=None)
     for i in tegelane_hit_list:
+        pygame.mixer.Sound.play(energia_kokkupuude)
+        pygame.mixer.Sound.play(suremine_eye)
         eye_list2.remove(tegelane_hit_list[i])
 def kokkupuude41():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list1, wizard_list2, False, False, collided=None)
     for i in tegelane_hit_list:
+        pygame.mixer.Sound.play(energia_kokkupuude)
+        pygame.mixer.Sound.play(suremine_võlur)
         wizard_list2.remove(tegelane_hit_list[i])
 def kokkupuude42():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list1, orc_list2, False, False, collided=None)
     for i in tegelane_hit_list:
+        pygame.mixer.Sound.play(energia_kokkupuude)
+        pygame.mixer.Sound.play(suremine_orc)
         orc_list2.remove(tegelane_hit_list[i])
 def kokkupuude43():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list2, player_list1, False, False, collided=None)
     for i in tegelane_hit_list:
+        pygame.mixer.Sound.play(energia_kokkupuude)
+        pygame.mixer.Sound.play(suremine_mees)
         player_list1.remove(tegelane_hit_list[i])
 def kokkupuude44():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list2, skeleton_list1, False, False, collided=None)
     for i in tegelane_hit_list:
+        pygame.mixer.Sound.play(energia_kokkupuude)
+        pygame.mixer.Sound.play(suremine_skeleton)
         skeleton_list1.remove(tegelane_hit_list[i])
 def kokkupuude45():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list2, knight_list1, False, False, collided=None)
     for i in tegelane_hit_list:
+        pygame.mixer.Sound.play(energia_kokkupuude)
+        pygame.mixer.Sound.play(suremine_knight)
         knight_list1.remove(tegelane_hit_list[i])
 def kokkupuude46():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list2, eye_list1, False, False, collided=None)
     for i in tegelane_hit_list:
+        pygame.mixer.Sound.play(energia_kokkupuude)
+        pygame.mixer.Sound.play(suremine_eye)
         eye_list1.remove(tegelane_hit_list[i])
 def kokkupuude47():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list2, orc_list1, False, False, collided=None)
     for i in tegelane_hit_list:
+        pygame.mixer.Sound.play(energia_kokkupuude)
+        pygame.mixer.Sound.play(suremine_orc)
         orc_list1.remove(tegelane_hit_list[i])
 def kokkupuude48():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list2, wizard_list1, False, False, collided=None)
     for i in tegelane_hit_list:
+        pygame.mixer.Sound.play(energia_kokkupuude)
+        pygame.mixer.Sound.play(suremine_võlur)
         wizard_list1.remove(tegelane_hit_list[i])
 def kokkupuude49():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list1, lillakuul_list2, False, False, collided=None)
     for i in tegelane_hit_list:
+        pygame.mixer.Sound.play(energia_kokkupuude)
+        pygame.mixer.Channel(0).stop()
         lillakuul_list1.remove(i)
         lillakuul_list2.remove(tegelane_hit_list[i])
 
@@ -1674,71 +1795,83 @@ while a:
     k1 = pygame.sprite.groupcollide(player_list1, parem_torn_sprite, False, False, collided=None)
     for i in k1:
         player_list1.remove(i)
+        pygame.mixer.Sound.play(torni_pihtasaamine)
         parema_torni_elud -= 1
         if parema_torni_elud == 0:
             b_parem = 1
     k2 = pygame.sprite.groupcollide(player_list2, vasak_torn_sprite, False, False, collided=None)
     for i in k2:
+        pygame.mixer.Sound.play(torni_pihtasaamine)
         player_list2.remove(i)
         vasaku_torni_elud -= 1
         if vasaku_torni_elud == 0:
             b_vasak = 1
     k3 = pygame.sprite.groupcollide(knight_list1, parem_torn_sprite, False, False, collided=None)
     for i in k3:
+        pygame.mixer.Sound.play(torni_pihtasaamine)
         knight_list1.remove(i)
         parema_torni_elud -= 1
         if parema_torni_elud == 0:
             b_parem = 1
     k4 = pygame.sprite.groupcollide(knight_list2, vasak_torn_sprite, False, False, collided=None)
     for i in k4:
+        pygame.mixer.Sound.play(torni_pihtasaamine)
         knight_list2.remove(i)
         vasaku_torni_elud -= 1
         if vasaku_torni_elud == 0:
             b_vasak = 1
     k5 = pygame.sprite.groupcollide(skeleton_list1, parem_torn_sprite, False, False, collided=None)
     for i in k5:
+        pygame.mixer.Sound.play(torni_pihtasaamine)
         skeleton_list1.remove(i)
         parema_torni_elud -= 1
         if parema_torni_elud == 0:
             b_parem = 1
     k6 = pygame.sprite.groupcollide(skeleton_list2, vasak_torn_sprite, False, False, collided=None)
     for i in k6:
+        pygame.mixer.Sound.play(torni_pihtasaamine)
         skeleton_list2.remove(i)
         vasaku_torni_elud -= 1
         if vasaku_torni_elud == 0:
             b_vasak = 1
     k7 = pygame.sprite.groupcollide(eye_list1, parem_torn_sprite, False, False, collided=None)
     for i in k7:
+        pygame.mixer.Sound.play(torni_pihtasaamine)
         eye_list1.remove(i)
         parema_torni_elud -= 1
         if parema_torni_elud == 0:
             b_parem = 1
     k8 = pygame.sprite.groupcollide(eye_list2, vasak_torn_sprite, False, False, collided=None)
     for i in k8:
+        pygame.mixer.Sound.play(torni_pihtasaamine)
         eye_list2.remove(i)
         vasaku_torni_elud -= 1
         if vasaku_torni_elud == 0:
             b_vasak = 1
     k9 = pygame.sprite.groupcollide(orc_list1, parem_torn_sprite, False, False, collided=None)
     for i in k9:
+        pygame.mixer.Sound.play(torni_pihtasaamine)
         orc_list1.remove(i)
         parema_torni_elud -= 1
         if parema_torni_elud == 0:
             b_parem = 1
     k10 = pygame.sprite.groupcollide(orc_list2, vasak_torn_sprite, False, False, collided=None)
     for i in k10:
+        pygame.mixer.Sound.play(torni_pihtasaamine)
         orc_list2.remove(i)
         vasaku_torni_elud -= 1
         if vasaku_torni_elud == 0:
             b_vasak = 1
     k11 = pygame.sprite.groupcollide(wizard_list1, parem_torn_sprite, False, False, collided=None)
     for i in k11:
+        pygame.mixer.Sound.play(torni_pihtasaamine)
         wizard_list1.remove(i)
         parema_torni_elud -= 1
         if parema_torni_elud == 0:
             b_parem = 1
     k12 = pygame.sprite.groupcollide(wizard_list2, vasak_torn_sprite, False, False, collided=None)
     for i in k12:
+        pygame.mixer.Sound.play(torni_pihtasaamine)
         wizard_list2.remove(i)
         vasaku_torni_elud -= 1
         if vasaku_torni_elud == 0:
@@ -1746,18 +1879,26 @@ while a:
     k13 = pygame.sprite.groupcollide(lillakuul_list1, parem_torn_sprite, False, False, collided=None)
     for i in k13:
         lillakuul_list1.remove(i)
+        pygame.mixer.Channel(0).fadeout(1000)
     k14 = pygame.sprite.groupcollide(lillakuul_list2, vasak_torn_sprite, False, False, collided=None)
     for i in k14:
         lillakuul_list2.remove(i)
+        pygame.mixer.Channel(0).fadeout(1000)
     k15 = pygame.sprite.groupcollide(punanekuul_list1, parem_torn_sprite, False, False, collided=None)
     for i in k15:
+        pygame.mixer.Sound.play(torni_pihtasaamine)
+        pygame.mixer.Sound.play(energia_kokkupuude)
         punanekuul_list1.remove(i)
+        pygame.mixer.Channel(0).stop()
         parema_torni_elud -= 1
         if parema_torni_elud == 0:
             b_parem = 1
     k16 = pygame.sprite.groupcollide(punanekuul_list2, vasak_torn_sprite, False, False, collided=None)
     for i in k16:
+        pygame.mixer.Sound.play(torni_pihtasaamine)
+        pygame.mixer.Sound.play(energia_kokkupuude)
         punanekuul_list2.remove(i)
+        pygame.mixer.Channel(0).stop()
         vasaku_torni_elud -= 1
         if vasaku_torni_elud == 0:
             b_vasak = 1
