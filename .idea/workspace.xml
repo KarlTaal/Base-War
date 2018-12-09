@@ -6,12 +6,8 @@
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/parem_torn.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/taust.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/vasak_torn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/projekt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projekt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paus/paus.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paus/paus.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,13 +51,13 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="39" />
-          <entry key="Python" value="48813" />
+          <entry key="Python" value="49285" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="38" />
-          <entry key="py" value="48813" />
+          <entry key="py" value="49285" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -105,8 +101,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="1870" column="25" selection-start-line="1870" selection-start-column="25" selection-end-line="1870" selection-end-column="25" />
+            <state relative-caret-position="-5882">
+              <caret line="41" column="140" selection-start-line="41" selection-start-column="140" selection-end-line="41" selection-end-column="140" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -214,10 +210,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="153" />
-    <option name="y" value="66" />
-    <option name="width" value="1224" />
-    <option name="height" value="864" />
+    <option name="x" value="-15" />
+    <option name="y" value="51" />
+    <option name="width" value="1838" />
+    <option name="height" value="477" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -422,7 +418,7 @@
       <window_info id="Favorites" order="2" sideWeight="0.17259787" side_tool="true" weight="0.145469" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291815" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49871904" visible="true" weight="0.2508897" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49871904" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.47686833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -535,8 +531,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="1870" column="25" selection-start-line="1870" selection-start-column="25" selection-end-line="1870" selection-end-column="25" />
+        <state relative-caret-position="-5882">
+          <caret line="41" column="140" selection-start-line="41" selection-start-column="140" selection-end-line="41" selection-end-column="140" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

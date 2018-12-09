@@ -20,13 +20,26 @@ paremad_coinid = 0
 
 #sõnumid
 sõnumid = ["There is actually a poem written by Tim Peters named as THE ZEN OF PYTHON which can be read by just writing import “this” in the interpreter.",\
-               "You can return multiple values in Python.",\
-               "You can use an “else” clause with a “for” loop in Python. It’s a special type of syntax that executes only if the for loop exits naturally, without any break statements.",\
-               "In Python, everything is done by reference. It doesn’t support pointers.",\
-               "Want to find the index inside a for loop? Wrap an iterable with ‘enumerate’ and it will yield the item along with its index.", \
-               "We can’t define Infinities right? But wait! Not for Python.",\
-               "Instead of building a list with a loop, you can build it more concisely with a list comprehension."]
-
+           "You can use an “else” clause with a “for” loop in Python. It’s a special type of syntax that executes only if the for loop exits naturally, without any break statements.",\
+           "In Python, everything is done by reference. It doesn’t support pointers.",\
+           "We can’t define Infinities right? But wait! Not for Python.",\
+           "Python was named after the comedy troupe Monty Python.",\
+           "Python was created in 1991 by Guido Van Rossum.",\
+           "There are Java and C variants of Python called JPython and CPython.",\
+           "Python is an interpretive language, meaning you don’t need to compile it.",\
+           "Python is part of the open source community, meaning plenty of independent programmers are out there building libraries and adding functionality to Python.",\
+           "Python is one of the official languages at Google.",\
+           "Python has done away with braces. Find out what happens when you try importing braces.",\
+           "Programmer: An organism that turns caffeine and pizza into software.",\
+           "Software developers like to solve problems. If there are no problems available, they will create their own problems. It’s an addiction.",\
+           "Algorithm: Word used by programmers when they do not want to explain what they did.",\
+           "A programmer puts two glasses on his bedside table before going to sleep. A full one, in case he gets thirsty, and an empty one, in case he doesn’t.",\
+           "Hardware- The part of a computer that you can kick.",\
+           "Chuck Norris can take a screenshot of his blue screen.",\
+           "99 little bugs in the code, 99 bugs in the code, 1 bug fixed...compile again, 100 little bugs in the code.",\
+           "Debugging is like being the detective in a crime drama where you are also the murderer.",\
+           "The best thing about a Boolean is that even if you are wrong, you are only off by a bit."]
+            ##########################################################################################     -pikkus, kus teksti suurus muutub
 
 try:
     import ctypes
