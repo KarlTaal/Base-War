@@ -15,8 +15,17 @@ clock = pygame.time.Clock()
 tegelane_lisamis_delay = 20
 vasaku_torni_elud = 5
 parema_torni_elud = 5
-vasakud_coinid = 100
-paremad_coinid = 100
+vasakud_coinid = 0
+paremad_coinid = 0
+
+#sõnumid
+sõnumid = ["There is actually a poem written by Tim Peters named as THE ZEN OF PYTHON which can be read by just writing import “this” in the interpreter.",\
+               "You can return multiple values in Python.",\
+               "You can use an “else” clause with a “for” loop in Python. It’s a special type of syntax that executes only if the for loop exits naturally, without any break statements.",\
+               "In Python, everything is done by reference. It doesn’t support pointers.",\
+               "Want to find the index inside a for loop? Wrap an iterable with ‘enumerate’ and it will yield the item along with its index.", \
+               "We can’t define Infinities right? But wait! Not for Python.",\
+               "Instead of building a list with a loop, you can build it more concisely with a list comprehension."]
 
 
 try:
@@ -1535,7 +1544,7 @@ class Button_Play_Again:
 button_play_again = Button_Play_Again(((x_global * 0.5 - x_global * 0.1 * 0.5),(y_global * 0.55), (x_global * 0.1), (y_global * 0.07)), command=None)  #asukoht, suurus
 
 
-class Button_Mainmenu:
+class Button_Mainmenu1:
     def __init__(self, rect, command, **kwargs):
         self.process_kwargs(kwargs)
         self.rect = pygame.Rect(rect)
@@ -1570,7 +1579,7 @@ class Button_Mainmenu:
             self.image.fill(self.color)
         surf.blit(self.image, self.rect)
         surf.blit(self.text, self.text_rect)
-button_mainmenu = Button_Mainmenu(((x_global * 0.5 - x_global * 0.1 * 0.5),(y_global * 0.645), (x_global * 0.1), (y_global * 0.07)), command=None)  #asukoht, suurus
+button_mainmenu1 = Button_Mainmenu1(((x_global * 0.5 - x_global * 0.1 * 0.5),(y_global * 0.645), (x_global * 0.1), (y_global * 0.07)), command=None)  #asukoht, suurus
 
 
 class Button_ESC2:
@@ -1611,8 +1620,89 @@ class Button_ESC2:
 button_ESC2 = Button_ESC2(((x_global * 0.5 - x_global * 0.1 * 0.5),(y_global * 0.74), (x_global * 0.1), (y_global * 0.07)), command=None)  #asukoht, suurus
 
 
-def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2, vasak1, vasak2, vasak3, vasak4, vasak5, vasak6, vasak7, vasak8,\
+class Button_Mainmenu2:
+    def __init__(self, rect, command, **kwargs):
+        self.process_kwargs(kwargs)
+        self.rect = pygame.Rect(rect)
+        self.image = pygame.Surface(self.rect.size).convert()
+        self.function = command
+        self.text = self.font.render(self.text, True, self.font_color)
+        self.text_rect = self.text.get_rect(center=self.rect.center)
+
+    def process_kwargs(self, kwargs):
+        settings = {
+            'color': pygame.Color(122, 197, 205),
+            'text': 'Main menu',
+            'font': pygame.font.SysFont('Comic Sans MS', int(y_global * 0.025)),
+            'hover_color': (83,134,139),
+            'font_color': pygame.Color('white'),
+        }
+        for kwarg in kwargs:
+            if kwarg in settings:
+                settings[kwarg] = kwargs[kwarg]
+            else:
+                raise AttributeError("{} has no keyword: {}".format(self.__class__.__name__, kwarg))
+        self.__dict__.update(settings)
+
+    def is_hovering(self):
+        if self.rect.collidepoint(pygame.mouse.get_pos()):
+            return True
+
+    def draw(self, surf):
+        if self.is_hovering():
+            self.image.fill(self.hover_color)
+        else:
+            self.image.fill(self.color)
+        surf.blit(self.image, self.rect)
+        surf.blit(self.text, self.text_rect)
+button_mainmenu2 = Button_Mainmenu2(((x_global * 0.5 - x_global * 0.1 * 0.5),(y_global * 0.645), (x_global * 0.1), (y_global * 0.07)), command=None)  #asukoht, suurus
+
+class Button_ESC3:
+    def __init__(self, rect, command, **kwargs):
+        self.process_kwargs(kwargs)
+        self.rect = pygame.Rect(rect)
+        self.image = pygame.Surface(self.rect.size).convert()
+        self.function = command
+        self.text = self.font.render(self.text, True, self.font_color)
+        self.text_rect = self.text.get_rect(center=self.rect.center)
+
+    def process_kwargs(self, kwargs):
+        settings = {
+            'color': pygame.Color(122, 197, 205),
+            'text': 'Quit',
+            'font': pygame.font.SysFont('Comic Sans MS', int(y_global * 0.025)),
+            'hover_color': (83,134,139),
+            'font_color': pygame.Color('white'),
+        }
+        for kwarg in kwargs:
+            if kwarg in settings:
+                settings[kwarg] = kwargs[kwarg]
+            else:
+                raise AttributeError("{} has no keyword: {}".format(self.__class__.__name__, kwarg))
+        self.__dict__.update(settings)
+
+    def is_hovering(self):
+        if self.rect.collidepoint(pygame.mouse.get_pos()):
+            return True
+
+    def draw(self, surf):
+        if self.is_hovering():
+            self.image.fill(self.hover_color)
+        else:
+            self.image.fill(self.color)
+        surf.blit(self.image, self.rect)
+        surf.blit(self.text, self.text_rect)
+button_ESC3 = Button_ESC3(((x_global * 0.5 - x_global * 0.1 * 0.5),(y_global * 0.74), (x_global * 0.1), (y_global * 0.07)), command=None)  #asukoht, suurus
+
+def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, vasak1, vasak2, vasak3, vasak4, vasak5, vasak6, vasak7, vasak8,\
          parem1, parem2, parem3, parem4, parem5, parem6, parem7, parem8):
+
+    global vasakud_coinid
+    global paremad_coinid
+    if vasakud_coinid < 999:
+        vasakud_coinid += 0.1
+    if paremad_coinid < 999:
+        paremad_coinid += 0.1
 
     kokkupuude1()
     kokkupuude2()
@@ -1730,11 +1820,11 @@ def draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2, vasak
     mängu_screen.blit(coin2, (0.925 * x_global, 0.425 * y_global))
 
     basicfont1 = pygame.font.SysFont("Arial", int(x_global * 0.036))
-    text1 = basicfont1.render(str(round(coins1)), True, (139, 117, 0))
+    text1 = basicfont1.render(str(round(vasakud_coinid)), True, (139, 117, 0))
     mängu_screen.blit(text1, (0.04 * x_global, 0.415* y_global))
 
     basicfont2 = pygame.font.SysFont("Arial", int(x_global * 0.036))
-    text2 = basicfont2.render(str(round(coins2)), True, (139, 117, 0))
+    text2 = basicfont2.render(str(round(paremad_coinid)), True, (139, 117, 0))
     mängu_screen.blit(text2, (0.95 * x_global, 0.415 * y_global))
 
     pygame.display.update()
@@ -1744,7 +1834,7 @@ def draw_game_over(t):
     pygame.draw.rect(mängu_screen, (0, 0, 0), [x_global * 0.5 - (x_global * 0.1 + 10) * 0.5, y_global * 0.55 - 5, (x_global * 0.1 + 10), (y_global * 0.07 + 10)])  # asukoht, suurus
     button_play_again.draw(mängu_screen)
     pygame.draw.rect(mängu_screen, (0, 0, 0), [x_global * 0.5 - (x_global * 0.1 + 10) * 0.5, y_global * 0.645 - 5, (x_global * 0.1 + 10), (y_global * 0.07 + 10)])  # asukoht, suurus
-    button_mainmenu.draw(mängu_screen)
+    button_mainmenu1.draw(mängu_screen)
     pygame.draw.rect(mängu_screen, (0, 0, 0), [x_global * 0.5 - (x_global * 0.1 + 10) * 0.5, y_global * 0.74 - 5, (x_global * 0.1 + 10), (y_global * 0.07 + 10)])  # asukoht, suurus
     button_ESC2.draw(mängu_screen)
     pygame.display.update()
@@ -1766,6 +1856,34 @@ def draw_instructions():
     button_back.draw(mängu_screen)
     pygame.display.update()
 
+def draw_pause():
+    paus = pygame.image.load("images/paus/paus.png")
+    paus = pygame.transform.scale(paus, (x_global, y_global))
+    paus = pygame.transform.smoothscale(paus, (x_global, y_global))
+    mängu_screen.blit(paus, (0, 0))
+
+    paused_font = pygame.font.SysFont("Comic Sans MS", int(x_global * 0.1))
+    paused = paused_font.render("Paused", True, (139, 117, 0))
+    paused_rect = paused.get_rect(center=(x_global / 2, y_global / 2))
+    mängu_screen.blit(paused, paused_rect)
+
+    global valik
+    if len(sõnumid[valik]) < 90:
+        m = 0.02
+    else:
+        m = 0.01
+    sõnum_font = pygame.font.SysFont("Comic Sans MS", int(x_global * m))
+    sõnum = sõnum_font.render(sõnumid[valik], True, (139, 117, 0))
+    sõnum_rect = sõnum.get_rect(center=(x_global / 2, y_global / 2))
+    mängu_screen.blit(sõnum, (sõnum_rect[0], sõnum_rect[1] + y_global * 0.1))
+
+
+    pygame.draw.rect(mängu_screen, (0, 0, 0), [x_global * 0.5 - (x_global * 0.1 + 10) * 0.5, y_global * 0.645 - 5, (x_global * 0.1 + 10), (y_global * 0.07 + 10)])  # asukoht, suurus
+    button_mainmenu2.draw(mängu_screen)
+    pygame.draw.rect(mängu_screen, (0, 0, 0), [x_global * 0.5 - (x_global * 0.1 + 10) * 0.5, y_global * 0.74 - 5, (x_global * 0.1 + 10), (y_global * 0.07 + 10)])  # asukoht, suurus
+    button_ESC1.draw(mängu_screen)
+
+    pygame.display.update()
 
 
 player_list2 = pygame.sprite.Group()
@@ -1788,6 +1906,7 @@ punanekuul_list1 = pygame.sprite.Group()
 a = True
 b_parem = 3
 b_vasak = 3
+pausi_arv = 0
 
 #viivitus tegelaste lisamiseks, 1- vasak   2-parem
 tegelane1_aeg = tegelane_lisamis_delay
@@ -1916,8 +2035,8 @@ while a:
         #b = 0 - mäng
         #b = 1 - end screen
         #b = 2 - instructions
+        #b = 4 - paus
     for event in pygame.event.get():
-
         cursor = pygame.mouse.get_pos()
 
         #Play vajutamine
@@ -1996,12 +2115,11 @@ while a:
                 punanekuul_list2.empty()
                 punanekuul_list1.empty()
 
-        #mainmenu vajutamine
+        #mainmenu vajutamine1
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 \
         and (x_global * 0.5 - x_global * 0.1 * 0.5) <= cursor[0] <= (x_global * 0.5 - x_global * 0.1 * 0.5 + x_global * 0.1) \
         and (y_global * 0.645) <= cursor[1] <= (y_global * 0.645 + y_global * 0.07):
             if b_vasak == 1 or b_parem == 1:
-
                 b_parem = 3
                 b_vasak = 3
 
@@ -2012,8 +2130,44 @@ while a:
             if b_vasak == 1 or b_parem == 1:
                 a = False
 
-        if event.type == pygame.QUIT:
+        # vajutamine
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 \
+        and (x_global * 0.5 - x_global * 0.1 * 0.5) <= cursor[0] <= (x_global * 0.5 - x_global * 0.1 * 0.5 + x_global * 0.1) \
+        and 5 <= cursor[1] <= (5 + y_global * 0.07) and b_vasak == 4 and b_parem == 4:
+            print("laall")
+
+
+        #PAUSI NUPP
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_SPACE and pausi_arv % 2 == 0 and b_parem == 0 and b_vasak == 0:
+                pausi_arv += 1
+                pygame.image.save(mängu_screen, "images/paus/paus.png")
+                b_vasak = 4
+                b_parem = 4
+                sõnumid_pikkus = len(sõnumid)
+                valik = random.randint(0, sõnumid_pikkus - 1)
+            elif event.key == pygame.K_SPACE and pausi_arv % 2 != 0 and b_vasak == 4 and b_parem == 4:
+                pausi_arv += 1
+                b_vasak = 0
+                b_parem = 0
+
+        #mainmenu vajutamine2
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and b_vasak == 4 and b_parem == 4 \
+        and (x_global * 0.5 - x_global * 0.1 * 0.5) <= cursor[0] <= (x_global * 0.5 - x_global * 0.1 * 0.5 + x_global * 0.1) \
+        and (y_global * 0.645) <= cursor[1] <= (y_global * 0.645 + y_global * 0.07):
+            b_parem = 3
+            b_vasak = 3
+            pausi_arv += 1
+
+        #Quit vajutamine 3
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and b_vasak == 4 and b_parem == 4 \
+        and (x_global * 0.5 - x_global * 0.1 * 0.5) <= cursor[0] <= (x_global * 0.5 - x_global * 0.1 * 0.5 + x_global * 0.1) \
+        and (y_global * 0.74) <= cursor[1] <= (y_global * 0.74 + y_global * 0.07):
             a = False
+
+
+
+        #tegelaste nupud
         if event.type == pygame.KEYDOWN and b_vasak == 0 and b_parem == 0:
             if event.key == pygame.K_q and vasakud_coinid >= 5:
                 if tegelane1_aeg == tegelane_lisamis_delay:
@@ -2095,6 +2249,7 @@ while a:
                     punanekuul2()
                     paremad_coinid -= 100
                     tegelane2_aeg -= tegelane_lisamis_delay
+
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 a = False
@@ -2134,77 +2289,70 @@ while a:
     if parema_torni_elud == 1:
         paremad_elud = parem_elud1
 
-    if vasakud_coinid < 999:
-        vasakud_coinid += 0.1
-        coins1 = vasakud_coinid
-    if paremad_coinid < 999:
-        paremad_coinid += 0.1
-        coins2 = paremad_coinid
 
-
-    if round(coins1) < 5:
+    if round(vasakud_coinid) < 5:
         vasak1 = vasakud_tuhm1
     else:
         vasak1 = vasakud_ikoonid1
-    if round(coins1) < 10:
+    if round(vasakud_coinid) < 10:
         vasak2 = vasakud_tuhm2
     else:
         vasak2 = vasakud_ikoonid2
-    if round(coins1) < 15:
+    if round(vasakud_coinid) < 15:
         vasak3 = vasakud_tuhm3
     else:
         vasak3 = vasakud_ikoonid3
-    if round(coins1) < 20:
+    if round(vasakud_coinid) < 20:
         vasak4 = vasakud_tuhm4
     else:
         vasak4 = vasakud_ikoonid4
-    if round(coins1) < 25:
+    if round(vasakud_coinid) < 25:
         vasak5 = vasakud_tuhm5
     else:
         vasak5 = vasakud_ikoonid5
-    if round(coins1) < 30:
+    if round(vasakud_coinid) < 30:
         vasak6 = vasakud_tuhm6
     else:
         vasak6 = vasakud_ikoonid6
-    if round(coins1) < 100:
+    if round(vasakud_coinid) < 100:
         vasak7 = vasakud_tuhm7
     else:
         vasak7 = vasakud_ikoonid7
-    if round(coins1) < 100:
+    if round(vasakud_coinid) < 100:
         vasak8 = vasakud_tuhm8
     else:
         vasak8 = vasakud_ikoonid8
 
 
-    if round(coins2) < 5:
+    if round(paremad_coinid) < 5:
         parem1 = paremad_tuhm1
     else:
         parem1 = paremad_ikoonid1
-    if round(coins2) < 10:
+    if round(paremad_coinid) < 10:
         parem2 = paremad_tuhm2
     else:
         parem2 = paremad_ikoonid2
-    if round(coins2) < 15:
+    if round(paremad_coinid) < 15:
         parem3 = paremad_tuhm3
     else:
         parem3 = paremad_ikoonid3
-    if round(coins2) < 20:
+    if round(paremad_coinid) < 20:
         parem4 = paremad_tuhm4
     else:
         parem4 = paremad_ikoonid4
-    if round(coins2) < 25:
+    if round(paremad_coinid) < 25:
         parem5 = paremad_tuhm5
     else:
         parem5 = paremad_ikoonid5
-    if round(coins2) < 30:
+    if round(paremad_coinid) < 30:
         parem6 = paremad_tuhm6
     else:
         parem6 = paremad_ikoonid6
-    if round(coins2) < 100:
+    if round(paremad_coinid) < 100:
         parem7 = paremad_tuhm7
     else:
         parem7 = paremad_ikoonid7
-    if round(coins2) < 100:
+    if round(paremad_coinid) < 100:
         parem8 = paremad_tuhm8
     else:
         parem8 = paremad_ikoonid8
@@ -2213,7 +2361,7 @@ while a:
     if b_parem == 3 and b_vasak == 3:
         draw_start_screen()
     if b_parem == 0 and b_vasak == 0:
-        draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, coins1, coins2, vasak1, vasak2, vasak3, vasak4, vasak5,
+        draw(vasaktorn, paremtorn, vasakud_elud, paremad_elud, vasak1, vasak2, vasak3, vasak4, vasak5,
              vasak6, vasak7, vasak8, parem1, parem2, parem3, parem4, parem5, parem6, parem7, parem8)
     if b_parem == 1:
         t = game_over_parempool
@@ -2223,6 +2371,9 @@ while a:
         draw_game_over(t)
     if b_parem == 2 and b_vasak == 2:
         draw_instructions()
+    if b_vasak == 4 and b_parem == 4:
+        draw_pause()
+
 
 
 #    1 on vasakpoolsed ja 2 on parempoolsed
