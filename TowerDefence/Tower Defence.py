@@ -11,6 +11,7 @@ channel2 = pygame.mixer.Channel(1)
 channel3 = pygame.mixer.Channel(2)
 
 
+
 FPS = 60
 clock = pygame.time.Clock()
 tegelane_lisamis_delay = 20
