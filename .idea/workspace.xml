@@ -6,44 +6,10 @@
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/parem_torn.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/taust.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/vasak_torn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_kuulid/raam1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_kuulid/raam1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_kuulid/raam2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_kuulid/raam2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_kuulid/tuhm1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_kuulid/tuhm1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_kuulid/tuhm2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_kuulid/tuhm2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam3.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam4.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam5.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam6.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm3.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm4.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm5.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm6.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/audio/taustamuusika.wav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TowerDefence/images/paus/paus.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paus/paus.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/taustad/game_over_parem.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/taustad/game_over_parem.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/taustad/game_over_vasak.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/taustad/game_over_vasak.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TowerDefence/images/taustad/instructions.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/taustad/instructions.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_kuulid/raam1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_kuulid/raam1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_kuulid/raam2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_kuulid/raam2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_kuulid/tuhm1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_kuulid/tuhm1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_kuulid/tuhm2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_kuulid/tuhm2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam3.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam4.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam5.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam6.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm3.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm4.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm5.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm6.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm6.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,13 +53,13 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="39" />
-          <entry key="Python" value="53616" />
+          <entry key="Python" value="54367" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="38" />
-          <entry key="py" value="53616" />
+          <entry key="py" value="54367" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -137,8 +103,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="21" column="121" selection-start-line="21" selection-start-column="121" selection-end-line="21" selection-end-column="121" />
+            <state relative-caret-position="141">
+              <caret line="2488" column="26" selection-start-line="2488" selection-start-column="26" selection-end-line="2488" selection-end-column="26" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -180,6 +146,8 @@
       <find>audio</find>
       <find>sound</find>
       <find>mixer</find>
+      <find>true_res</find>
+      <find>channel1</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -501,7 +469,7 @@
       <window_info id="Favorites" order="2" sideWeight="0.17259787" side_tool="true" weight="0.145469" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291815" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49871904" visible="true" weight="0.08718861" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49871904" visible="true" weight="0.15302491" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.47686833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -676,8 +644,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="121" selection-start-line="21" selection-start-column="121" selection-end-line="21" selection-end-column="121" />
+        <state relative-caret-position="141">
+          <caret line="2488" column="26" selection-start-line="2488" selection-start-column="26" selection-end-line="2488" selection-end-column="26" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
