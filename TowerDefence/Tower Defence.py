@@ -18,6 +18,7 @@ vasaku_torni_elud = 5
 parema_torni_elud = 5
 vasakud_coinid = 0
 paremad_coinid = 0
+mute_muutuja = 0
 
 #sõnumid
 sõnumid = ["There is actually a poem written by Tim Peters named as THE ZEN OF PYTHON which can be read by just writing “import this” in the interpreter.",\
@@ -41,7 +42,7 @@ sõnumid = ["There is actually a poem written by Tim Peters named as THE ZEN OF 
            "Debugging is like being the detective in a crime drama where you are also the murderer.",\
            "The best thing about a Boolean is that even if you are wrong, you are only off by a bit."]
             ##########################################################################################     -pikkus, kus teksti suurus muutub
-
+#windows
 try:
     muusika = 0
     import ctypes
@@ -51,12 +52,12 @@ try:
     x_global = int(y_global * (16/9))# arvutab suhte järgi x'i, siis on suhe koguaeg sama, ükskõik mis resolutsiooniga
     mängu_screen = pygame.display.set_mode((x_global, y_global), pygame.FULLSCREEN)
 
+#mac
 except:
     muusika = 1
     infoObject = pygame.display.Info()
     y_global = infoObject.current_h
     x_global = int(y_global * (16/9))
-
     mängu_screen = pygame.display.set_mode((x_global, y_global), pygame.FULLSCREEN)
 
 #MÄNGU NIMI
@@ -2369,6 +2370,7 @@ while a:
             if event.key == pygame.K_ESCAPE:
                 a = False
 
+
     if vasaku_torni_elud > 3:
         vasaktorn = vasak_torn1
     if vasaku_torni_elud > 1 and vasaku_torni_elud < 4:
@@ -2511,11 +2513,7 @@ while a:
         channel2.stop()
     if b_vasak == 4 and b_parem == 4:
         draw_pause()
-        #mängumuusika = 0
         channel2.pause()
-
-
-
 
 #    1 on vasakpoolsed ja 2 on parempoolsed
     if tegelane1_aeg < tegelane_lisamis_delay:
