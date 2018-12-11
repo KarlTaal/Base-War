@@ -241,7 +241,8 @@ if muusika == 0:
     suremine_orc = pygame.mixer.Sound("audio/suremine_orc.wav")
     suremine_eye = pygame.mixer.Sound("audio/suremine_eye.wav")
     suremine_skeleton = pygame.mixer.Sound("audio/suremine_skeleton.wav")
-    energia_kokkupuude = pygame.mixer.Sound("audio/energia_kokkupuude.wav")
+    kuul_vastastevastu = pygame.mixer.Sound("audio/kuul_vastastevastu.wav")
+    kuul_tornivastu = pygame.mixer.Sound("audio/kuul_tornivastu.wav")
     kuul_heli = pygame.mixer.Sound("audio/kuul.wav")
     torni_pihtasaamine = pygame.mixer.Sound("audio/torni_pihtasaamine.wav")
     mäng_muusika = pygame.mixer.Sound("audio/mäng.wav")
@@ -380,11 +381,13 @@ class Punanekuul1(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x += int(0.014 * y_global)
+        #self.rect.x += int(0.014 * y_global)
+        self.rect.x += int(0.023 * y_global)
 def punanekuul1():
     punanekuul1 = Punanekuul1(position=(0, y_global * 0.78), punanekuul_walkRight=punanekuul_walkRight)
     punanekuul_list1.add(punanekuul1)
-    channel1.play(kuul_heli, loops=-1)
+    channel1.play(kuul_heli)
+    channel1.set_volume(0.4)
 
 
 class Punanekuul2(pygame.sprite.Sprite):
@@ -408,11 +411,13 @@ class Punanekuul2(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x -= int(0.014 * y_global)
+        #self.rect.x -= int(0.014 * y_global)
+        self.rect.x -= int(0.023 * y_global)
 def punanekuul2():
     punanekuul2 = Punanekuul2(position=(x_global - int(0.1 * x_global), y_global * 0.78), punanekuul_walkLeft=punanekuul_walkLeft)
     punanekuul_list2.add(punanekuul2)
-    channel1.play(kuul_heli, loops=-1)
+    channel1.play(kuul_heli)
+    channel1.set_volume(0.2)
 
 
 class Lillakuul1(pygame.sprite.Sprite):
@@ -436,11 +441,13 @@ class Lillakuul1(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x += int(0.014 * y_global)
+        #self.rect.x += int(0.014 * y_global)
+        self.rect.x += int(0.023 * y_global)
 def lillakuul1():
     lillakuul1 = Lillakuul1(position=(0, y_global * 0.78), lillakuul_walkRight=lillakuul_walkRight)
     lillakuul_list1.add(lillakuul1)
-    channel1.play(kuul_heli, loops=-1)
+    channel1.play(kuul_heli)
+    channel1.set_volume(0.2)
 
 class Lillakuul2(pygame.sprite.Sprite):
     def __init__(self, position, lillakuul_walkLeft):
@@ -463,11 +470,13 @@ class Lillakuul2(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.update_time_dependent(dt)
-        self.rect.x -= int(0.014 * y_global)
+        #self.rect.x -= int(0.014 * y_global)
+        self.rect.x -= int(0.023 * y_global)
 def lillakuul2():
     lillakuul2 = Lillakuul2(position=(x_global - int(0.1 * x_global), y_global * 0.78), lillakuul_walkLeft=lillakuul_walkLeft)
     lillakuul_list2.add(lillakuul2)
-    channel1.play(kuul_heli, loops=-1)
+    channel1.play(kuul_heli)
+    channel1.set_volume(0.2)
 
 
 class Orc1(pygame.sprite.Sprite):
@@ -1363,91 +1372,91 @@ def kokkupuude37():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list1, player_list2, False, False, collided=None)
     for i in tegelane_hit_list:
         if muusika == 0:
-            pygame.mixer.Sound.play(energia_kokkupuude)
+            pygame.mixer.Sound.play(kuul_vastastevastu)
             pygame.mixer.Sound.play(suremine_mees)
         player_list2.remove(tegelane_hit_list[i])
 def kokkupuude38():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list1, skeleton_list2, False, False, collided=None)
     for i in tegelane_hit_list:
         if muusika == 0:
-            pygame.mixer.Sound.play(energia_kokkupuude)
+            pygame.mixer.Sound.play(kuul_vastastevastu)
             pygame.mixer.Sound.play(suremine_skeleton)
         skeleton_list2.remove(tegelane_hit_list[i])
 def kokkupuude39():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list1, knight_list2, False, False, collided=None)
     for i in tegelane_hit_list:
         if muusika == 0:
-            pygame.mixer.Sound.play(energia_kokkupuude)
+            pygame.mixer.Sound.play(kuul_vastastevastu)
             pygame.mixer.Sound.play(suremine_knight)
         knight_list2.remove(tegelane_hit_list[i])
 def kokkupuude40():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list1, eye_list2, False, False, collided=None)
     for i in tegelane_hit_list:
         if muusika == 0:
-            pygame.mixer.Sound.play(energia_kokkupuude)
+            pygame.mixer.Sound.play(kuul_vastastevastu)
             pygame.mixer.Sound.play(suremine_eye)
         eye_list2.remove(tegelane_hit_list[i])
 def kokkupuude41():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list1, wizard_list2, False, False, collided=None)
     for i in tegelane_hit_list:
         if muusika == 0:
-            pygame.mixer.Sound.play(energia_kokkupuude)
+            pygame.mixer.Sound.play(kuul_vastastevastu)
             pygame.mixer.Sound.play(suremine_võlur)
         wizard_list2.remove(tegelane_hit_list[i])
 def kokkupuude42():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list1, orc_list2, False, False, collided=None)
     for i in tegelane_hit_list:
         if muusika == 0:
-            pygame.mixer.Sound.play(energia_kokkupuude)
+            pygame.mixer.Sound.play(kuul_vastastevastu)
             pygame.mixer.Sound.play(suremine_orc)
         orc_list2.remove(tegelane_hit_list[i])
 def kokkupuude43():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list2, player_list1, False, False, collided=None)
     for i in tegelane_hit_list:
         if muusika == 0:
-            pygame.mixer.Sound.play(energia_kokkupuude)
+            pygame.mixer.Sound.play(kuul_vastastevastu)
             pygame.mixer.Sound.play(suremine_mees)
         player_list1.remove(tegelane_hit_list[i])
 def kokkupuude44():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list2, skeleton_list1, False, False, collided=None)
     for i in tegelane_hit_list:
         if muusika == 0:
-            pygame.mixer.Sound.play(energia_kokkupuude)
+            pygame.mixer.Sound.play(kuul_vastastevastu)
             pygame.mixer.Sound.play(suremine_skeleton)
         skeleton_list1.remove(tegelane_hit_list[i])
 def kokkupuude45():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list2, knight_list1, False, False, collided=None)
     for i in tegelane_hit_list:
         if muusika == 0:
-            pygame.mixer.Sound.play(energia_kokkupuude)
+            pygame.mixer.Sound.play(kuul_vastastevastu)
             pygame.mixer.Sound.play(suremine_knight)
         knight_list1.remove(tegelane_hit_list[i])
 def kokkupuude46():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list2, eye_list1, False, False, collided=None)
     for i in tegelane_hit_list:
         if muusika == 0:
-            pygame.mixer.Sound.play(energia_kokkupuude)
+            pygame.mixer.Sound.play(kuul_vastastevastu)
             pygame.mixer.Sound.play(suremine_eye)
         eye_list1.remove(tegelane_hit_list[i])
 def kokkupuude47():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list2, orc_list1, False, False, collided=None)
     for i in tegelane_hit_list:
         if muusika == 0:
-            pygame.mixer.Sound.play(energia_kokkupuude)
+            pygame.mixer.Sound.play(kuul_vastastevastu)
             pygame.mixer.Sound.play(suremine_orc)
         orc_list1.remove(tegelane_hit_list[i])
 def kokkupuude48():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list2, wizard_list1, False, False, collided=None)
     for i in tegelane_hit_list:
         if muusika == 0:
-            pygame.mixer.Sound.play(energia_kokkupuude)
+            pygame.mixer.Sound.play(kuul_vastastevastu)
             pygame.mixer.Sound.play(suremine_võlur)
         wizard_list1.remove(tegelane_hit_list[i])
 def kokkupuude49():
     tegelane_hit_list = pygame.sprite.groupcollide(lillakuul_list1, lillakuul_list2, False, False, collided=None)
     for i in tegelane_hit_list:
         if muusika == 0:
-            pygame.mixer.Sound.play(energia_kokkupuude)
+            pygame.mixer.Sound.play(kuul_vastastevastu)
             pygame.mixer.Channel(0).stop()
         lillakuul_list1.remove(i)
         lillakuul_list2.remove(tegelane_hit_list[i])
@@ -2127,7 +2136,7 @@ while a:
     for i in k15:
         if muusika == 0:
             pygame.mixer.Sound.play(torni_pihtasaamine)
-            pygame.mixer.Sound.play(energia_kokkupuude)
+            pygame.mixer.Sound.play(kuul_tornivastu)
         punanekuul_list1.remove(i)
         if muusika == 0:
             pygame.mixer.Channel(0).stop()
@@ -2138,7 +2147,7 @@ while a:
     for i in k16:
         if muusika == 0:
             pygame.mixer.Sound.play(torni_pihtasaamine)
-            pygame.mixer.Sound.play(energia_kokkupuude)
+            pygame.mixer.Sound.play(kuul_tornivastu)
         punanekuul_list2.remove(i)
         if muusika == 0:
             pygame.mixer.Channel(0).stop()
@@ -2479,6 +2488,8 @@ while a:
         mittemängumuusika += 1
         if muusika == 0 and mittemängumuusika == 1:
             channel3.play(mittemäng_muusika, loops=-1)
+            #paneb taustamuusika 50% peale
+            channel3.set_volume(0.5)
         draw_start_screen()
         mängumuusika = 0
         channel2.stop()
@@ -2491,6 +2502,8 @@ while a:
         channel2.unpause()
         if muusika == 0 and mängumuusika == 1:
             channel2.play(mäng_muusika, loops=-1)
+            #paneb taustamuusika volüümi 10% peale
+            channel2.set_volume(0.1)
     if b_parem == 1:
         mittemängumuusika += 1
         if muusika == 0 and mittemängumuusika == 1:
