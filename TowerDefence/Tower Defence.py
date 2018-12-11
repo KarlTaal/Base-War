@@ -4,7 +4,7 @@ import time
 
 
 pygame.init()
-# initialize pygame.mixer
+#initialize pygame.mixer
 pygame.mixer.init(frequency = 44100, size = -16, channels = 2, buffer = 2**12)
 channel1 = pygame.mixer.Channel(0)
 channel2 = pygame.mixer.Channel(1)
@@ -19,7 +19,7 @@ vasakud_coinid = 0
 paremad_coinid = 0
 
 #sõnumid
-sõnumid = ["There is actually a poem written by Tim Peters named as THE ZEN OF PYTHON which can be read by just writing import “this” in the interpreter.",\
+sõnumid = ["There is actually a poem written by Tim Peters named as THE ZEN OF PYTHON which can be read by just writing “import this” in the interpreter.",\
            "You can use an “else” clause with a “for” loop in Python. It’s a special type of syntax that executes only if the for loop exits naturally, without any break statements.",\
            "In Python, everything is done by reference. It doesn’t support pointers.",\
            "We can’t define Infinities right? But wait! Not for Python.",\

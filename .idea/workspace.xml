@@ -6,8 +6,44 @@
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/parem_torn.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/taust.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TowerDefence/images/vasak_torn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_kuulid/raam1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_kuulid/raam1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_kuulid/raam2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_kuulid/raam2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_kuulid/tuhm1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_kuulid/tuhm1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_kuulid/tuhm2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_kuulid/tuhm2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam3.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam4.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam5.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam6.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/raam6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm3.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm4.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm5.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm6.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paremad_tegelased/tuhm6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TowerDefence/images/paus/paus.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paus/paus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/taustad/game_over_parem.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/taustad/game_over_parem.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/taustad/game_over_vasak.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/taustad/game_over_vasak.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/taustad/instructions.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/taustad/instructions.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_kuulid/raam1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_kuulid/raam1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_kuulid/raam2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_kuulid/raam2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_kuulid/tuhm1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_kuulid/tuhm1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_kuulid/tuhm2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_kuulid/tuhm2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam3.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam4.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam5.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam6.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/raam6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm1.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm2.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm3.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm4.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm5.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm6.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/vasakud_tegelased/tuhm6.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,17 +61,17 @@
           <entry key="project.closed" value="40" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="6" />
-          <entry key="project.open.time.4" value="13" />
+          <entry key="project.open.time.4" value="14" />
           <entry key="project.open.time.5" value="9" />
           <entry key="project.open.time.6" value="9" />
           <entry key="project.open.time.7" value="6" />
-          <entry key="project.opened" value="45" />
+          <entry key="project.opened" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="png" value="2" />
-          <entry key="py" value="185" />
+          <entry key="py" value="201" />
           <entry key="txt" value="5" />
         </counts>
       </usages-collector>
@@ -43,7 +79,7 @@
         <counts>
           <entry key="Image" value="2" />
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="184" />
+          <entry key="Python" value="200" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -51,13 +87,13 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="39" />
-          <entry key="Python" value="49285" />
+          <entry key="Python" value="53616" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="38" />
-          <entry key="py" value="49285" />
+          <entry key="py" value="53616" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -101,8 +137,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5882">
-              <caret line="41" column="140" selection-start-line="41" selection-start-column="140" selection-end-line="41" selection-end-column="140" />
+            <state relative-caret-position="204">
+              <caret line="21" column="121" selection-start-line="21" selection-start-column="121" selection-end-line="21" selection-end-column="121" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -141,6 +177,9 @@
       <find>coins1</find>
       <find>mainmenu</find>
       <find>järjend</find>
+      <find>audio</find>
+      <find>sound</find>
+      <find>mixer</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -149,12 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/kõndiv mehike.py" />
-        <option value="$PROJECT_DIR$/../Kodutööd/kodutöö10/kodu1.py" />
-        <option value="$PROJECT_DIR$/../Kodutööd/kodutöö10/kodu2.py" />
-        <option value="$PROJECT_DIR$/kõndiv mehike vol2.py" />
-        <option value="$PROJECT_DIR$/../Praktikumid/praks10/Järjend hulgaks.py" />
-        <option value="$PROJECT_DIR$/../lisaülesanded/veiderdav tekst/anagrammide leidmine.py" />
         <option value="$PROJECT_DIR$/../lisaülesanded/veiderdav tekst/anagrammid/anagrammide leidmine.py" />
         <option value="$PROJECT_DIR$/../lisaülesanded/veiderdav tekst/veiderdav tekst/veiderdav tekst.py" />
         <option value="$PROJECT_DIR$/../lisaülesanded/veiderdav tekst/veiderdav tekst/veiderdav tekst one line.py" />
@@ -199,6 +232,12 @@
         <option value="$PROJECT_DIR$/../Praktikumid/sügavus.py" />
         <option value="$PROJECT_DIR$/../Praktikumid/praks 14/sügavus.py" />
         <option value="$PROJECT_DIR$/../Kodutööd/kodutöö14/kuusnurk.py" />
+        <option value="$PROJECT_DIR$/../Kodutööd/kodutöö15/regulaaravaldis.py" />
+        <option value="$PROJECT_DIR$/../Kodutööd/kodutöö15/regulaaravaldis re.py" />
+        <option value="$PROJECT_DIR$/../Kodutööd/kodutöö15/järjesta punktid.py" />
+        <option value="$PROJECT_DIR$/../Kodutööd/kodutöö15/järjesta punktid2.py" />
+        <option value="$PROJECT_DIR$/../Kodutööd/kodutöö15/bussid.py" />
+        <option value="$PROJECT_DIR$/../Kodutööd/kodutöö15/bussid/bussid.py" />
         <option value="$PROJECT_DIR$/TowerDefence/Tower Defence.py" />
       </list>
     </option>
@@ -210,10 +249,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-15" />
-    <option name="y" value="51" />
-    <option name="width" value="1838" />
-    <option name="height" value="477" />
+    <option name="x" value="598" />
+    <option name="y" value="30" />
+    <option name="width" value="735" />
+    <option name="height" value="761" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -223,23 +262,72 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Tower-Defence" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proge" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Tower-Defence" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proge" type="462c0819:PsiDirectoryNode" />
+              <item name="projekt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proge" type="462c0819:PsiDirectoryNode" />
+              <item name="projekt" type="462c0819:PsiDirectoryNode" />
+              <item name="TowerDefence" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proge" type="462c0819:PsiDirectoryNode" />
+              <item name="Kodutööd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proge" type="462c0819:PsiDirectoryNode" />
+              <item name="Kodutööd" type="462c0819:PsiDirectoryNode" />
+              <item name="kodutöö15" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proge" type="462c0819:PsiDirectoryNode" />
+              <item name="Kodutööd" type="462c0819:PsiDirectoryNode" />
+              <item name="kodutöö15" type="462c0819:PsiDirectoryNode" />
+              <item name="bussid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proge" type="462c0819:PsiDirectoryNode" />
+              <item name="Kodutööd" type="462c0819:PsiDirectoryNode" />
+              <item name="kodutöö15" type="462c0819:PsiDirectoryNode" />
+              <item name="järjesta punktid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proge" type="462c0819:PsiDirectoryNode" />
+              <item name="Kodutööd" type="462c0819:PsiDirectoryNode" />
+              <item name="kodutöö15" type="462c0819:PsiDirectoryNode" />
+              <item name="regulaaravaldis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proge" type="462c0819:PsiDirectoryNode" />
+              <item name="lisaülesanded" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proge" type="462c0819:PsiDirectoryNode" />
+              <item name="lisaülesanded" type="462c0819:PsiDirectoryNode" />
+              <item name="anagrammid" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,7 +361,6 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TowerDefence/Tower Defence.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -283,7 +370,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="kuusnurk" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="bussid" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="proge" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -291,12 +378,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Kodutööd/kodutöö14" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Kodutööd/kodutöö15/bussid" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Kodutööd/kodutöö14/kuusnurk.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Kodutööd/kodutöö15/bussid/bussid.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -305,7 +391,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="sügavus" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="järjesta punktid" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="proge" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -313,12 +399,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Praktikumid/praks 14" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Kodutööd/kodutöö15" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Praktikumid/praks 14/sügavus.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Kodutööd/kodutöö15/järjesta punktid.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -327,7 +412,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tasemed" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="järjesta punktid2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="proge" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -335,12 +420,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Kodutööd/kodutöö14" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Kodutööd/kodutöö15" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Kodutööd/kodutöö14/tasemed.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Kodutööd/kodutöö15/järjesta punktid2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -349,7 +433,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="väljasta liin" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="regulaaravaldis re" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="proge" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -357,12 +441,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Kodutööd/kodutöö14" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Kodutööd/kodutöö15" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Kodutööd/kodutöö14/väljasta liin.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Kodutööd/kodutöö15/regulaaravaldis re.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -372,19 +455,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.regulaaravaldis re" />
+      <item itemvalue="Python.järjesta punktid" />
+      <item itemvalue="Python.järjesta punktid2" />
+      <item itemvalue="Python.bussid" />
       <item itemvalue="Python.Tower Defence" />
-      <item itemvalue="Python.tasemed" />
-      <item itemvalue="Python.väljasta liin" />
-      <item itemvalue="Python.sügavus" />
-      <item itemvalue="Python.kuusnurk" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Tower Defence" />
-        <item itemvalue="Python.kuusnurk" />
-        <item itemvalue="Python.sügavus" />
-        <item itemvalue="Python.väljasta liin" />
-        <item itemvalue="Python.tasemed" />
+        <item itemvalue="Python.bussid" />
+        <item itemvalue="Python.järjesta punktid2" />
+        <item itemvalue="Python.järjesta punktid" />
+        <item itemvalue="Python.regulaaravaldis re" />
       </list>
     </recent_temporary>
   </component>
@@ -413,12 +496,12 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8274021" visible="true" weight="0.09300477" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8274021" visible="true" weight="0.16295707" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.17259787" side_tool="true" weight="0.145469" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291815" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49871904" visible="true" weight="0.0" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49871904" visible="true" weight="0.08718861" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.47686833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -465,15 +548,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../lisaülesanded/veiderdav tekst/evolution.txt" />
-    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö11/kodu1/kodu3.py" />
-    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö11/kodu1/kodu2.py" />
-    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö11/kodu1/kodu1.vol2.py" />
-    <entry file="file://$PROJECT_DIR$/../Praktikumid/praks11/Valuutad/Valuutad.py" />
-    <entry file="file://$PROJECT_DIR$/../lisaülesanded/veiderdav tekst/veiderdav tekst.py" />
-    <entry file="file://$PROJECT_DIR$/../lisaülesanded/veiderdav tekst/veiderdav tekst one line.py" />
-    <entry file="file://$PROJECT_DIR$/../lisaülesanded/anagrammid/test anagrams.py" />
-    <entry file="file://$PROJECT_DIR$/../lisaülesanded/anagrammid/anagrammide leidmine 2.py" />
     <entry file="file://$PROJECT_DIR$/../lisaülesanded/anagrammid/poomismängvol2.py" />
     <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö11/kodu1/kodu1.py" />
     <entry file="file://$PROJECT_DIR$/../lisaülesanded/poomismäng/analüüsimine.py" />
@@ -504,9 +578,7 @@
     <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö10/kodu1.py" />
     <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö9/aktsiad.txt" />
     <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö9/kodu1.py" />
-    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö9/kodu2.py" />
     <entry file="file://$PROJECT_DIR$/../Praktikumid/terase ül.py" />
-    <entry file="file://$PROJECT_DIR$/../lisaülesanded/anagrammid/anagrammide leidmine.py" />
     <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö13/k.py" />
     <entry file="file://$USER_HOME$/Desktop/projekt/TowerDefence/Tower Defence.py" />
     <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö14/väljasta liin.py" />
@@ -529,10 +601,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../lisaülesanded/anagrammid/anagrammide leidmine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="49" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö15/regulaaravaldis re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö15/regulaaravaldis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="14" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö9/kodu2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö15/järjesta punktid2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="31" column="32" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö15/järjesta punktid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö15/bussid.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö15/regulaaravaldis/regulaaravaldis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="50" lean-forward="true" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö15/järjesta punktid/järjesta punktid2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="21" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö15/bussid/bussid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Kodutööd/kodutöö15/järjesta punktid/järjesta punktid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TowerDefence/Tower Defence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5882">
-          <caret line="41" column="140" selection-start-line="41" selection-start-column="140" selection-end-line="41" selection-end-column="140" />
+        <state relative-caret-position="204">
+          <caret line="21" column="121" selection-start-line="21" selection-start-column="121" selection-end-line="21" selection-end-column="121" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
