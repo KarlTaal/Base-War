@@ -5,10 +5,12 @@ import time
 
 pygame.init()
 #initialize pygame.mixer
-pygame.mixer.init(frequency = 44100, size = -16, channels = 2, buffer = 2**12)
+pygame.mixer.init(frequency = 44100, size = -16, channels = 4, buffer = 2**12)
 channel1 = pygame.mixer.Channel(0)
 channel2 = pygame.mixer.Channel(1)
 channel3 = pygame.mixer.Channel(2)
+channel4 = pygame.mixer.Channel(3)
+
 
 
 
@@ -2137,10 +2139,8 @@ while a:
     for i in k15:
         if muusika == 0:
             pygame.mixer.Sound.play(torni_pihtasaamine)
-            pygame.mixer.Sound.play(kuul_tornivastu)
+            channel4.play(kuul_tornivastu)
         punanekuul_list1.remove(i)
-        if muusika == 0:
-            pygame.mixer.Channel(0).stop()
         parema_torni_elud -= 1
         if parema_torni_elud == 0:
             b_parem = 1
@@ -2148,10 +2148,8 @@ while a:
     for i in k16:
         if muusika == 0:
             pygame.mixer.Sound.play(torni_pihtasaamine)
-            pygame.mixer.Sound.play(kuul_tornivastu)
+            channel4.play(kuul_tornivastu)
         punanekuul_list2.remove(i)
-        if muusika == 0:
-            pygame.mixer.Channel(0).stop()
         vasaku_torni_elud -= 1
         if vasaku_torni_elud == 0:
             b_vasak = 1
