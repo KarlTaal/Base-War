@@ -64,7 +64,7 @@ except:
     mängu_screen = pygame.display.set_mode((x_global, y_global), pygame.FULLSCREEN)
 
 #MÄNGU NIMI
-pygame.display.set_caption("TOWER DEFENCE")
+pygame.display.set_caption("BASE WAR")
 
 #LAEB PILDID JA MUUDAB NEED SOBIVAKS SUURUSEKS
 game_over_vasakpool = pygame.image.load("images/taustad/game_over_parem.png")
@@ -2502,7 +2502,7 @@ while a:
         if muusika == 0 and mängumuusika == 1:
             channel2.play(mäng_muusika, loops=-1)
             #paneb taustamuusika volüümi 10% peale
-            channel2.set_volume(0.1)
+            channel2.set_volume(0.2)
     if b_parem == 1:
         mittemängumuusika += 1
         if muusika == 0 and mittemängumuusika == 1:
