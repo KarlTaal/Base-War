@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d04254c-a715-4f0e-9438-f9270827d057" name="Default Changelist" comment="Lisasin heliefektid kokkupuudetele">
+      <change beforePath="$PROJECT_DIR$/../TowerDefence/Tower Defence.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TowerDefence/images/parem_torn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TowerDefence/images/taust.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TowerDefence/images/vasak_torn.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/Tower Defence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TowerDefence/images/paus/paus.png" beforeDir="false" afterPath="$PROJECT_DIR$/TowerDefence/images/paus/paus.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,14 +22,14 @@
     <session id="855116060">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="41" />
+          <entry key="project.closed" value="42" />
           <entry key="project.open.time.2" value="2" />
-          <entry key="project.open.time.3" value="6" />
+          <entry key="project.open.time.3" value="7" />
           <entry key="project.open.time.4" value="13" />
           <entry key="project.open.time.5" value="8" />
           <entry key="project.open.time.6" value="9" />
           <entry key="project.open.time.7" value="6" />
-          <entry key="project.opened" value="44" />
+          <entry key="project.opened" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -219,6 +223,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -235,7 +240,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
