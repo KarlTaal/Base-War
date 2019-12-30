@@ -1,5 +1,5 @@
 # Base-War
-Base War, pygame
+Base War, pygame. Code is like REALLY messy, had no coding experince before.
 
 1. Download Base War folder with everything in it.
 2. Open .py file.
